@@ -1,0 +1,65 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=open-transactions
+_realname=opentxs
+pkgver=0.89.c
+pkgrel=1
+pkgdesc="Decentralized digital asset management system with support for higher-level, contract-based transactions including payment plans and markets with trades"
+arch=('i686' 'x86_64')
+depends=('autoconf' 'automake' 'boost' 'chaiscript-boost' 'cmake' 'cppzmq-git' 'gcc' 'gtest' 'libtool' 'maven' 'msgpack' 'openssl' 'protobuf' 'python2-distribute' 'wget' 'zeromq' 'zlib')
+optdepends=('gdc-git: Enable configuration for SWIG Digital Mars D Programing Language support'
+            'java-environment: Enable configuration for SWIG Java support'
+            'mono: Enable configuration for SWIG C# support'
+            'perl: Enable configuration for SWIG Perl support'
+            'php: Enable configuration for SWIG PHP support'
+            'python2: Enable configuration for SWIG Python support'
+            'ruby: Enable configuration for SWIG Ruby support'
+            'tcl: Enable configuration for SWIG TCL support')
+url="https://github.com/FellowTraveler/Open-Transactions"
+license=('custom')
+source=(http://downloads.sourceforge.net/project/${_realname}/${_realname}-${pkgver}.tar.gz)
+sha1sums=('dd982c88cd70fdfdcc26b2f3f078bb2a37105f3a')
+sha256sums=('5e0e0c8db05fb75e5caf646b7c3f332c55ad0d540fa2aca587baf57dcc881b18')
+provides=('createmint' 'opentxs' 'open-transactions' 'ot' 'otserver')
+conflicts=('open-transactions-git')
+install=open-transactions.install
+
+build() {
+  cd "$srcdir"/$_realname-$pkgver
+
+  msg 'Running autoreconf...'
+  autoreconf -vif -Wall
+
+  msg 'Running configure...'
+  export PYTHON=/usr/bin/python2
+	./configure \
+      LDFLAGS="-L/usr/lib/python2.7/config -lpython2.7" \
+      --enable-warnings \
+      --prefix=/usr \
+      --with-java \
+      --with-python \
+      --with-csharp \
+      --with-d \
+      --with-perl5 \
+      --with-php \
+      --with-tcl \
+      # --with-ruby \ # perhaps requires ruby-1.8.7
+      # --with-keyring=ARG # set ARG to gnome or kwallet to enable system
+                           # keyring storage of OT passwords in Gnome
+                           # or KDE, respectively
+
+  msg 'Running make...'
+  make
+  # make -j2 # Build multithreaded, need about 1gb of ram per thread
+             # (must be multiple of 2)
+}
+
+package() {
+  cd "$srcdir"/$_realname-$pkgver
+
+  msg 'Installing license...'
+  install -D -m644 docs/LICENSE-AND-CREDITS.txt "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+
+  msg 'Installing...'
+  make DESTDIR="$pkgdir" install
+}

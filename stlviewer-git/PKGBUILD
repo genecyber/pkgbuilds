@@ -1,0 +1,49 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=stlviewer-git
+_gitname='stlviewer'
+pkgver=272eae7
+pkgrel=2
+pkgdesc="Simple command line tool to view STL files"
+arch=('any')
+depends=('python2')
+makedepends=('gcc' 'git')
+url="https://github.com/vishpat/stlviewer/wiki"
+license=('custom')
+source=(git://github.com/vishpat/stlviewer.git
+        LICENSE)
+sha256sums=('SKIP'
+            'f43ca3551171a46b73b45c0cb37f57408294feea87f7a840a5dc642edf6f68b2')
+provides=('stlviewer')
+conflicts=('stlviewer')
+
+pkgver() {
+  cd $_gitname
+  git describe --always | sed 's|-|.|g'
+}
+
+prepare() {
+  cd $_gitname
+  msg 'Fixing Python version...'
+  find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/python#/usr/bin/python2#g'
+  find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/env python#/usr/bin/env python2#g'
+}
+
+build() {
+  cd $_gitname
+  msg 'Compiling...'
+  python2 compile.py
+}
+
+package() {
+  cd $_gitname
+  msg 'Installing executable...'
+  install -D -m755 stlviewer "${pkgdir}/usr/bin/stlviewer"
+
+  cd $srcdir
+  msg 'Installing license...'
+  install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+
+  msg 'Cleaning up pkgdir...'
+  find "$pkgdir" -type d -name .git -exec rm -r '{}' +
+}
