@@ -36,6 +36,10 @@
 
 **Description:** P2P messaging client for Bitmessage.
 
+## [pybitmessage-daemon-git](https://aur.archlinux.org/packages/pybitmessage-daemon-git/)
+
+**Description:** PyBitmessage API.
+
 ## [python2-zbar](https://aur.archlinux.org/packages/python2-zbar/)
 
 **Description:** Python bindings for zbar.
