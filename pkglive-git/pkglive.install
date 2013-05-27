@@ -1,0 +1,19 @@
+post_install() {
+  getent passwd pkglive &>/dev/null || {
+    echo -n "Creating pkglive user... "
+    /usr/sbin/useradd -g users -d /opt/pkglive -s /bin/false pkglive
+    echo "done"
+  }
+  chown -R pkglive:users /opt/pkglive
+}
+
+pre_remove() {
+  /usr/bin/pkglive --uninstall
+}
+
+post_remove() {
+  echo -n "Removing pkglive user... "
+  /usr/sbin/userdel -rf pkglive
+  echo "done"
+  rm -rf /opt/pkglive
+}
