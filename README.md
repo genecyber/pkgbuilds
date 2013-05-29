@@ -4,6 +4,10 @@
 
 **Description:** libvirt replacement in Bash.
 
+## [bitpaint](https://aur.archlinux.org/packages/bitpaint)
+
+**Description:** Bitcoin smart contracts.
+
 ## [chaiscript-boost](https://aur.archlinux.org/packages/chaiscript-boost)
 
 **Description:** Easy to use scripting for C++.
