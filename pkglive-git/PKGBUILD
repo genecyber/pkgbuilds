@@ -2,7 +2,7 @@
 
 pkgname=pkglive-git
 _gitname=pkglive
-pkgver=0.0.0
+pkgver=e418c6b
 pkgrel=1
 pkgdesc="Automated LiveCD build system"
 arch=('x86-64')
