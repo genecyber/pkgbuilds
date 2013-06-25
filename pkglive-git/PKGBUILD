@@ -2,11 +2,11 @@
 
 pkgname=pkglive-git
 _gitname=pkglive
-pkgver=e418c6b
+pkgver=1a965f8
 pkgrel=1
 pkgdesc="Automated LiveCD build system"
 arch=('x86-64')
-depends=('archiso' 'perl' 'perl-archlinux-term' 'perl-file-find-rule' 'perl-list-compare' 'sudo' 'wgetpkg')
+depends=('archiso' 'perl' 'perl-archlinux-term' 'perl-data-dump' 'perl-file-find-rule' 'perl-list-compare' 'sudo' 'wgetpkg')
 makedepends=('git')
 url="https://github.com/atweiden/pkglive"
 license=('GPL3')
