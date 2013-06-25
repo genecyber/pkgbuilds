@@ -1,0 +1,30 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=vim-awk-support
+pkgver=1.0
+_srcid=19436
+pkgrel=1
+pkgdesc='AWK-IDE - Write and run AWK-scripts using menus and hotkeys'
+arch=('any')
+depends=('vim')
+groups=('vim-plugins')
+url='http://www.vim.org/scripts/script.php?script_id=4415'
+license=('custom:vim')
+source=("${pkgname}-${pkgver}.zip::http://www.vim.org/scripts/download_script.php?src_id=$_srcid")
+sha256sums=('1d0995ee8fe31fcc0e5e9f6cc4b942830b137608eb2fb1034495d0466589e181')
+provides=('vim-awk-support')
+conflicts=('vim-awk-support-git')
+install='vimdoc.install'
+
+package() {
+  cd "$srcdir"
+
+  _VIM_FILES_DIR="$pkgdir"/usr/share/vim/vimfiles/
+
+  install -dm755 "${_VIM_FILES_DIR}"
+
+  find {awk-support,doc,ftplugin,plugin} -type d \
+    -exec install -dm755 "${_VIM_FILES_DIR}/{}" \;
+  find {awk-support,doc,ftplugin,plugin} -not -type d \
+    -exec install -m644 "{}" "${_VIM_FILES_DIR}/{}" \;
+}
