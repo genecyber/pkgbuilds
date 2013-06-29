@@ -10,7 +10,7 @@ depends=('vim')
 groups=('vim-plugins')
 url='http://www.vim.org/scripts/script.php?script_id=4415'
 license=('custom:vim')
-source=("${pkgname}-${pkgver}.zip::http://www.vim.org/scripts/download_script.php?src_id=$_srcid")
+source=(${pkgname}-${pkgver}.zip::http://www.vim.org/scripts/download_script.php?src_id=$_srcid)
 sha256sums=('1d0995ee8fe31fcc0e5e9f6cc4b942830b137608eb2fb1034495d0466589e181')
 provides=('vim-awk-support')
 conflicts=('vim-awk-support-git')
