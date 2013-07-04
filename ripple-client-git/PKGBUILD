@@ -10,7 +10,7 @@ depends=('nodejs')
 makedepends=('git' 'nodejs-grunt-cli')
 url="https://github.com/rippleFoundation/ripple-client"
 license=('MIT')
-source=(git://github.com/rippleFoundation/ripple-client.git
+source=(git+https://github.com/rippleFoundation/ripple-client
         ripple-client.install
         ripple-client.sh)
 sha256sums=('SKIP'

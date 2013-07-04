@@ -10,7 +10,7 @@ depends=('python2')
 makedepends=('gcc' 'git')
 url="https://github.com/vishpat/stlviewer/wiki"
 license=('custom')
-source=(git://github.com/vishpat/stlviewer.git
+source=(git+https://github.com/vishpat/stlviewer
         LICENSE)
 sha256sums=('SKIP'
             'f43ca3551171a46b73b45c0cb37f57408294feea87f7a840a5dc642edf6f68b2')

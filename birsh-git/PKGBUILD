@@ -10,7 +10,7 @@ depends=('iptables' 'multipath-tools' 'qemu' 'screen' 'socat')
 makedepends=('git')
 url="https://github.com/Kdecherf/birsh"
 license=('ISC')
-source=(git://github.com/Kdecherf/birsh.git
+source=(git+https://github.com/Kdecherf/birsh
         settings.patch)
 sha256sums=('SKIP'
             'b3ee58c101b7b27b2165f51eae79a3c5f4bee9d3051287d15443cac88ba5bd52')

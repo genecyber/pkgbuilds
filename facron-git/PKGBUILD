@@ -10,7 +10,7 @@ depends=('autoconf')
 makedepends=('gcc' 'git' 'make')
 url="https://github.com/Keruspe/facron"
 license=('GPL3')
-source=(git://github.com/Keruspe/facron.git
+source=(git+https://github.com/Keruspe/facron
         facron.mk.patch
         facron.service.patch
         Makefile.patch
