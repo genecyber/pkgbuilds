@@ -26,7 +26,7 @@
 
 ## [nodejs-grunt-cli](https://aur.archlinux.org/packages/nodejs-grunt-cli/)
 
-**Description:** Grunt cmdline interface.
+**Description:** Grunt command line interface.
 
 ## [nodejs-ripple-lib](https://aur.archlinux.org/packages/nodejs-ripple-lib/)
 
@@ -59,6 +59,10 @@
 ## [subrepo](https://aur.archlinux.org/packages/subrepo/)
 
 **Description:** Git & Mercurial submodules.
+
+## [sx-git](https://aur.archlinux.org/packages/sx-git/)
+
+**Description:** Modular Bitcoin command line utilities.
 
 ## [tscat](https://aur.archlinux.org/packages/tscat/)
 
