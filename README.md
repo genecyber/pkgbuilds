@@ -44,6 +44,10 @@
 
 **Description:** PyBitmessage API.
 
+## [python2-dopy](https://aur.archlinux.org/packages/python2-dopy/)
+
+**Description:** Digital Ocean API Python wrapper.
+
 ## [python2-zbar](https://aur.archlinux.org/packages/python2-zbar/)
 
 **Description:** Python bindings for zbar.
