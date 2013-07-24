@@ -20,6 +20,10 @@
 
 **Description:** Advanced filesystem cron.
 
+## [libbitcoin-leveldb-git](https://aur.archlinux.org/packages/libbitcoin-leveldb-git/)
+
+**Description:** Asynchronous C++ library for Bitcoin.
+
 ## [mickey](https://aur.archlinux.org/packages/mickey/)
 
 **Description:** Simple, self-contained and easily reviewable Bitcoin address generator.
@@ -31,6 +35,10 @@
 ## [nodejs-ripple-lib](https://aur.archlinux.org/packages/nodejs-ripple-lib/)
 
 **Description:** Ripple JavaScript client library.
+
+## [obelisk-git](https://aur.archlinux.org/packages/obelisk-git/)
+
+**Description:** Scalable Bitcoin infrastructure.
 
 ## [open-transactions](https://aur.archlinux.org/packages/open-transactions/)
 
