@@ -2,11 +2,11 @@
 
 pkgname=sx-git
 _gitname='sx'
-pkgver=ad0dbea
+pkgver=1f4e5ef
 pkgrel=1
 pkgdesc="Modular Bitcoin cmdline utilities"
 arch=('i686' 'x86_64')
-depends=('libbitcoin-git')
+depends=('obelisk-git')
 makedepends=('gcc' 'git' 'make')
 url="https://github.com/genjix/sx/"
 license=('GPL')
