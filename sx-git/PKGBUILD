@@ -2,12 +2,13 @@
 
 pkgname=sx-git
 _gitname='sx'
-pkgver=1f4e5ef
+pkgver=0.0.0
 pkgrel=1
 pkgdesc="Modular Bitcoin cmdline utilities"
 arch=('i686' 'x86_64')
 depends=('obelisk-git')
 makedepends=('gcc' 'git' 'make')
+optdepends=('qrencode: generate QR codes with sx-genqr')
 url="https://github.com/genjix/sx/"
 license=('AGPL3')
 source=(git+https://github.com/genjix/sx/)
@@ -25,7 +26,7 @@ build() {
 
   msg 'Building...'
   autoreconf -i
-  ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/bin --sysconfdir=/etc --sharedstatedir=/etc --localstatedir=/etc --program-prefix=sx-
+  ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/bin --sysconfdir=/etc --sharedstatedir=/etc --localstatedir=/etc
   make
 }
 

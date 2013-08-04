@@ -4,7 +4,7 @@
 
 pkgname=libbitcoin-leveldb-git
 _gitname=libbitcoin
-pkgver=v1.0.10.75.g43ef730
+pkgver=0.0.0
 pkgrel=1
 pkgdesc="libbitcoin asynchronous C++ library for Bitcoin, with leveldb enabled"
 arch=('i686' 'x86_64')
@@ -15,7 +15,7 @@ license=('AGPL3')
 source=(git+https://github.com/spesmilo/libbitcoin.git)
 sha256sums=('SKIP')
 provides=('libbitcoin')
-conflicts=('libbitcoin-git' 'libbitcoin-leveldb')
+conflicts=('libbitcoin' 'libbitcoin-git' 'libbitcoin-leveldb')
 
 pkgver() {
   cd $_gitname
@@ -36,5 +36,5 @@ package() {
 
   msg 'Installing...'
   make DESTDIR="$pkgdir" install
-  install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+  install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${_gitname}/LICENSE"
 }
