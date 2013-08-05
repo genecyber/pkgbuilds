@@ -4,7 +4,7 @@
 
 pkgname=libbitcoin-leveldb-git
 _gitname=libbitcoin
-pkgver=0.0.0
+pkgver=v1.0.10.94.g40a9a1c
 pkgrel=1
 pkgdesc="libbitcoin asynchronous C++ library for Bitcoin, with leveldb enabled"
 arch=('i686' 'x86_64')
