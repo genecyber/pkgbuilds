@@ -28,9 +28,25 @@
 
 **Description:** Simple, self-contained and easily reviewable Bitcoin address generator.
 
+## [nodejs-egs](https://aur.archlinux.org/packages/nodejs-egs/)
+
+**Description:** Embedded GorillaScript template generator.
+
+## [nodejs-gorillascript](https://aur.archlinux.org/packages/nodejs-gorillascript/)
+
+**Description:** Compile-to-JavaScript language designed to empower the user while attempting to prevent some common errors.
+
 ## [nodejs-grunt-cli](https://aur.archlinux.org/packages/nodejs-grunt-cli/)
 
 **Description:** Grunt command line interface.
+
+## [nodejs-grunt-egs](https://aur.archlinux.org/packages/nodejs-grunt-egs/)
+
+**Description:** Compiles EGS packages to JavaScript.
+
+## [nodejs-grunt-gorilla](https://aur.archlinux.org/packages/nodejs-grunt-gorilla/)
+
+**Description:** Compiles GorillaScript files to JavaScript.
 
 ## [nodejs-ripple-lib](https://aur.archlinux.org/packages/nodejs-ripple-lib/)
 
