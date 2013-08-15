@@ -64,6 +64,10 @@
 
 **Description:** Decentralized digital asset management system.
 
+## [psycd-git](https://aur.archlinux.org/packages/psycd-git/)
+
+**Description:** Generic messaging daemon.
+
 ## [pybitmessage-git](https://aur.archlinux.org/packages/pybitmessage-git/)
 
 **Description:** P2P messaging client for Bitmessage.
