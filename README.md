@@ -128,6 +128,10 @@
 
 **Description:** Extended syntax highlighting rules for Perl.
 
+## [vim-after-syntax-vim-git](https://aur.archlinux.org/packages/vim-after-syntax-vim-git/)
+
+**Description:** Extended syntax highlighting rules for Vimscript.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.

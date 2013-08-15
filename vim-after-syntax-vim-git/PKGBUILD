@@ -2,7 +2,7 @@
 
 pkgname=vim-after-syntax-vim-git
 _gitname='vim-after-syntax-vim'
-pkgver=0.0.0
+pkgver=e1a9bb3
 pkgrel=1
 pkgdesc="Extended syntax highlighting rules for Vimscript"
 arch=('any')
