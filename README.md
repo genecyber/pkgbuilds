@@ -152,6 +152,10 @@
 
 **Description:** Heavily-reworked version of 'Mustang' by Henrique C. Alves.
 
+## [vim-csapprox](https://aur.archlinux.org/packages/vim-csapprox/)
+
+**Description:** Adapt gvim-only colorschemes to Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
