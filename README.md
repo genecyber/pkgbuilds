@@ -20,6 +20,10 @@
 
 **Description:** Advanced filesystem cron.
 
+## [irssyc-git](https://aur.archlinux.org/packages/irssyc-git)
+
+**Description:** Native PSYC client designed to work with psycd.
+
 ## [libbitcoin-leveldb-git](https://aur.archlinux.org/packages/libbitcoin-leveldb-git/)
 
 **Description:** Asynchronous C++ library for Bitcoin.
