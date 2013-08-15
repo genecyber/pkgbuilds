@@ -24,6 +24,10 @@
 
 **Description:** Asynchronous C++ library for Bitcoin.
 
+## [libpsyc-git](https://aur.archlinux.org/packages/libpsyc-git/)
+
+**Description:** PSYC library in C.
+
 ## [mickey](https://aur.archlinux.org/packages/mickey/)
 
 **Description:** Simple, self-contained and easily reviewable Bitcoin address generator.
