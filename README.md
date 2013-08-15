@@ -116,6 +116,10 @@
 
 **Description:** Bitcoin vanity address generator written in C.
 
+## [viacrypt-git](https://aur.archlinux.org/packages/viacrypt-git/)
+
+**Description:** One-time-read messaging system.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
