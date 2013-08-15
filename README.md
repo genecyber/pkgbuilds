@@ -148,6 +148,10 @@
 
 **Description:** Mayan smoke colors for Vim.
 
+## [vim-colors-sorcerer](https://aur.archlinux.org/packages/vim-colors-sorcerer/)
+
+**Description:** Heavily-reworked version of 'Mustang' by Henrique C. Alves.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
