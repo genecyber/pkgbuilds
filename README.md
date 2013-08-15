@@ -124,6 +124,10 @@
 
 **Description:** One-time-read messaging system.
 
+## [vim-after-syntax-perl-git](https://aur.archlinux.org/packages/vim-after-syntax-perl-git/)
+
+**Description:** Extended syntax highlighting rules for Perl.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.

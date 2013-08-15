@@ -2,7 +2,7 @@
 
 pkgname=vim-after-syntax-perl-git
 _gitname='vim-after-syntax-perl'
-pkgver=0.0.0
+pkgver=9397568
 pkgrel=1
 pkgdesc="Extended syntax highlighting rules for Perl"
 arch=('any')
