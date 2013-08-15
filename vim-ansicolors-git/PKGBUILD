@@ -2,7 +2,7 @@
 
 pkgname=vim-ansicolors-git
 _gitname='vim-ansicolors'
-pkgver=0.0.0
+pkgver=6556d47
 pkgrel=1
 pkgdesc="Highlight ANSI color name strings with appropriate colors (vim, gvim)"
 arch=('any')

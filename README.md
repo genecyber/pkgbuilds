@@ -132,6 +132,10 @@
 
 **Description:** Extended syntax highlighting rules for Vimscript.
 
+## [vim-ansicolors-git](https://aur.archlinux.org/packages/vim-ansicolors-git/)
+
+**Description:** ANSI color highlighting in Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
