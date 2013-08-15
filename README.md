@@ -92,6 +92,10 @@
 
 **Description:** Client for the Ripple payment network.
 
+## [secushare-git](https://aur.archlinux.org/packages/secushare-git/)
+
+**Description:** P2P encrypted social network framework.
+
 ## [stlviewer-git](https://aur.archlinux.org/packages/stlviewer-git/)
 
 **Description:** Simple command line tool to view STL files.
