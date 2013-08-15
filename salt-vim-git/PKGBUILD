@@ -2,7 +2,7 @@
 
 pkgname=salt-vim-git
 _gitname='salt-vim'
-pkgver=0.0.0
+pkgver=e0e7d4d
 pkgrel=1
 pkgdesc="Vim files for editing Salt files"
 arch=('any')

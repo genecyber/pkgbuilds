@@ -92,6 +92,10 @@
 
 **Description:** Client for the Ripple payment network.
 
+## [salt-vim-git](https://aur.archlinux.org/packages/salt-vim-git/)
+
+**Description:** Vim files for editing Salt files.
+
 ## [secushare-git](https://aur.archlinux.org/packages/secushare-git/)
 
 **Description:** P2P encrypted social network framework.
