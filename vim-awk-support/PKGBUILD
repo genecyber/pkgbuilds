@@ -11,7 +11,7 @@ groups=('vim-plugins')
 url='http://www.vim.org/scripts/script.php?script_id=4415'
 license=('custom:vim')
 source=(${pkgname}-${pkgver}.zip::http://www.vim.org/scripts/download_script.php?src_id=$_srcid)
-sha256sums=('1d0995ee8fe31fcc0e5e9f6cc4b942830b137608eb2fb1034495d0466589e181')
+sha256sums=('5535551e18e90a5e3e157eada89b5f48225156c0bd6753a6f2268a6e0f98c931')
 provides=('vim-awk-support')
 conflicts=('vim-awk-support-git')
 install='vimdoc.install'
@@ -19,12 +19,6 @@ install='vimdoc.install'
 package() {
   cd "$srcdir"
 
-  _VIM_FILES_DIR="$pkgdir"/usr/share/vim/vimfiles/
-
-  install -dm755 "${_VIM_FILES_DIR}"
-
-  find {awk-support,doc,ftplugin,plugin} -type d \
-    -exec install -dm755 "${_VIM_FILES_DIR}/{}" \;
-  find {awk-support,doc,ftplugin,plugin} -not -type d \
-    -exec install -m644 "{}" "${_VIM_FILES_DIR}/{}" \;
+  install -dm 755 ${pkgdir}/usr/share/vim/vimfiles/
+  tar -c . | tar -x -C ${pkgdir}/usr/share/vim/vimfiles
 }

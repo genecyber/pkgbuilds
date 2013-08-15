@@ -136,6 +136,10 @@
 
 **Description:** ANSI color highlighting in Vim.
 
+## [vim-awk-support](https://aur.archlinux.org/packages/vim-awk-support/)
+
+**Description:** AWK-IDE.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
