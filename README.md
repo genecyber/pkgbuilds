@@ -140,6 +140,10 @@
 
 **Description:** AWK-IDE.
 
+## [vim-colors-liquidcarbon](https://aur.archlinux.org/packages/vim-colors-liquidcarbon/)
+
+**Description:** Liquid carbon colors for Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
