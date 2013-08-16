@@ -2,7 +2,7 @@
 
 pkgname=vim-stylus-git
 _gitname='vim-stylus'
-pkgver=v0.1.41.gbb0c601
+pkgver=v0.1.43.g019a524
 pkgrel=1
 pkgdesc="Stylus syntax highlighting for Vim"
 arch=('any')

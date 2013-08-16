@@ -224,6 +224,10 @@
 
 **Description:** Vim line navigation helper.
 
+## [vim-stylus-git](https://aur.archlinux.org/packages/vim-stylus-git/)
+
+**Description:** Stylus syntax highlighting for Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
