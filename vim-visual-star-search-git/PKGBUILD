@@ -2,7 +2,7 @@
 
 pkgname=vim-visual-star-search-git
 _gitname='vim-visual-star-search'
-pkgver=a959a1b
+pkgver=0.2.1.g15abfaa
 pkgrel=1
 pkgdesc="Start a * or # search from a visual block in Vim"
 arch=('any')

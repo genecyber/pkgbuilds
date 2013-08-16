@@ -232,6 +232,10 @@
 
 **Description:** Easily interact with tmux from Vim.
 
+## [vim-visual-star-search-git](https://aur.archlinux.org/packages/vim-visual-star-search-git/)
+
+**Description:** Start a * or # search from a visual block in Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
