@@ -196,6 +196,10 @@
 
 **Description:** Semantic highlighting for Lua in Vim.
 
+## [vim-mojo-git](https://aur.archlinux.org/packages/vim-mojo-git/)
+
+**Description:** Vim syntax for Mojolicious epl templates.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
