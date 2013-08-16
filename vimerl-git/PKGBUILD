@@ -2,7 +2,7 @@
 
 pkgname=vimerl-git
 _gitname='vimerl'
-pkgver=0.0.0
+pkgver=7e38e24
 pkgrel=1
 pkgdesc="The Erlang plugin for Vim"
 arch=('any')

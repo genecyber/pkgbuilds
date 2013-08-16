@@ -164,6 +164,10 @@
 
 **Description:** EGS template for Vim.
 
+## [vimerl-git](https://aur.archlinux.org/packages/vimerl-git/)
+
+**Description:** The Erlang plugin for Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
