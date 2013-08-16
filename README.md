@@ -180,6 +180,10 @@
 
 **Description:** Vim JavaScript indentation improvements.
 
+## [vim-kivy-git](https://aur.archlinux.org/packages/vim-kivy-git/)
+
+**Description:** Vim syntax for the Kivy language.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
