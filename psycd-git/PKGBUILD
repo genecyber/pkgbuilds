@@ -24,7 +24,10 @@ build() {
   cd $_gitname
 
   msg 'Building...'
-  #must set CMAKE_INSTALL_PREFIX=/usr 
+  msg 'You MUST set CMAKE_INSTALL_PREFIX=/usr'
+  msg 'press "c" to initialize configuration,'
+  msg 'then edit CMAKE_INSTALL_PREFIX to point to /usr'
+  #cmake CMAKE_INSTALL_PREFIX=/usr .
   ccmake .
   make
 }
