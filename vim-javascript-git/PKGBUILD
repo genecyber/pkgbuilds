@@ -2,7 +2,7 @@
 
 pkgname=vim-javascript-git
 _gitname='vim-javascript'
-pkgver=0.0.0
+pkgver=0.8.0
 pkgrel=1
 pkgdesc="Vastly improves Vim's JavaScript indentation"
 arch=('any')
@@ -26,8 +26,8 @@ prepare() {
   cd $_gitname
   
   msg 'Removing stray files...'
-  rm -rf extras tmp
-  rm Rakefile README.md
+  rm -rf extras
+  rm README.md
 }
 
 package() {

@@ -176,6 +176,10 @@
 
 **Description:** Vim plugin for Handlebars.
 
+## [vim-javascript-git](https://aur.archlinux.org/packages/vim-javascript-git/)
+
+**Description:** Vim JavaScript indentation improvements.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
