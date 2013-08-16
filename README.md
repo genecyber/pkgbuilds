@@ -220,6 +220,10 @@
 
 **Description:** Minimal rbenv support in Vim.
 
+## [vim-seek-git](https://aur.archlinux.org/packages/vim-seek-git/)
+
+**Description:** Vim line navigation helper.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.

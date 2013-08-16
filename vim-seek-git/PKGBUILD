@@ -2,7 +2,7 @@
 
 pkgname=vim-seek-git
 _gitname='vim-seek'
-pkgver=0.0.0
+pkgver=02dcc71
 pkgrel=1
 pkgdesc="Seek makes navigating long lines effortless, acting like f but taking two characters"
 arch=('any')
