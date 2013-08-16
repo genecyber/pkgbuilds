@@ -168,6 +168,10 @@
 
 **Description:** The Erlang plugin for Vim.
 
+## [vim-haml-git](https://aur.archlinux.org/packages/vim-haml-git/)
+
+**Description:** Vim runtime files for Haml, Sass, and SCSS.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
