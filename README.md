@@ -200,6 +200,10 @@
 
 **Description:** Vim syntax for Mojolicious epl templates.
 
+## [vim-mustache-git](https://aur.archlinux.org/packages/vim-mustache-git/)
+
+**Description:** Vim syntax for Mustache and Handlebars.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
