@@ -184,6 +184,10 @@
 
 **Description:** Vim syntax for the Kivy language.
 
+## [vim-lint-git](https://aur.archlinux.org/packages/vim-lint-git/)
+
+**Description:** Vim + JSHint + CSSLint + V8.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.

@@ -2,7 +2,7 @@
 
 pkgname=vim-lint-git
 _gitname='lint.vim'
-pkgver=0.0.0
+pkgver=40cc50d
 pkgrel=1
 pkgdesc="Vim + JSHint + CSSLint + V8"
 arch=('any')
@@ -26,7 +26,7 @@ prepare() {
   cd $_gitname
   
   msg 'Removing stray files...'
-  find . -type f -iname "*.md" -exec rm '{}' \;
+  rm README.markdown LICENSE
 }
 
 package() {
