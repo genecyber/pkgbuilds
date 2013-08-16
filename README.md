@@ -208,6 +208,10 @@
 
 **Description:** Node.js debugging utility for Vim.
 
+## [vim-nodejs-git](https://aur.archlinux.org/packages/vim-nodejs-git/)
+
+**Description:** Node.js shebang filetype detect plugin for Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.

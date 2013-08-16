@@ -2,7 +2,7 @@
 
 pkgname=vim-nodejs-git
 _gitname='vim-node.js'
-pkgver=0.0.0
+pkgver=0b5146f
 pkgrel=1
 pkgdesc="Node.js shebang file type detect plugin for Vim"
 arch=('any')
