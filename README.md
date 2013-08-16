@@ -188,6 +188,10 @@
 
 **Description:** Vim + JSHint + CSSLint + V8.
 
+## [vim-lua-ftplugin-git](https://aur.archlinux.org/packages/vim-lua-ftplugin-git/)
+
+**Description:** Lua filetype plugin for Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
