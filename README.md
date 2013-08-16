@@ -204,6 +204,10 @@
 
 **Description:** Vim syntax for Mustache and Handlebars.
 
+## [vim-nodejs-errorformat-git](https://aur.archlinux.org/packages/vim-nodejs-errorformat-git/)
+
+**Description:** Node.js debugging utility for Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.

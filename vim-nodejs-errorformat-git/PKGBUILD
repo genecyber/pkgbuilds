@@ -2,7 +2,7 @@
 
 pkgname=vim-nodejs-errorformat-git
 _gitname='vim-nodejs-errorformat'
-pkgver=0.0.0
+pkgver=1bacf39
 pkgrel=1
 pkgdesc="A simple Vim plugin that allows you to execute any opened node.js file with :make and provides errorformat settings that allow you to quickly jump to any file / line numbers referenced in a stack trace"
 arch=('any')
@@ -26,8 +26,7 @@ prepare() {
   cd $_gitname
   
   msg 'Removing stray files...'
-  rm -rf screenshots
-  rm README.md example.js
+  rm -rf screenshots Readme.md example.js
 }
 
 package() {
