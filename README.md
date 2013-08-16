@@ -172,6 +172,10 @@
 
 **Description:** Vim runtime files for Haml, Sass, and SCSS.
 
+## [vim-handlebars-git](https://aur.archlinux.org/packages/vim-handlebars-git/)
+
+**Description:** Vim plugin for Handlebars.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.

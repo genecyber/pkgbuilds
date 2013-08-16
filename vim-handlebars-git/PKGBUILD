@@ -2,7 +2,7 @@
 
 pkgname=vim-handlebars-git
 _gitname='vim-handlebars'
-pkgver=0.0.0
+pkgver=8a04dc5
 pkgrel=1
 pkgdesc="Vim plugin for Handlebars"
 arch=('any')
