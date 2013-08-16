@@ -216,6 +216,10 @@
 
 **Description:** Vim PHP language features.
 
+## [vim-rbenv-git](https://aur.archlinux.org/packages/vim-rbenv-git/)
+
+**Description:** Minimal rbenv support in Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.

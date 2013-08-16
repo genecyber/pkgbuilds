@@ -2,7 +2,7 @@
 
 pkgname=vim-rbenv-git
 _gitname='vim-rbenv'
-pkgver=0.0.0
+pkgver=v1.1
 pkgrel=1
 pkgdesc="Minimal rbenv support in Vim"
 arch=('any')
