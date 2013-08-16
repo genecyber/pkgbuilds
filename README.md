@@ -156,6 +156,10 @@
 
 **Description:** Adapt gvim-only colorschemes to Vim.
 
+## [vim-csv-git](https://aur.archlinux.org/packages/vim-csv-git/)
+
+**Description:** Vim filetype plugin for CSV files.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
