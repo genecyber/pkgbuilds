@@ -228,6 +228,10 @@
 
 **Description:** Stylus syntax highlighting for Vim.
 
+## [vimux-git](https://aur.archlinux.org/packages/vimux-git/)
+
+**Description:** Easily interact with tmux from Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
