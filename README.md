@@ -192,6 +192,10 @@
 
 **Description:** Lua filetype plugin for Vim.
 
+## [vim-lua-inspect-git](https://aur.archlinux.org/packages/vim-lua-inspect-git/)
+
+**Description:** Semantic highlighting for Lua in Vim.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.

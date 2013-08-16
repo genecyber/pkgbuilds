@@ -2,7 +2,7 @@
 
 pkgname=vim-lua-inspect-git
 _gitname='vim-lua-inspect'
-pkgver=0.0.0
+pkgver=c79c8d9
 pkgrel=1
 pkgdesc="Semantic highlighting for Lua in Vim"
 arch=('any')
