@@ -2,7 +2,7 @@
 
 pkgname=vim-php-git
 _gitname='vim-php'
-pkgver=0.0.0
+pkgver=1eae174
 pkgrel=1
 pkgdesc="Vim PHP language features"
 arch=('any')

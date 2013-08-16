@@ -212,6 +212,10 @@
 
 **Description:** Node.js shebang filetype detect plugin for Vim.
 
+## [vim-php-git](https://aur.archlinux.org/packages/vim-php-git/)
+
+**Description:** Vim PHP language features.
+
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
