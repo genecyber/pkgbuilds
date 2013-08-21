@@ -60,6 +60,10 @@
 
 **Description:** Ripple JavaScript client library.
 
+## [nodejs-ungit](https://aur.archlinux.org/packages/nodejs-ungit/)
+
+**Description:** Git Web UI.
+
 ## [obelisk-git](https://aur.archlinux.org/packages/obelisk-git/)
 
 **Description:** Scalable Bitcoin infrastructure.
