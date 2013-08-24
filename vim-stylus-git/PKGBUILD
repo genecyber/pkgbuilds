@@ -13,8 +13,8 @@ url="https://github.com/wavded/vim-stylus"
 license=('MIT')
 source=(git+https://github.com/wavded/vim-stylus)
 sha256sums=('SKIP')
-provides=('vimerl')
-conflicts=('vimerl')
+provides=('vim-stylus')
+conflicts=('vim-stylus')
 install=vimdoc.install
 
 pkgver() {
