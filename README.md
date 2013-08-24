@@ -202,7 +202,11 @@
 
 ## [vim-mojo-git](https://aur.archlinux.org/packages/vim-mojo-git/)
 
-**Description:** Vim syntax for Mojolicious epl templates.
+**Description:** Vim syntax for Mojolicious EPL templates.
+
+## [vim-moonscript-git](https://aur.archlinux.org/packages/vim-moonscript-git/)
+
+**Description:** MoonScript support for Vim.
 
 ## [vim-mustache-git](https://aur.archlinux.org/packages/vim-mustache-git/)
 
