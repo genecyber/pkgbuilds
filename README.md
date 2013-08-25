@@ -212,6 +212,10 @@
 
 **Description:** Vim syntax for Mustache and Handlebars.
 
+## [vim-nimrod-git](https://aur.archlinux.org/packages/vim-nimrod-git/)
+
+**Description:** Nimrod language support for Vim.
+
 ## [vim-nodejs-errorformat-git](https://aur.archlinux.org/packages/vim-nodejs-errorformat-git/)
 
 **Description:** Node.js debugging utility for Vim.
