@@ -20,6 +20,10 @@
 
 **Description:** Advanced filesystem cron.
 
+## [git-crypt-git](https://aur.archlinux.org/packages/git-crypt-git)
+
+**Description:** Transparent file encryption in Git.
+
 ## [irssyc-git](https://aur.archlinux.org/packages/irssyc-git)
 
 **Description:** Native PSYC client designed to work with psycd.
