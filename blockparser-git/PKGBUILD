@@ -1,0 +1,39 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=blockparser-git
+_gitname=blockparser
+pkgver=4d6e2a2
+pkgrel=1
+pkgdesc="znort's fast, quick and dirty Bitcoin blockchain parser"
+arch=('x86_64')
+url="https://github.com/znort987/blockparser"
+depends=('bitcoin-daemon' 'boost' 'openssl' 'sparsehash')
+makedepends=('gcc' 'git' 'make')
+conflicts=('blockparser')
+provides=('blockparser')
+license=('MIT')
+source=(git+https://github.com/znort987/blockparser)
+sha256sums=('SKIP')
+install=blockparser.install
+
+pkgver() {
+	cd $_gitname
+  git describe --always | sed 's|-|.|g'
+}
+
+build() {
+	cd $_gitname
+
+	msg 'Building...'
+	make
+}
+
+package() {
+	cd $_gitname
+
+	msg 'Installing...'
+  install -D -m755 parser "${pkgdir}/usr/bin/blockparser"
+
+  msg 'Cleaning up pkgdir...'
+  find "$pkgdir" -type d -name .git -exec rm -r '{}' +
+}
