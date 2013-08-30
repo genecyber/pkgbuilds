@@ -248,6 +248,10 @@
 
 **Description:** Easily interact with tmux from Vim.
 
+## [vim-tmux-navigator-git](https://aur.archlinux.org/packages/vim-tmux-navigator-git/)
+
+**Description:** Seamless navigation between tmux panes and Vim splits.
+
 ## [vim-visual-star-search-git](https://aur.archlinux.org/packages/vim-visual-star-search-git/)
 
 **Description:** Start a * or # search from a visual block in Vim.
