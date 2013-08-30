@@ -172,6 +172,10 @@
 
 **Description:** EGS template for Vim.
 
+## [vim-elixir-git](https://aur.archlinux.org/packages/vim-elixir-git/)
+
+**Description:** Vim configuration files for Elixir.
+
 ## [vim-eunuch](https://aur.archlinux.org/packages/vim-eunuch/)
 
 **Description:** Vim helpers for UNIX.
