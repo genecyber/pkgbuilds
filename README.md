@@ -216,6 +216,10 @@
 
 **Description:** Semantic highlighting for Lua in Vim.
 
+## [vim-mix-git](https://aur.archlinux.org/packages/vim-mix-git/)
+
+**Description:** Vim plugin for using Elixir's build tool, mix.
+
 ## [vim-mojo-git](https://aur.archlinux.org/packages/vim-mojo-git/)
 
 **Description:** Vim syntax for Mojolicious EPL templates.
