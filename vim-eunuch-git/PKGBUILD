@@ -1,6 +1,6 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
-pkgname=vim-eunuch
+pkgname=vim-eunuch-git
 _gitname='vim-eunuch'
 pkgver=v1.0.5.g6a4d193
 pkgrel=1
