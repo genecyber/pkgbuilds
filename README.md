@@ -172,6 +172,10 @@
 
 **Description:** EGS template for Vim.
 
+## [vim-eunuch-git](https://aur.archlinux.org/packages/vim-eunuch-git/)
+
+**Description:** Vim helpers for UNIX.
+
 ## [vimerl-git](https://aur.archlinux.org/packages/vimerl-git/)
 
 **Description:** The Erlang plugin for Vim.
