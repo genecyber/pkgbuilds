@@ -68,6 +68,10 @@
 
 **Description:** Git Web UI.
 
+## [nodejs-yapp.js](https://aur.archlinux.org/packages/nodejs-yapp.js/)
+
+**Description:** Client-side framework for structured applications.
+
 ## [obelisk-git](https://aur.archlinux.org/packages/obelisk-git/)
 
 **Description:** Scalable Bitcoin infrastructure.
