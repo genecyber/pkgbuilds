@@ -1,0 +1,34 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=hledger-git
+_gitname=hledger
+pkgver=0.21.3.14.geff1d3f
+pkgrel=1
+pkgdesc="track money, time, or any other commodity, using a simple, editable file format and double-entry accounting, inspired by and largely compatible with ledger"
+url="http://hledger.org"
+license=('GPL')
+arch=('i686' 'x86_64')
+makedepends=('cabal-install' 'ghc' 'git')
+options=('strip')
+source=(git+https://github.com/simonmichael/hledger.git)
+sha256sums=('SKIP')
+
+pkgver() {
+  cd $_gitname
+  git describe --always | sed 's|-|.|g'
+}
+
+build() {
+  cd $_gitname
+
+  msg 'Updating hackage...'
+  cabal update
+}
+
+package() {
+  cd $_gitname
+
+  msg 'Installing...'
+  mkdir -p "$pkgdir/usr/bin"
+  cabal install --prefix="$pkgdir/usr" --bindir="$pkgdir/usr/bin" --libexecdir="$pkgdir/usr/bin" ./hledger-lib ./hledger
+}
