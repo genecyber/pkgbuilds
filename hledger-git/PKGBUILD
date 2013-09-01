@@ -18,7 +18,7 @@ pkgver() {
   git describe --always | sed 's|-|.|g'
 }
 
-build() {
+prepare() {
   cd $_gitname
 
   msg 'Updating hackage...'
