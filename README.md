@@ -96,6 +96,10 @@
 
 **Description:** Digital Ocean API Python wrapper.
 
+## [python2-pydown](https://aur.archlinux.org/packages/python2-pydown/)
+
+**Description:** HTML5 presentation builder written in Python.
+
 ## [python2-zbar](https://aur.archlinux.org/packages/python2-zbar/)
 
 **Description:** Python bindings for zbar.
