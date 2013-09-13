@@ -64,6 +64,10 @@
 
 **Description:** Ripple JavaScript client library.
 
+## [nodejs-sx](https://aur.archlinux.org/packages/nodejs-sx/)
+
+**Description:** Node library for sx.
+
 ## [nodejs-ungit](https://aur.archlinux.org/packages/nodejs-ungit/)
 
 **Description:** Git Web UI.
