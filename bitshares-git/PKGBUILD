@@ -1,0 +1,49 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=bitshares-git
+_gitname=bitshares
+pkgver=f6f3ee3
+pkgrel=1
+pkgdesc="Bitcoin P2P exchange system"
+arch=('i686' 'x86_64')
+url="https://github.com/InvictusInnovations/BitShares"
+depends=('boost' 'openssl' 'qt5-base')
+makedepends=('cmake' 'gcc' 'make')
+conflicts=('bitshares')
+provides=('bitshares')
+license=('custom')
+source=($_gitname::git+https://github.com/InvictusInnovations/BitShares)
+sha256sums=('SKIP')
+install=bitshares.install
+
+pkgver() {
+	cd $_gitname
+  git describe --always | sed 's|-|.|g'
+}
+
+prepare() {
+  cd $_gitname
+
+  msg 'Cloning fc build tool...'
+  git clone https://github.com/InvictusInnovations/fc.git
+}
+
+build() {
+	cd $_gitname
+
+	msg 'Building...'
+  export BOOST_ROOT=/usr/include/boost
+  cmake .
+	make
+}
+
+package() {
+	cd $_gitname
+
+	msg 'Installing...'
+  mkdir -p "$pkgdir/usr/share/bitshares"
+  cp -R . "$pkgdir/usr/share/bitshares"
+
+  msg 'Cleaning up pkgdir...'
+  find "$pkgdir" -type d -name .git -exec rm -r '{}' +
+}
