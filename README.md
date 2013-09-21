@@ -272,6 +272,10 @@
 
 **Description:** Stylus syntax highlighting for Vim.
 
+## [vim-syntaxrange-git](https://aur.archlinux.org/packages/vim-syntaxrange-git/)
+
+**Description:** Define a different filetype syntax on regions of a Vim buffer.
+
 ## [vimux-git](https://aur.archlinux.org/packages/vimux-git/)
 
 **Description:** Easily interact with tmux from Vim.
