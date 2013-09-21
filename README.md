@@ -216,6 +216,10 @@
 
 **Description:** Vim syntax for the Kivy language.
 
+## [vim-lightline-git](https://aur.archlinux.org/packages/vim-lightline-git/)
+
+**Description:** A light and configurable statusline/tabline for Vim.
+
 ## [vim-lint-git](https://aur.archlinux.org/packages/vim-lint-git/)
 
 **Description:** Vim + JSHint + CSSLint + V8.
