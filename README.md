@@ -40,6 +40,10 @@
 
 **Description:** Simple, self-contained and easily reviewable Bitcoin address generator.
 
+## [nodejs-cleaver](https://aur.archlinux.org/packages/nodejs-cleaver/)
+
+**Description:** 30-second slideshows for hackers.
+
 ## [nodejs-egs](https://aur.archlinux.org/packages/nodejs-egs/)
 
 **Description:** Embedded GorillaScript template generator.
