@@ -40,6 +40,10 @@
 
 **Description:** Simple, self-contained and easily reviewable Bitcoin address generator.
 
+## [nodejs-async](https://aur.archlinux.org/packages/nodejs-async/)
+
+**Description:** Higher-order functions and common patterns for asynchronous code.
+
 ## [nodejs-cleaver](https://aur.archlinux.org/packages/nodejs-cleaver/)
 
 **Description:** 30-second slideshows for hackers.
