@@ -1,0 +1,43 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=rippled-git
+_gitname="rippled"
+pkgver=c568988
+pkgrel=1
+pkgdesc="Ripple peer-to-peer network daemon"
+arch=('i686' 'x86_64')
+depends=('boost' 'ctags' 'nodejs' 'openssl' 'protobuf' 'scons')
+makedepends=('git')
+url="https://github.com/ripple/rippled/"
+license=('ISC')
+source=(git+https://github.com/ripple/rippled/)
+sha256sums=('SKIP')
+provides=('rippled')
+conflicts=('rippled')
+install=rippled.install
+
+_insdir="/opt/${_gitname}"
+
+pkgver() {
+  cd $_gitname
+  git describe --always | sed 's|-|.|g'
+}
+
+build() {
+  cd $_gitname
+
+  msg 'Building with scons...'
+  scons
+}
+
+package() {
+  mkdir -p "${pkgdir}/${_insdir}"
+
+  msg 'Installing...'
+  cp -rf "${_gitname}/"* "${pkgdir}/${_insdir}"
+
+  msg 'Cleaning up pkgdir...'
+  find "$pkgdir" -type d -name .git -exec rm -r '{}' +
+  find "$pkgdir" -type f -name .gitignore -exec rm -r '{}' +
+  find "$pkgdir" -type f -name .gitattributes -exec rm -r '{}' +
+}
