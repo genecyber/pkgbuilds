@@ -96,6 +96,10 @@
 
 **Description:** Generic messaging daemon.
 
+## [pybitmessage](https://aur.archlinux.org/packages/pybitmessage/)
+
+**Description:** Decentralized and trustless P2P communications protocol.
+
 ## [pybitmessage-git](https://aur.archlinux.org/packages/pybitmessage-git/)
 
 **Description:** P2P messaging client for Bitmessage.
