@@ -68,6 +68,10 @@
 
 **Description:** Compiles GorillaScript files to JavaScript.
 
+## [nodejs-node-gyp](https://aur.archlinux.org/packages/nodejs-node-gyp/)
+
+**Description:** Node.js native addon build tool.
+
 ## [nodejs-ripple-lib](https://aur.archlinux.org/packages/nodejs-ripple-lib/)
 
 **Description:** Ripple JavaScript client library.
