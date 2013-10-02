@@ -224,6 +224,10 @@
 
 **Description:** Vim plugin for Handlebars.
 
+## [vim-hilinktrace-git](https://aur.archlinux.org/packages/vim-hilinktrace-git/)
+
+**Description:** Trace Vim syntax highlighting rules.
+
 ## [vim-javascript-git](https://aur.archlinux.org/packages/vim-javascript-git/)
 
 **Description:** Vim JavaScript indentation improvements.
