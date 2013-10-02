@@ -17,5 +17,5 @@ conflicts=('vim-colors-sorcerer-git')
 
 package() {
   msg 'Installing...'
-  install -Dm755 ${srcdir}/${pkgname} ${pkgdir}/usr/share/vim/vim73/colors/sorcerer.vim
+  install -Dm755 ${srcdir}/${pkgname} ${pkgdir}/usr/share/vim/vim74/colors/sorcerer.vim
 }

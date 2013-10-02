@@ -17,5 +17,5 @@ conflicts=('vim-colors-mayansmoke-git')
 
 package() {
   msg 'Installing...'
-  install -Dm755 ${srcdir}/${pkgname} ${pkgdir}/usr/share/vim/vim73/colors/mayansmoke.vim
+  install -Dm755 ${srcdir}/${pkgname} ${pkgdir}/usr/share/vim/vim74/colors/mayansmoke.vim
 }
