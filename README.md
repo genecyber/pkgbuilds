@@ -132,6 +132,10 @@
 
 **Description:** HTML5 presentation builder written in Python.
 
+## [python2-pysodium](https://aur.archlinux.org/packages/python2-pysodium/)
+
+**Description:** Python wrapper for libsodium.
+
 ## [python2-zbar](https://aur.archlinux.org/packages/python2-zbar/)
 
 **Description:** Python bindings for zbar.
