@@ -29,6 +29,8 @@ build() {
 }
 
 package() {
-    cd $srcdir/$_realname-$pkgver
-    python2 setup.py install --root="$pkgdir" --optimize=1 
+  cd $srcdir/$_realname-$pkgver
+
+  msg 'Installing...'
+  python2 setup.py install --root="$pkgdir" --optimize=1 
 }

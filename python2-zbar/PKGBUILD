@@ -5,7 +5,7 @@
 pkgname=python2-zbar
 _realname=zbar
 pkgver=0.10
-pkgrel=3
+pkgrel=4
 pkgdesc="Python bindings for zbar QR code & bar code reader"
 arch=('any')
 depends=('python2' 'zbar')
@@ -19,12 +19,16 @@ md5sums=('09568253d65e13e252987e3fd02e5ec8'
 sha256sums=('5d0dad77dbca8822a4689c546f598f28030321efb14fa36ac5e409d181a0d9dd'
             'ecff67e9505b6f7773beac1f6149d661566e3b083db32b61a0e58eba9172f3d2')
 
-build() {
+prepare() {
   cd $srcdir/$_realname-$pkgver
 
   msg 'Fixing Python version...'
   find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/python#/usr/bin/python2#g'
   find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/env python#/usr/bin/env python2#g'
+}
+
+build() {
+  cd $srcdir/$_realname-$pkgver
 
   msg 'Building...'
   python2 setup.py build

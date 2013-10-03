@@ -25,9 +25,9 @@ conflicts=('electrum-git')
 install=electrum.install
 
 prepare() {
-  cd "$srcdir"/$_realname-$pkgver
+  cd $srcdir/$_realname-$pkgver
 
-  msg "Patching setup.py..."
+  msg 'Patching setup.py...'
   patch -p1 < ${srcdir}/setup.py.patch
 
   msg 'Fixing Python version...'
@@ -36,17 +36,18 @@ prepare() {
 }
 
 build() {
-  cd "$srcdir"/$_realname-$pkgver
+  cd $srcdir/$_realname-$pkgver
 
   msg 'Building...'
   python2 mki18n.py
+  #pyrcc4 icons.qrc -o gui/qt/icons_rc.py # new in 1.9
   pyrcc4 icons.qrc -o gui/icons_rc.py
   python2 setup.py build
 }
 
 package() {
-  cd "$srcdir"/$_realname-$pkgver
+  cd $srcdir/$_realname-$pkgver
 
   msg 'Installing...'
-  python2 setup.py install --root=$pkgdir
+  python2 setup.py install --root="$pkgdir" --optimize=1 
 }
