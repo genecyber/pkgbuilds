@@ -112,6 +112,10 @@
 
 **Description:** PyBitmessage API.
 
+## [python2-cffi](https://aur.archlinux.org/packages/python2-cffi/)
+
+**Description:** Foreign Function Interface for Python calling C code.
+
 ## [python2-dopy](https://aur.archlinux.org/packages/python2-dopy/)
 
 **Description:** Digital Ocean API Python wrapper.
