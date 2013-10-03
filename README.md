@@ -136,6 +136,10 @@
 
 **Description:** Python wrapper for libsodium.
 
+## [python2-securestring](https://aur.archlinux.org/packages/python2-securestring/)
+
+**Description:** Clears the contents of strings containing cryptographic material.
+
 ## [python2-zbar](https://aur.archlinux.org/packages/python2-zbar/)
 
 **Description:** Python bindings for zbar.
