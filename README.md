@@ -120,6 +120,10 @@
 
 **Description:** Digital Ocean API Python wrapper.
 
+## [python2-pbp](https://aur.archlinux.org/packages/python2-pbp/)
+
+**Description:** Simple PGP-like CLI for libsodium, with scrypt KDF.
+
 ## [python2-pydown](https://aur.archlinux.org/packages/python2-pydown/)
 
 **Description:** HTML5 presentation builder written in Python.
