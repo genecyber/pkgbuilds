@@ -3,7 +3,7 @@
 pkgname=vim-colors-liquidcarbon
 pkgver=1.1
 _srcid=14080
-pkgrel=1
+pkgrel=2
 pkgdesc="Matte dark-gray background with flat dark blue-slate trimmings, and colorful yet harmonious syntax highlighting, for Vim"
 arch=('any')
 depends=('vim')
@@ -17,5 +17,6 @@ conflicts=('vim-colors-liquidcarbon-git')
 
 package() {
   msg 'Installing...'
-  install -Dm755 ${srcdir}/${pkgname} ${pkgdir}/usr/share/vim/vim74/colors/liquidcarbon.vim
+  mkdir -p ${pkgdir}/usr/share/vim/vimfiles/colors
+  install -Dm755 ${srcdir}/${pkgname} ${pkgdir}/usr/share/vim/vimfiles/colors/liquidcarbon.vim
 }

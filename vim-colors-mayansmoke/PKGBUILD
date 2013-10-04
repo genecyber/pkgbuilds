@@ -3,7 +3,7 @@
 pkgname=vim-colors-mayansmoke
 pkgver=2.0
 _srcid=14049
-pkgrel=1
+pkgrel=2
 pkgdesc="Pleasant and ergonomic light-background Vim color scheme, designed for long hours of coding and working"
 arch=('any')
 depends=('vim')
@@ -17,5 +17,6 @@ conflicts=('vim-colors-mayansmoke-git')
 
 package() {
   msg 'Installing...'
-  install -Dm755 ${srcdir}/${pkgname} ${pkgdir}/usr/share/vim/vim74/colors/mayansmoke.vim
+  mkdir -p ${pkgdir}/usr/share/vim/vimfiles/colors
+  install -Dm755 ${srcdir}/${pkgname} ${pkgdir}/usr/share/vim/vimfiles/colors/mayansmoke.vim
 }
