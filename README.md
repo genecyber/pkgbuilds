@@ -120,6 +120,10 @@
 
 **Description:** Digital Ocean API Python wrapper.
 
+## [python2-gittle](https://aur.archlinux.org/packages/python2-gittle/)
+
+**Description:** Pythonic Git for Humans.
+
 ## [python2-pbp](https://aur.archlinux.org/packages/python2-pbp/)
 
 **Description:** Simple PGP-like CLI for libsodium, with scrypt KDF.
