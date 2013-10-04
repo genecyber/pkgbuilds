@@ -128,6 +128,10 @@
 
 **Description:** Pythonic Git for Humans.
 
+## [python2-mimer](https://aur.archlinux.org/packages/python2-mimer/)
+
+**Description:** Python mimetype library.
+
 ## [python2-pbp](https://aur.archlinux.org/packages/python2-pbp/)
 
 **Description:** Simple PGP-like CLI for libsodium, with scrypt KDF.
