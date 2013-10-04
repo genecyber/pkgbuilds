@@ -120,6 +120,10 @@
 
 **Description:** Digital Ocean API Python wrapper.
 
+## [python2-funky](https://aur.archlinux.org/packages/python2-funky/)
+
+**Description:** A package of some useful functionnal constructs for Python.
+
 ## [python2-gittle](https://aur.archlinux.org/packages/python2-gittle/)
 
 **Description:** Pythonic Git for Humans.
