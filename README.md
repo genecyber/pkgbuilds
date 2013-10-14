@@ -340,6 +340,10 @@
 
 **Description:** Extended Vim visual mode commands, substitutes, and searches.
 
+## [vim-vmath-git](https://aur.archlinux.org/packages/vim-vmath-git/)
+
+**Description:** Vim global plugin for math on visual regions, by Damien Conway.
+
 ## [vimux-git](https://aur.archlinux.org/packages/vimux-git/)
 
 **Description:** Easily interact with tmux from Vim.
