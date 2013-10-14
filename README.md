@@ -208,6 +208,10 @@
 
 **Description:** AWK-IDE.
 
+## [vim-betterdigraphs-git](https://aur.archlinux.org/packages/vim-betterdigraphs-git/)
+
+**Description:** Vim global plugin for better digraph interactions, by Damien Conway.
+
 ## [vim-colors-liquidcarbon](https://aur.archlinux.org/packages/vim-colors-liquidcarbon/)
 
 **Description:** Liquid carbon colors for Vim.
