@@ -332,6 +332,10 @@
 
 **Description:** Define a different filetype syntax on regions of a Vim buffer.
 
+## [vim-vis-git](https://aur.archlinux.org/packages/vim-vis-git/)
+
+**Description:** Extended Vim visual mode commands, substitutes, and searches.
+
 ## [vimux-git](https://aur.archlinux.org/packages/vimux-git/)
 
 **Description:** Easily interact with tmux from Vim.
