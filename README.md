@@ -224,6 +224,10 @@
 
 **Description:** Adapt gvim-only colorschemes to Vim.
 
+## [vim-dragvisuals](https://aur.archlinux.org/packages/vim-dragvisuals/)
+
+**Description:** Vim global plugin for dragging virtual blocks, by Damien Conway.
+
 ## [vim-csv-git](https://aur.archlinux.org/packages/vim-csv-git/)
 
 **Description:** Vim filetype plugin for CSV files.
