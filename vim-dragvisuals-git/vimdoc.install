@@ -18,6 +18,7 @@ post_remove() {
 }
 
 read -d '' dragvisuals <<"EOF"
+
   # vim-dragvisuals
 
   Add the following to your .vimrc...
