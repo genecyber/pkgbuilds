@@ -264,6 +264,10 @@
 
 **Description:** Trace Vim syntax highlighting rules.
 
+## [vim-hudigraphs-git](https://aur.archlinux.org/packages/vim-hudigraphs-git/)
+
+**Description:** Vim global plugin for heads-up digraph interactions, by Damien Conway.
+
 ## [vim-javascript-git](https://aur.archlinux.org/packages/vim-javascript-git/)
 
 **Description:** Vim JavaScript indentation improvements.
