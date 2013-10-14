@@ -1,47 +1,30 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=btcd
-pkgver=20131001
+pkgver=20131005
 pkgrel=1
 pkgdesc="Implements the bitcoin transaction script language - a package from btcd"
 arch=('any')
 makedepends=('go')
 url="https://opensource.conformal.com/wiki/btcd"
 license=('ISC')
+options=('!strip' '!emptydirs')
 provides=('btcd')
+install=btcd.install
 
 build() {
-  cd "$srcdir"
-
-  GOPATH="$srcdir" go get -fix -v -x github.com/conformal/btcwire
-  GOPATH="$srcdir" go get -fix -v -x github.com/conformal/btcjson
-  GOPATH="$srcdir" go get -fix -v -x github.com/conformal/btcutil
-  GOPATH="$srcdir" go get -fix -v -x github.com/conformal/btcdb
-  GOPATH="$srcdir" go get -fix -v -x github.com/conformal/btcscript
-  GOPATH="$srcdir" go get -fix -v -x github.com/conformal/btcec
-  GOPATH="$srcdir" go get -fix -v -x github.com/conformal/btcchain
   GOPATH="$srcdir" go get -fix -v -x github.com/conformal/btcd
-  GOPATH="$srcdir" go get -fix -v -x github.com/conformal/btcwallet
-  GOPATH="$srcdir" go get -fix -v -x github.com/conformal/btcgui
 }
 
 check() {
   source /etc/profile.d/go.sh
-  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/conformal/btcwire || return 0
-  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/conformal/btcjson || return 0
-  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/conformal/btcutil || return 0
-  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/conformal/btcdb || return 0
-  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/conformal/btcscript || return 0
-  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/conformal/btcchain || return 0
   GOPATH="$GOPATH:$srcdir" go test -v -x github.com/conformal/btcd || return 0
-  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/conformal/btcwallet || return 0
-  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/conformal/btcgui || return 0
 }
 
 package() {
   source /etc/profile.d/go.sh
   mkdir -p "$pkgdir/$GOPATH"
-  cp -Rv --preserve=timestamps ${srcdir}/{src,pkg} "$pkgdir/$GOPATH"
+  cp -Rv --preserve=timestamps ${srcdir}/{src,pkg,bin} "$pkgdir/$GOPATH"
 
   # Package license (if available)
   for f in LICENSE COPYING LICENSE.* COPYING.*; do
