@@ -328,6 +328,10 @@
 
 **Description:** Vim PHP language features.
 
+## [vim-racket-git](https://aur.archlinux.org/packages/vim-racket-git/)
+
+**Description:** Vim bundle for Racket.
+
 ## [vim-rbenv-git](https://aur.archlinux.org/packages/vim-rbenv-git/)
 
 **Description:** Minimal rbenv support in Vim.
