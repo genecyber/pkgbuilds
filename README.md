@@ -212,6 +212,10 @@
 
 **Description:** Vim global plugin for better digraph interactions, by Damien Conway.
 
+## [vim-clojure-static-git](https://aur.archlinux.org/packages/vim-clojure-static-git/)
+
+**Description:** Vim Clojure runtime files.
+
 ## [vim-colors-liquidcarbon](https://aur.archlinux.org/packages/vim-colors-liquidcarbon/)
 
 **Description:** Liquid carbon colors for Vim.
@@ -228,13 +232,13 @@
 
 **Description:** Adapt gvim-only colorschemes to Vim.
 
-## [vim-dragvisuals](https://aur.archlinux.org/packages/vim-dragvisuals/)
-
-**Description:** Vim global plugin for dragging virtual blocks, by Damien Conway.
-
 ## [vim-csv-git](https://aur.archlinux.org/packages/vim-csv-git/)
 
 **Description:** Vim filetype plugin for CSV files.
+
+## [vim-dragvisuals](https://aur.archlinux.org/packages/vim-dragvisuals/)
+
+**Description:** Vim global plugin for dragging virtual blocks, by Damien Conway.
 
 ## [vim-egs-git](https://aur.archlinux.org/packages/vim-egs-git/)
 
