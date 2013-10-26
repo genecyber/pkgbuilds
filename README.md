@@ -212,6 +212,10 @@
 
 **Description:** Vim global plugin for better digraph interactions, by Damien Conway.
 
+## [vim-classpath-git](https://aur.archlinux.org/packages/vim-classpath-git/)
+
+**Description:** Set 'path' from the Java class path in Vim.
+
 ## [vim-clojure-static-git](https://aur.archlinux.org/packages/vim-clojure-static-git/)
 
 **Description:** Vim Clojure runtime files.
