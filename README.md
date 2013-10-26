@@ -264,6 +264,10 @@
 
 **Description:** The Erlang plugin for Vim.
 
+## [vim-fireplace-git](https://aur.archlinux.org/packages/vim-fireplace-git/)
+
+**Description:** Clojure REPL tease.
+
 ## [vim-gtk-syntax-git](https://aur.archlinux.org/packages/vim-gtk-syntax-git/)
 
 **Description:** Vim syntax highlighting for GLib, Gtk+, Xlib, Gimp, Gnome, and more.
