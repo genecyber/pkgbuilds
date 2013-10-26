@@ -216,6 +216,10 @@
 
 **Description:** Vim Clojure runtime files.
 
+## [vim-clojure-sql-git](https://aur.archlinux.org/packages/vim-clojure-sql-git/)
+
+**Description:** Vim SQL syntax highlighting inside strings in Clojure files.
+
 ## [vim-colors-liquidcarbon](https://aur.archlinux.org/packages/vim-colors-liquidcarbon/)
 
 **Description:** Liquid carbon colors for Vim.
