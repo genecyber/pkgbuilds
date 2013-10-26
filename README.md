@@ -16,6 +16,10 @@
 
 **Description:** Lightweight Bitcoin wallet.
 
+## [electrum-entropy](https://aur.archlinux.org/packages/electrum-entropy/)
+
+**Description:** Lightweight Bitcoin wallet with additional entropy.
+
 ## [facron-git](https://aur.archlinux.org/packages/facron-git)
 
 **Description:** Advanced filesystem cron.
