@@ -328,6 +328,10 @@
 
 **Description:** Vim PHP language features.
 
+## [vim-pipe2eval-git](https://aur.archlinux.org/packages/vim-pipe2eval-git/)
+
+**Description:** Simple REPL inside Vim.
+
 ## [vim-racket-git](https://aur.archlinux.org/packages/vim-racket-git/)
 
 **Description:** Vim bundle for Racket.
