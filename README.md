@@ -360,6 +360,10 @@
 
 **Description:** Vim bundle for Racket.
 
+## [vim-rainbow-parentheses-git](https://aur.archlinux.org/packages/vim-rainbow-parentheses-git/)
+
+**Description:** Better rainbow parentheses for Vim.
+
 ## [vim-rbenv-git](https://aur.archlinux.org/packages/vim-rbenv-git/)
 
 **Description:** Minimal rbenv support in Vim.
