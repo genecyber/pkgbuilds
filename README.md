@@ -212,6 +212,10 @@
 
 **Description:** Vim global plugin for better digraph interactions, by Damien Conway.
 
+## [vim-clam-git](https://aur.archlinux.org/packages/vim-clam-git/)
+
+**Description:** Vim plugin for working with shell commands.
+
 ## [vim-classpath-git](https://aur.archlinux.org/packages/vim-classpath-git/)
 
 **Description:** Set 'path' from the Java class path in Vim.
