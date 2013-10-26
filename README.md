@@ -256,6 +256,10 @@
 
 **Description:** The Erlang plugin for Vim.
 
+## [vim-gtk-syntax-git](https://aur.archlinux.org/packages/vim-gtk-syntax-git/)
+
+**Description:** Vim syntax highlighting for GLib, Gtk+, Xlib, Gimp, Gnome, and more.
+
 ## [vim-haml-git](https://aur.archlinux.org/packages/vim-haml-git/)
 
 **Description:** Vim runtime files for Haml, Sass, and SCSS.
