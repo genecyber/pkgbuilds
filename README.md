@@ -328,6 +328,10 @@
 
 **Description:** Node.js shebang filetype detect plugin for Vim.
 
+## [vim-pacmanlog-git](https://aur.archlinux.org/packages/vim-pacmanlog-git/)
+
+**Description:** Vim syntax highlighting for Pacman log files.
+
 ## [vim-php-git](https://aur.archlinux.org/packages/vim-php-git/)
 
 **Description:** Vim PHP language features.
