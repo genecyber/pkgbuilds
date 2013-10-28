@@ -10,12 +10,11 @@ depends=('python2')
 makedepends=('git')
 url="https://github.com/mafm/ledger.py"
 license=('GPL3')
-source=(git+https://github.com/mafm/ledger.py
-        ledger.sh)
-sha256sums=('SKIP'
-            '39dbd81507db78eb2e8401f222cfdf22ec051a3ce2560b15a5600c55ba6c1def')
+source=(git+https://github.com/mafm/ledger.py)
+sha256sums=('SKIP')
 provides=('ledger.py')
 conflicts=('ledger.py')
+install=ledger.py.install
 
 pkgver() {
   cd $_gitname
@@ -33,12 +32,16 @@ prepare() {
 package() {
   cd $_gitname
 
-  msg 'Installing...'
-  install -dm 755 ${pkgdir}/usr/share/ledger.py
-  tar -c . | tar -x -C ${pkgdir}/usr/share/ledger.py
+  msg 'Installing license...'
+  install -dm 755 ${pkgdir}/usr/share/licenses/ledger.py
+  cp LICENSE ${pkgdir}/usr/share/licenses/ledger.py
+
+  msg 'Installing documentation...'
+  install -dm 755 ${pkgdir}/usr/share/doc/ledger.py
+  tar -c README.md doc/* examples | tar -x -C ${pkgdir}/usr/share/doc/ledger.py
 
   msg 'Installing executable...'
-  install -Dm755 "${srcdir}"/ledger.sh "${pkgdir}"/usr/bin/ledger.py
+  install -Dm755 ledger.py "${pkgdir}"/usr/bin/ledger.py
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +
