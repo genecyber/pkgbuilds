@@ -32,6 +32,10 @@
 
 **Description:** Native PSYC client designed to work with psycd.
 
+## [ledger.py-git](https://aur.archlinux.org/packages/ledger.py-git/)
+
+**Description:** Command-line, double-entry accounting system written in Python.
+
 ## [libbitcoin-leveldb-git](https://aur.archlinux.org/packages/libbitcoin-leveldb-git/)
 
 **Description:** Asynchronous C++ library for Bitcoin.
