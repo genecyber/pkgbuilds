@@ -2,7 +2,7 @@
 
 pkgname=hledger-web-git
 _gitname=hledger
-pkgver=0.21.3.14.geff1d3f
+pkgver=0.21.3.59.g4123d45
 pkgrel=1
 pkgdesc="track money, time, or any other commodity, using a simple, editable file format and double-entry accounting, inspired by and largely compatible with ledger"
 url="http://hledger.org"
