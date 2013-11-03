@@ -140,6 +140,10 @@
 
 **Description:** Pythonic Git for Humans.
 
+## [python2-globster](https://aur.archlinux.org/packages/python2-globster/)
+
+**Description:** Convert shell-like globs to regular expressions.
+
 ## [python2-mimer](https://aur.archlinux.org/packages/python2-mimer/)
 
 **Description:** Python mimetype library.
