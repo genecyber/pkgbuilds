@@ -64,6 +64,10 @@
 
 **Description:** Compile-to-JavaScript language designed to empower the user while attempting to prevent some common errors.
 
+## [nodejs-grasp](https://aur.archlinux.org/packages/nodejs-grasp/)
+
+**Description:** Search JavaScript code semantically.
+
 ## [nodejs-grunt-cli](https://aur.archlinux.org/packages/nodejs-grunt-cli/)
 
 **Description:** Grunt command line interface.
