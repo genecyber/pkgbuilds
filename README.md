@@ -1,4 +1,4 @@
-# Index of PKGBUILDS
+# Index
 
 ## [birsh-git](https://aur.archlinux.org/packages/birsh-git)
 
