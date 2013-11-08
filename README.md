@@ -176,6 +176,10 @@
 
 **Description:** Clears the contents of strings containing cryptographic material.
 
+## [python2-verlib](https://aur.archlinux.org/packages/python2-verlib/)
+
+**Description:** A version comparison tool for distutils.
+
 ## [python2-zbar](https://aur.archlinux.org/packages/python2-zbar/)
 
 **Description:** Python bindings for zbar.
