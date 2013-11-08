@@ -152,6 +152,10 @@
 
 **Description:** Convert shell-like globs to regular expressions.
 
+## [python2-html2md](https://aur.archlinux.org/packages/python2-html2md/)
+
+**Description:** Converts HTML documents to Markdown.
+
 ## [python2-mimer](https://aur.archlinux.org/packages/python2-mimer/)
 
 **Description:** Python mimetype library.
