@@ -276,6 +276,10 @@
 
 **Description:** Heavily-reworked version of 'Mustang' by Henrique C. Alves.
 
+## [vim-colortoggle-git](https://aur.archlinux.org/packages/vim-colortoggle-git/)
+
+**Description:** Vim plugin for toggling background and color scheme.
+
 ## [vim-csapprox](https://aur.archlinux.org/packages/vim-csapprox/)
 
 **Description:** Adapt gvim-only colorschemes to Vim.
