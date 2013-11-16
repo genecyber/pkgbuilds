@@ -260,6 +260,10 @@
 
 **Description:** Vim SQL syntax highlighting inside strings in Clojure files.
 
+## [vim-colors-github](https://aur.archlinux.org/packages/vim-colors-github/)
+
+**Description:** GitHub colors for Vim.
+
 ## [vim-colors-liquidcarbon](https://aur.archlinux.org/packages/vim-colors-liquidcarbon/)
 
 **Description:** Liquid carbon colors for Vim.
