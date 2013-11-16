@@ -268,6 +268,10 @@
 
 **Description:** Mayan smoke colors for Vim.
 
+## [vim-colors-neverland-git](https://aur.archlinux.org/packages/vim-colors-neverland-git/)
+
+**Description:** Neverland colors for Vim.
+
 ## [vim-colors-sorcerer](https://aur.archlinux.org/packages/vim-colors-sorcerer/)
 
 **Description:** Heavily-reworked version of 'Mustang' by Henrique C. Alves.
