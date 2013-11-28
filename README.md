@@ -156,6 +156,10 @@
 
 **Description:** Converts HTML documents to Markdown.
 
+## [python2-jsonrpclib](https://aur.archlinux.org/packages/python2-jsonrpclib/)
+
+**Description:** An implementation of the JSON-RPC v2.0 specification.
+
 ## [python2-mimer](https://aur.archlinux.org/packages/python2-mimer/)
 
 **Description:** Python mimetype library.
