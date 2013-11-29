@@ -124,6 +124,10 @@
 
 **Description:** PyBitmessage API.
 
+## [python2-bitcoinrpc-git](https://aur.archlinux.org/packages/python2-bitcoinrpc-git/)
+
+**Description:** Python interface to Bitcoin's JSON-RPC API.
+
 ## [python2-camlistore](https://aur.archlinux.org/packages/python2-camlistore/)
 
 **Description:** Unofficial Python client for Camlistore.
