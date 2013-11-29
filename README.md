@@ -192,6 +192,10 @@
 
 **Description:** Clears the contents of strings containing cryptographic material.
 
+## [python2-simpleconfig](https://aur.archlinux.org/packages/python2-simpleconfig/)
+
+**Description:** Dead simple configuration file parser.
+
 ## [python2-verlib](https://aur.archlinux.org/packages/python2-verlib/)
 
 **Description:** A version comparison tool for distutils.
