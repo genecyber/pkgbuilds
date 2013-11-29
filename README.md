@@ -52,6 +52,10 @@
 
 **Description:** Higher-order functions and common patterns for asynchronous code.
 
+## [nodejs-bitcoin](https://aur.archlinux.org/packages/nodejs-bitcoin/)
+
+**Description:** Communicate with bitcoind via JSON-RPC.
+
 ## [nodejs-cleaver](https://aur.archlinux.org/packages/nodejs-cleaver/)
 
 **Description:** 30-second slideshows for hackers.
