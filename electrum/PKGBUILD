@@ -1,7 +1,6 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=electrum
-_realname=Electrum
 pkgver=1.9.5
 pkgrel=2
 pkgdesc="Lightweight Bitcoin wallet"
@@ -11,8 +10,8 @@ makedepends=('gcc' 'make' 'python2-pycurl' 'python2-setuptools')
 optdepends=('python2-zbar: QR code reading support')
 url="http://electrum.org/"
 license=('GPL3')
-source=(http://download.electrum.org/download/$_realname-$pkgver.tar.gz
-        http://download.electrum.org/download/$_realname-$pkgver.tar.gz.asc
+source=(http://download.electrum.org/download/${pkgname^}-${pkgver}.tar.gz
+        http://download.electrum.org/download/${pkgname^}-${pkgver}.tar.gz.asc
         setup.py.patch)
 md5sums=('e8d66b08f7d1d745e1de04a090d199c2'
          '893d1786206334826764bcab36e94d69'
@@ -25,7 +24,7 @@ conflicts=('electrum-git')
 install=electrum.install
 
 prepare() {
-  cd $srcdir/$_realname-$pkgver
+  cd ${srcdir}/${pkgname^}-${pkgver}
 
   msg 'Patching setup.py...'
   patch -p1 < ${srcdir}/setup.py.patch
@@ -36,7 +35,7 @@ prepare() {
 }
 
 build() {
-  cd $srcdir/$_realname-$pkgver
+  cd ${srcdir}/${pkgname^}-${pkgver}
 
   msg 'Building...'
   python2 mki18n.py
@@ -45,8 +44,8 @@ build() {
 }
 
 package() {
-  cd $srcdir/$_realname-$pkgver
+  cd ${srcdir}/${pkgname^}-${pkgver}
 
   msg 'Installing...'
-  python2 setup.py install --root="$pkgdir" --optimize=1 
+  python2 setup.py install --root="${pkgdir}" --optimize=1 
 }
