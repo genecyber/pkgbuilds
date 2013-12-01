@@ -17,7 +17,7 @@ sha256sums=('SKIP'
             'c1de6c61614f64f555bf5847fbc4c69ee628fe3c5f0075494d6bacd3c81803af'
             '6580430798487c30c8c4f5344892376dfd5004d57b42e673aab3f1a45569ce6e')
 backup=('etc/electrum-server.conf'
-	      'etc/logrotate.d/electrum-server')
+        'etc/logrotate.d/electrum-server')
 provides=('electrum-server')
 conflicts=('electrum-server')
 install=electrum-server.install
