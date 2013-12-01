@@ -1,0 +1,15 @@
+[Unit]
+Description=Electrum server
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/run/electrum-server.pid
+User=electrum-server
+Group=electrum-server
+ExecStart=/usr/bin/nohup /usr/bin/electrum-server > /var/log/electrum-server.log &
+ExecStop=/usr/bin/electrum-server stop
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

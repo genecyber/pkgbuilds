@@ -1,0 +1,69 @@
+post_install() {
+  getent passwd electrum-server &>/dev/null || {
+    echo -n "Creating electrum-server user... "
+    grep -E "^electrum-server:" /etc/group >/dev/null || groupadd electrum-server
+    useradd -M -g electrum-server -s /bin/false electrum-server
+    echo "done"
+  }
+  touch /var/log/electrum-server.log
+  chown electrum-server:electrum-server /var/log/electrum-server.log
+  printf "$node\n"
+}
+
+post_upgrade() {
+  [[ ! -f /var/log/electrum-server.log ]] && touch /var/log/electrum-server.log; chown electrum-server:electrum-server /var/log/electrum-server.log
+  printf "$node\n"
+}
+
+post_remove() {
+  echo -n "Removing electrum-server user... "
+  userdel -rf electrum-server 2>/dev/null
+  echo "done"
+}
+
+read -d '' node <<"EOF"
+########################################################################
+########################################################################
+##                                                                    ##
+##  Electrum Server                                                   ##
+##  _______________                                                   ##
+##                                                                    ##
+##                                                                    ##
+##                                                                    ##
+##                         ';,;:.                                     ##
+##                       'o'   .;d.                                   ##
+##                       K.      :l                                   ##
+##                       cl     .O,                                   ##
+##                        .c:cclc.                                    ##
+##              .;::;.     .;ko,.     ':::'     .',,,.                ##
+##            .OMMMMMWo  ,d,.  .oo  cXMMMMMX:  do.  .:d.              ##
+##           x MMMMMMMMxlX.      kdoMMMMMMMMMoxl      '0              ##
+##            oMMMMMMMN;'K,     .Oc;NMMMMMMMX,ld      ;k              ##
+##             :0WMMNk.  .cl;,;cl,  'kWMMMWx.  :o:,';cc               ##
+##                ..        .'.       .oWc.      .''.                 ##
+##                                  'oc;,;lo.                         ##
+##                                 ,O.     .0.                        ##
+##                                 :k      .0.                        ##
+##                                  cl,...:o,                         ##
+##                                    .,,,.                           ##
+##                                                                    ##
+##                                                                    ##
+##                                                                    ##
+##  Say hi to the dev crew, other server operators and fans on        ##
+##  irc.freenode.net #electrum and we'll try to congratulate you      ##
+##  on supporting the community by running an Electrum node.          ##
+##                                                                    ##
+##  If you're operating a public Electrum server please subscribe     ##
+##  to or regulary check the following thread:                        ##
+##                                                                    ##
+##  https://bitcointalk.org/index.php?topic=85475.0                   ##
+##                                                                    ##
+##  It'll contain announcements about important updates to Electrum   ##
+##  server required for a smooth user experience.                     ##
+##                                                                    ##
+##  Please see /usr/share/doc/electrum-server/HOWTO.md for detailed   ##
+##  information.                                                      ##
+##                                                                    ##
+########################################################################
+########################################################################
+EOF
