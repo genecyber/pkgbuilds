@@ -60,6 +60,10 @@
 
 **Description:** 30-second slideshows for hackers.
 
+## [nodejs-dispatch-proxy](https://aur.archlinux.org/packages/nodejs-dispatch-proxy/)
+
+**Description:** A SOCKS5/HTTP proxy that balances traffic between multiple internet connections.
+
 ## [nodejs-egs](https://aur.archlinux.org/packages/nodejs-egs/)
 
 **Description:** Embedded GorillaScript template generator.
