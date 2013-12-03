@@ -2,11 +2,13 @@
 
 pkgname=trousseau-git
 _gitname=trousseau
-pkgdesc="Networked and encrypted key-value database"
 pkgver=0.2.0.30.g9e5a9d4
 pkgrel=1
+pkgdesc="Networked and encrypted key-value database"
+arch=('any')
 depends=('gnome-keyring' 'gnupg')
 makedepends=('git' 'go')
+url="https://github.com/oleiade/trousseau"
 license=('MIT')
 source=(git+https://github.com/oleiade/trousseau.git)
 sha256sums=('SKIP')
