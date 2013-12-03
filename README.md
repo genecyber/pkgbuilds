@@ -232,6 +232,10 @@
 
 **Description:** Modular Bitcoin command line utilities.
 
+## [trousseau-git](https://aur.archlinux.org/packages/trousseau-git/)
+
+**Description:** Networked and encrypted key-value database.
+
 ## [tscat](https://aur.archlinux.org/packages/tscat/)
 
 **Description:** Prepends a timestamp to each line of STDIN.
