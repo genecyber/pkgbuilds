@@ -8,6 +8,10 @@
 
 **Description:** Bitcoin smart contracts.
 
+## [bitrated](https://aur.archlinux.org/packages/bitrated)
+
+**Description:** Bitcoin arbitration marketplace.
+
 ## [chaiscript-boost](https://aur.archlinux.org/packages/chaiscript-boost)
 
 **Description:** Easy to use scripting for C++.
