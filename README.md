@@ -8,7 +8,7 @@
 
 **Description:** Bitcoin smart contracts.
 
-## [bitrated](https://aur.archlinux.org/packages/bitrated)
+## [bitrated-git](https://aur.archlinux.org/packages/bitrated-git)
 
 **Description:** Bitcoin arbitration marketplace.
 
