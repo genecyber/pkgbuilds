@@ -2,7 +2,7 @@
 
 pkgname=facron-git
 _gitname='facron'
-pkgver=v0.9.6.gb1007bd
+pkgver=v0.9.13.ge031782
 pkgrel=1
 pkgdesc="Advanced filesystem cron based on fanotify"
 arch=('any')
