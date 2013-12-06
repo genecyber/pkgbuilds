@@ -3,7 +3,7 @@ pkgver=0.0.1
 pkgrel=1
 pkgdesc="Colored Bitcoin and smart contracts script"
 arch=('any')
-depends=('bitcoin-daemon' 'bitcoin-qt' 'python2' 'python2-jsonrpc-bzr')
+depends=('bitcoin-daemon' 'bitcoin-qt' 'python2' 'python2-jsonrpc-git')
 url="https://bitcointalk.org/index.php?topic=117630.0"
 license=('AGPL')
 source=(bitpaint.install
