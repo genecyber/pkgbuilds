@@ -2,7 +2,7 @@
 
 pkgname=birsh-git
 _gitname='birsh'
-pkgver=4ae9175
+pkgver=fba8167
 pkgrel=1
 pkgdesc="libvirt replacement in bash, without XML files"
 arch=('any')
