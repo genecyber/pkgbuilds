@@ -60,6 +60,10 @@
 
 **Description:** Communicate with bitcoind via JSON-RPC.
 
+## [nodejs-btc](https://aur.archlinux.org/packages/nodejs-btc/)
+
+**Description:** Bitcoin price board for geeks.
+
 ## [nodejs-cleaver](https://aur.archlinux.org/packages/nodejs-cleaver/)
 
 **Description:** 30-second slideshows for hackers.
