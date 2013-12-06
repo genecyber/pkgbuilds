@@ -464,9 +464,13 @@
 
 **Description:** Vim global plugin for math on visual regions, by Damien Conway.
 
-## [vimux-git](https://aur.archlinux.org/packages/vimux-git/)
+## [vimux](https://aur.archlinux.org/packages/vimux/)
 
 **Description:** Easily interact with tmux from Vim.
+
+## [vimux-git](https://aur.archlinux.org/packages/vimux-git/)
+
+**Description:** Easily interact with tmux from Vim, git version.
 
 ## [vim-tmux-navigator-git](https://aur.archlinux.org/packages/vim-tmux-navigator-git/)
 
