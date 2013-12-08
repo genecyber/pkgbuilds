@@ -1,5 +1,10 @@
 /var/log/electrum-server.log {
-   notifempty
-   copytruncate
-   missingok
+        rotate 5
+        copytruncate
+        daily
+        missingok
+        notifempty
+        compress
+        delaycompress
+        sharedscripts
 }
