@@ -2,7 +2,7 @@
 
 pkgname=electrum-server-git
 _gitname=electrum-server
-pkgver=f4375ea
+pkgver=0a87244
 pkgrel=1
 pkgdesc="Electrum server"
 arch=('i686' 'x86_64')
