@@ -11,15 +11,12 @@ makedepends=('git')
 url="https://github.com/spesmilo/electrum-server"
 license=('AGPL3')
 source=(git+https://github.com/spesmilo/electrum-server.git
-        electrum-server.banner
         electrum-server.logrotate
         electrum-server.service)
 sha256sums=('SKIP'
-            '62b2dfec610f04deeed2f4de6dd277e9c0b245466ff2d122cc5e0eba1a5fd6d8'
             '31b5e99ef53c7fec8de420380f8cff9a6bfb80cc936af36a036ab3123b4e870f'
             '6580430798487c30c8c4f5344892376dfd5004d57b42e673aab3f1a45569ce6e')
-backup=('etc/electrum-server.banner'
-        'etc/electrum-server.conf'
+backup=('etc/electrum-server.conf'
         'etc/logrotate.d/electrum-server')
 provides=('electrum-server')
 conflicts=('electrum-server')
@@ -81,9 +78,6 @@ package() {
 
   msg 'Installing electrum-server.conf...'
   install -m640 electrum-server.conf.sample "$pkgdir/$CFG_DIR/electrum-server.conf"
-
-  msg 'Installing electrum-server.banner...'
-  install -m640 "$srcdir/electrum-server.banner" "$pkgdir/$CFG_DIR/electrum-server.banner"
 
   msg 'Installing systemd service file...'
   install -Dm644 "$srcdir/electrum-server.service" "$pkgdir/usr/lib/systemd/system/electrum-server.service"
