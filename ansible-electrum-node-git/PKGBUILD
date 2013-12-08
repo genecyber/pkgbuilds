@@ -8,6 +8,7 @@ pkgdesc="Electrum node provisioning with Ansible (bitcoind and electrum-server)"
 arch=('any')
 depends=('ansible' 'openssh' 'sshpass')
 makedepends=('git')
+optdepends=('python2-keyczar: Run Ansible in Accelerated Mode')
 url="https://github.com/atweiden/ansible-electrum-node"
 license=('Unlicense')
 source=(git+https://github.com/atweiden/ansible-electrum-node.git)
