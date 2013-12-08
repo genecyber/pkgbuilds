@@ -1,0 +1,29 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=ansible-electrum-node-git
+_gitname=ansible-electrum-node
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Electrum node provisioning with Ansible (bitcoind and electrum-server)"
+arch=('any')
+depends=('ansible' 'openssh' 'sshpass')
+makedepends=('git')
+url="https://github.com/atweiden/ansible-electrum-node"
+license=('Unlicense')
+source=(git+https://github.com/atweiden/ansible-electrum-node.git)
+sha256sums=('SKIP')
+provides=('ansible-electrum-node')
+conflicts=('ansible-electrum-node')
+
+pkgver() {
+  cd $_gitname
+  git describe --always | sed 's|-|.|g'
+}
+
+build() {
+
+}
+
+package() {
+
+}
