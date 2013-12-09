@@ -13,9 +13,13 @@ makedepends=('automoc4' 'boost' 'miniupnpc' 'qrencode')
 license=('MIT')
 source=(http://sourceforge.net/projects/bitcoin/files/Bitcoin/${pkgname%d}-$pkgver/${pkgname%d}-$pkgver-linux.tar.gz
         bitcoin.conf
-        bitcoind.logrotate)
+        bitcoind.logrotate
+        bitcoind.sv.log
+        bitcoind.sv.run)
 sha256sums=('84543f10de5e82ce6e88dd5a501db37c6327edf79a2a04f29199c24843e71f63'
             '1dcc63d39b2990486293de4fd9bf11da2001956332aecadde44f64b6da103dc0'
+            'f9f68d36ba1aabf5c768b92ac27ebe3161485663b4fcf0f9d1a35c5c202558f9'
+            'f9f68d36ba1aabf5c768b92ac27ebe3161485663b4fcf0f9d1a35c5c202558f9'
             'f9f68d36ba1aabf5c768b92ac27ebe3161485663b4fcf0f9d1a35c5c202558f9')
 backup=('etc/logrotate.d/bitcoind')
 provides=('bitcoin' 'bitcoin-daemon')
@@ -45,6 +49,11 @@ package() {
 
   msg 'Installing bitcoin.conf file...'
   install -Dm600 "$srcdir/bitcoin.conf" "$pkgdir/srv/bitcoin/.bitcoin/bitcoin.conf"
+
+  msg 'Installing Runit start scripts...'
+  mkdir -p "$pkgdir/etc/sv/bitcoin/log"
+  install -m755 "$srcdir/bitcoind.sv.run" "$pkgdir/etc/sv/bitcoin"
+  install -m755 "$srcdir/bitcoind.sv.log" "$pkgdir/etc/sv/bitcoin/log"
 
   msg 'Readying logrotate...'
   install -Dm644 "$srcdir/bitcoind.logrotate" "$pkgdir/etc/logrotate.d/bitcoind"
