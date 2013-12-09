@@ -1,0 +1,56 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=socklog
+pkgver=2.1.0
+pkgrel=1
+pkgdesc="Small and secure syslogd replacement for use with Runit"
+arch=('i686' 'x86_64')
+depends=('runit')
+makedepends=('make')
+url="http://smarden.org/socklog/"
+license=('BSD')
+source=(http://smarden.org/socklog/$pkgname-$pkgver.tar.gz
+        headers.patch)
+sha256sums=('aa869a787ee004da4e5509b5a0031bcc17a4ab4ac650c2ce8d4e488123acb455'
+            '6687d9d7c93c993b99f47948999c03b6b1402cda78d5f854d093ac881171ddf3')
+provides=('socklog')
+
+prepare() {
+  cd "$srcdir/admin/$pkgname-$pkgver/src"
+
+  msg 'Patching headers...'
+  patch -p1 < "$srcdir/headers.patch"
+
+  msg 'Setting default kernel message path to /proc/kmsg...'
+  sed -i -e 's:^#define _PATH_KLOG "\/dev\/klog"$:#define _PATH_KLOG "\/proc\/kmsg":' socklog-conf.c
+}
+
+build() {
+  cd "$srcdir/admin/$pkgname-$pkgver/src"
+
+  msg 'Building...'
+  make
+  make check
+}
+
+package() {
+  cd "$srcdir/admin/$pkgname-$pkgver/src"
+  
+  msg 'Installing license...'
+  install -D "$srcdir/admin/$pkgname-$pkgver/package/COPYING" "$pkgdir/usr/share/licenses/$pkgname/COPYING"
+
+  msg 'Installing executables...'
+  install -d "$pkgdir/usr/bin"
+  for i in `cat $srcdir/admin/$pkgname-$pkgver/package/commands`
+  do
+    install -s -m0755 "$srcdir/admin/$pkgname-$pkgver/src/$i" "$pkgdir/usr/bin"
+  done
+
+  msg 'Installing documentation...'
+  install -d "$pkgdir/usr/share/doc/socklog"
+  install -m0644 "$srcdir/admin/$pkgname-$pkgver/doc"/*.html "$pkgdir/usr/share/doc/socklog"
+
+  msg 'Installing man pages...'
+  install -d "$pkgdir/usr/share/man/man8"
+  install -m0644 "$srcdir/admin/$pkgname-$pkgver/man"/* "$pkgdir/usr/share/man/man8"
+}
