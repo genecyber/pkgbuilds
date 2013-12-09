@@ -232,6 +232,10 @@
 
 **Description:** P2P encrypted social network framework.
 
+## [socklog](https://aur.archlinux.org/packages/socklog/)
+
+**Description:** Small and secure syslogd replacement for use with Runit.
+
 ## [stlviewer-git](https://aur.archlinux.org/packages/stlviewer-git/)
 
 **Description:** Simple command line tool to view STL files.
