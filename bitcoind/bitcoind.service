@@ -1,0 +1,15 @@
+[Unit]
+Description=Bitcoin Daemon
+After=network.target
+
+[Service]
+User=bitcoin
+Group=bitcoin
+PIDFile=/run/bitcoind.pid
+WorkingDirectory=/srv/bitcoin
+ExecStart=/usr/bin/bitcoind -pid=/run/bitcoind.pid -daemon
+ExecReload=/usr/bin/kill -HUP $MAINPID
+ExecStop=/usr/bin/bitcoind stop
+
+[Install]
+WantedBy=multi-user.target

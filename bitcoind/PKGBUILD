@@ -1,0 +1,51 @@
+# Maintainer: Timothy Redaelli <timothy.redaelli@gmail.com>
+# Contributor: shahid <helllamer@gmail.com>
+# Contributor: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=bitcoind
+pkgver=0.8.5
+pkgrel=1
+pkgdesc="Bitcoin daemon for long-running server usage"
+arch=('i686' 'x86_64')
+url="http://bitcoin.org/"
+depends=('boost-libs' 'miniupnpc' 'mongroup-git' 'openssl')
+makedepends=('automoc4' 'boost' 'miniupnpc' 'qrencode')
+license=('MIT')
+source=(http://sourceforge.net/projects/bitcoin/files/Bitcoin/${pkgname%d}-$pkgver/${pkgname%d}-$pkgver-linux.tar.gz
+        bitcoin.conf
+        bitcoind.logrotate)
+sha256sums=('84543f10de5e82ce6e88dd5a501db37c6327edf79a2a04f29199c24843e71f63'
+            '1dcc63d39b2990486293de4fd9bf11da2001956332aecadde44f64b6da103dc0'
+            'f9f68d36ba1aabf5c768b92ac27ebe3161485663b4fcf0f9d1a35c5c202558f9')
+backup=('etc/logrotate.d/bitcoind')
+provides=('bitcoin' 'bitcoin-daemon')
+conflicts=('bitcoin' 'bitcoin-daemon')
+install=bitcoind.install
+
+build() {
+  cd "$srcdir/${pkgname%d}-$pkgver-linux/src"
+
+  msg 'Building...'
+  make -f makefile.unix -C src CXXFLAGS="$CXXFLAGS"
+}
+
+package() {
+  cd "$srcdir/${pkgname%d}-$pkgver-linux/src"
+
+  msg 'Installing license...'
+  install -Dm644 COPYING "$pkgdir/usr/share/licenses/${pkgname%d}/COPYING"
+
+  msg 'Installing documentation and man pages...'
+  install -Dm644 contrib/debian/examples/bitcoin.conf "$pkgdir/usr/share/doc/${pkgname%d}/examples/bitcoin.conf"
+  install -Dm644 contrib/debian/manpages/bitcoind.1 "$pkgdir/usr/share/man/man1/bitcoind.1"
+  install -Dm644 contrib/debian/manpages/bitcoin.conf.5 "$pkgdir/usr/share/man/man5/bitcoin.conf.5"
+
+  msg 'Installing executable...'
+  install -Dm755 src/bitcoind "$pkgdir/usr/bin/bitcoind"
+
+  msg 'Installing bitcoin.conf file...'
+  install -Dm600 "$srcdir/bitcoin.conf" "$pkgdir/srv/bitcoin/.bitcoin/bitcoin.conf"
+
+  msg 'Readying logrotate...'
+  install -Dm644 "$srcdir/bitcoind.logrotate" "$pkgdir/etc/logrotate.d/bitcoind"
+}
