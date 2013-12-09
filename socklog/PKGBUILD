@@ -3,7 +3,7 @@
 
 pkgname=socklog
 pkgver=2.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Small and secure syslogd replacement for use with Runit"
 arch=('i686' 'x86_64')
 depends=('glibc' 'runit')
@@ -41,6 +41,12 @@ build() {
   echo "${CC:-gcc} ${CFLAGS:-O2 -Wall}" > conf-cc
   echo "${LD:-gcc -s}" > conf-ld
   make
+}
+
+check() {
+  cd "$srcdir/admin/$pkgname-$pkgver/src"
+
+  msg 'Testing...'
   make check
 }
 
