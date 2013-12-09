@@ -52,6 +52,10 @@
 
 **Description:** Simple, self-contained and easily reviewable Bitcoin address generator.
 
+## [mongroup-git](https://aur.archlinux.org/packages/mongroup-git/)
+
+**Description:** Monitor a group of processes with mon.
+
 ## [nodejs-async](https://aur.archlinux.org/packages/nodejs-async/)
 
 **Description:** Higher-order functions and common patterns for asynchronous code.
