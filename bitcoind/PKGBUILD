@@ -3,7 +3,7 @@
 # Contributor: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=bitcoind
-pkgver=0.8.5
+pkgver=0.8.6
 pkgrel=1
 pkgdesc="Bitcoin daemon for long-running server usage"
 arch=('i686' 'x86_64')
@@ -14,13 +14,15 @@ license=('MIT')
 source=(http://sourceforge.net/projects/bitcoin/files/Bitcoin/${pkgname%d}-$pkgver/${pkgname%d}-$pkgver-linux.tar.gz
         bitcoin.conf
         bitcoind.logrotate
+        bitcoind.service
         bitcoind.sv.log
         bitcoind.sv.run)
-sha256sums=('84543f10de5e82ce6e88dd5a501db37c6327edf79a2a04f29199c24843e71f63'
-            '1dcc63d39b2990486293de4fd9bf11da2001956332aecadde44f64b6da103dc0'
+sha256sums=('73495de53d1a30676884961e39ff46c3851ff770eeaa767331d065ff0ce8dd0c'
+            'dee24333ca3d9c09c2fafed72aa52a75d58cbb4c34366765d9581c77ac5061c5'
             'f9f68d36ba1aabf5c768b92ac27ebe3161485663b4fcf0f9d1a35c5c202558f9'
-            'f9f68d36ba1aabf5c768b92ac27ebe3161485663b4fcf0f9d1a35c5c202558f9'
-            'f9f68d36ba1aabf5c768b92ac27ebe3161485663b4fcf0f9d1a35c5c202558f9')
+            '846f9f96cbcf777b097dc88b5a9f79010e6ff4a9633d3d471f2d50d3ea1e0c23'
+            'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+            'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
 backup=('etc/logrotate.d/bitcoind')
 provides=('bitcoin' 'bitcoin-daemon')
 conflicts=('bitcoin' 'bitcoin-daemon')
@@ -49,6 +51,9 @@ package() {
 
   msg 'Installing bitcoin.conf file...'
   install -Dm600 "$srcdir/bitcoin.conf" "$pkgdir/srv/bitcoin/.bitcoin/bitcoin.conf"
+
+  msg 'Installing systemd service files...'
+  install -Dm644 "$srcdir/bitcoind.service" "$pkgdir/usr/lib/systemd/system/bitcoind.service"
 
   msg 'Installing Runit start scripts...'
   mkdir -p "$pkgdir/etc/sv/bitcoin/log"

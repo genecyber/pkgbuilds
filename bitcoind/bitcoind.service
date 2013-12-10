@@ -7,7 +7,7 @@ User=bitcoin
 Group=bitcoin
 PIDFile=/run/bitcoind.pid
 WorkingDirectory=/srv/bitcoin
-ExecStart=/usr/bin/bitcoind -pid=/run/bitcoind.pid -daemon
+ExecStart=/usr/bin/bitcoind -pid=/run/bitcoind.pid -daemon=0
 ExecReload=/usr/bin/kill -HUP $MAINPID
 ExecStop=/usr/bin/bitcoind stop
 
