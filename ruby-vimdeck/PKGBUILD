@@ -1,7 +1,6 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=ruby-vimdeck
-_pkgname=vimdeck
 pkgver=0.0.9
 pkgrel=1
 pkgdesc="VIM as a presentation tool"
@@ -20,5 +19,5 @@ package() {
     --no-user-install \
     --ignore-dependencies \
     -i "$pkgdir$(ruby -rubygems -e'puts Gem.default_dir')" \
-    $_pkgname-$pkgver.gem
+    ${pkgname#*-}-$pkgver.gem
 }
