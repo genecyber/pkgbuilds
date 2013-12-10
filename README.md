@@ -160,6 +160,10 @@
 
 **Description:** Foreign Function Interface for Python calling C code.
 
+## [python2-commandr](https://aur.archlinux.org/packages/python2-commandr/)
+
+**Description:** Simple tool for making Python functions accessible from the command line.
+
 ## [python2-dirtools](https://aur.archlinux.org/packages/python2-dirtools/)
 
 **Description:** Toolkit for working with directories.
