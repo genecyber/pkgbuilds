@@ -160,6 +160,10 @@
 
 **Description:** Foreign Function Interface for Python calling C code.
 
+## [python2-chaussette](https://aur.archlinux.org/packages/python2-chaussette/)
+
+**Description:** WSGI Server for Circus.
+
 ## [python2-commandr](https://aur.archlinux.org/packages/python2-commandr/)
 
 **Description:** Simple tool for making Python functions accessible from the command line.
