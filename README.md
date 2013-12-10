@@ -1,5 +1,9 @@
 # Index
 
+## [bashful-git](https://aur.archlinux.org/packages/bashful-git)
+
+**Description:** A collection of libraries to simplify writing bash scripts.
+
 ## [birsh-git](https://aur.archlinux.org/packages/birsh-git)
 
 **Description:** libvirt replacement in Bash.
