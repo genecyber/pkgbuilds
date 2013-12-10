@@ -240,6 +240,10 @@
 
 **Description:** Client for the Ripple payment network.
 
+## [ruby-god](https://aur.archlinux.org/packages/ruby-god/)
+
+**Description:** Process monitoring framework.
+
 ## [salt-vim-git](https://aur.archlinux.org/packages/salt-vim-git/)
 
 **Description:** Vim files for editing Salt files.
