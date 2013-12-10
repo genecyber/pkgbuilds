@@ -188,6 +188,10 @@
 
 **Description:** An implementation of the JSON-RPC v2.0 specification.
 
+## [python2-luigi](https://aur.archlinux.org/packages/python2-luigi/)
+
+**Description:** Build complex pipelines of batch jobs.
+
 ## [python2-mimer](https://aur.archlinux.org/packages/python2-mimer/)
 
 **Description:** Python mimetype library.
