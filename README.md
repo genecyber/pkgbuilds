@@ -1,4 +1,5 @@
-# Index
+Index
+-----
 
 ## [bashful-git](https://aur.archlinux.org/packages/bashful-git)
 
@@ -519,3 +520,9 @@
 ## [zbar-v4l](https://aur.archlinux.org/packages/zbar-v4l/)
 
 **Description:** QR code & bar code reader patched for video support.
+
+Licensing
+---------
+
+This is free and unencumbered public domain software. For more
+information, see http://unlicense.org/ or the accompanying UNLICENSE file
