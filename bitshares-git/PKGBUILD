@@ -17,7 +17,7 @@ sha256sums=('SKIP')
 install=bitshares.install
 
 pkgver() {
-	cd $_gitname
+  cd $_gitname
   git describe --always | sed 's|-|.|g'
 }
 
@@ -29,18 +29,18 @@ prepare() {
 }
 
 build() {
-	cd $_gitname
+  cd $_gitname
 
-	msg 'Building...'
+  msg 'Building...'
   export BOOST_ROOT=/usr/include/boost
   cmake .
-	make
+  make
 }
 
 package() {
-	cd $_gitname
+  cd $_gitname
 
-	msg 'Installing...'
+  msg 'Installing...'
   mkdir -p "$pkgdir/usr/share/bitshares"
   cp -R . "$pkgdir/usr/share/bitshares"
 

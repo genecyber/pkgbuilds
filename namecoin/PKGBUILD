@@ -23,7 +23,7 @@ makefile_unix=Makefile
 qmake=qmake-qt4
 
 pkgver() {
-	cd $_gitname
+  cd $_gitname
   git describe --always | sed 's|-|.|g'
 }
 
@@ -35,29 +35,29 @@ prepare() {
 }
 
 build() {
-	cd $_gitname/src
+  cd $_gitname/src
 
-	msg "Patching $makefile_unix..."
-	sed -i $makefile_unix \
-		-e 's/CXXFLAGS/CPPFLAGS/g' \
-		-e 's/-O[0-3]/${CXXFLAGS}/g' \
-		-e 's/$(DEBUGFLAGS)//g'
+  msg "Patching $makefile_unix..."
+  sed -i $makefile_unix \
+    -e 's/CXXFLAGS/CPPFLAGS/g' \
+    -e 's/-O[0-3]/${CXXFLAGS}/g' \
+    -e 's/$(DEBUGFLAGS)//g'
 
-	# make namecoind
-	msg "Starting make for namecoind..."
-	make USE_UPNP= USE_SSL=1 $MAKEFLAGS -f $makefile_unix namecoind
+  # make namecoind
+  msg "Starting make for namecoind..."
+  make USE_UPNP= USE_SSL=1 $MAKEFLAGS -f $makefile_unix namecoind
 
-	# and make qt gui
-	msg "Starting make for namecoin-qt..."
-	cd ..
-	$qmake
-	make $MAKEFLAGS
+  # and make qt gui
+  msg "Starting make for namecoin-qt..."
+  cd ..
+  $qmake
+  make $MAKEFLAGS
 }
 
 package() {
-	cd $_gitname
+  cd $_gitname
 
-	find $pkgdir/usr/share/ -type f | xargs chmod -x 
+  find $pkgdir/usr/share/ -type f | xargs chmod -x 
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +

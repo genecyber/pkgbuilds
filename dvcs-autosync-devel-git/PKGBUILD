@@ -15,28 +15,28 @@ source=('git://gitorious.org/dvcs-autosync/dvcs-autosync.git')
 md5sums=('SKIP')
 
 pkgver() {
-	cd "$srcdir/dvcs-autosync"
-	git checkout master 2> /dev/null
-	echo 0.5.$(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+  cd "$srcdir/dvcs-autosync"
+  git checkout master 2> /dev/null
+  echo 0.5.$(git rev-list --count HEAD).$(git rev-parse --short HEAD)
 }
 
 pkgver_dvcs-autosync-devel-git() {
-	cd "$srcdir/dvcs-autosync"
-	git checkout origin/devel 2> /dev/null
-	echo 0.6.$(git rev-list --count HEAD).$(git rev-parse --short HEAD)
+  cd "$srcdir/dvcs-autosync"
+  git checkout origin/devel 2> /dev/null
+  echo 0.6.$(git rev-list --count HEAD).$(git rev-parse --short HEAD)
 }
 
 package_dvcs-autosync-git() {
-	pkgver=$(pkgver)
-	cd "$srcdir/dvcs-autosync"
-	git checkout master
-	python2 setup.py install --root="$pkgdir" --optimize=1
+  pkgver=$(pkgver)
+  cd "$srcdir/dvcs-autosync"
+  git checkout master
+  python2 setup.py install --root="$pkgdir" --optimize=1
 }
 
 package_dvcs-autosync-devel-git() {
-	pkgver=$(pkgver_dvcs-autosync-devel-git)
-	conflicts=('dvcs-autosync-git')
-	cd "$srcdir/dvcs-autosync"
-	git checkout origin/devel
-	python2 setup.py install --root="$pkgdir" --optimize=1
+  pkgver=$(pkgver_dvcs-autosync-devel-git)
+  conflicts=('dvcs-autosync-git')
+  cd "$srcdir/dvcs-autosync"
+  git checkout origin/devel
+  python2 setup.py install --root="$pkgdir" --optimize=1
 }

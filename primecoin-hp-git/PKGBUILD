@@ -23,7 +23,7 @@ makefile_unix=makefile.unix
 qmake="qmake-qt4 bitcoin-qt.pro"
 
 pkgver() {
-	cd $_gitname
+  cd $_gitname
   git describe --always | sed 's|-|.|g'
 }
 
@@ -65,42 +65,42 @@ prepare() {
 }
 
 build() {
-	cd $_gitname/src
+  cd $_gitname/src
 
-	msg "Patching $makefile_unix..."
-	sed -i $makefile_unix \
-		-e 's/CXXFLAGS/CPPFLAGS/g' \
-		-e 's/-O[0-3]/${CXXFLAGS}/g' \
-		-e 's/$(DEBUGFLAGS)//g'
+  msg "Patching $makefile_unix..."
+  sed -i $makefile_unix \
+    -e 's/CXXFLAGS/CPPFLAGS/g' \
+    -e 's/-O[0-3]/${CXXFLAGS}/g' \
+    -e 's/$(DEBUGFLAGS)//g'
 
-	# make primecoind
-	msg "Starting make..."
-	make USE_UPNP=1 USE_SSL=1 $MAKEFLAGS -f $makefile_unix primecoind
+  # make primecoind
+  msg "Starting make..."
+  make USE_UPNP=1 USE_SSL=1 $MAKEFLAGS -f $makefile_unix primecoind
 
-	# and make qt gui
-	cd ..
-	$qmake
-	make $MAKEFLAGS
+  # and make qt gui
+  cd ..
+  $qmake
+  make $MAKEFLAGS
 }
 
 package() {
-	cd $_gitname
+  cd $_gitname
 
-	## Grab debian .install files here.
-	## First, create directories:
-	cat contrib/debian/*.install | cut -d\  -f2 | sort | uniq | xargs -I{} mkdir -p $pkgdir/{}
+  ## Grab debian .install files here.
+  ## First, create directories:
+  cat contrib/debian/*.install | cut -d\  -f2 | sort | uniq | xargs -I{} mkdir -p $pkgdir/{}
 
-	## Copy needed files into created dir-s:
-	cat contrib/debian/*.install | deb_paths_pp | apply_deb_install
+  ## Copy needed files into created dir-s:
+  cat contrib/debian/*.install | deb_paths_pp | apply_deb_install
 
-	## Copy mans
-	cat contrib/debian/*.manpages | deb_paths_pp | install_man
+  ## Copy mans
+  cat contrib/debian/*.manpages | deb_paths_pp | install_man
 
-	## Copy examples
-	mkdir -p $pkgdir/usr/share/primecoin
-	cat contrib/debian/*.examples | deb_paths_pp | xargs -I{} install {} $pkgdir/usr/share/primecoin/
+  ## Copy examples
+  mkdir -p $pkgdir/usr/share/primecoin
+  cat contrib/debian/*.examples | deb_paths_pp | xargs -I{} install {} $pkgdir/usr/share/primecoin/
 
-	find $pkgdir/usr/share/ -type f | xargs chmod -x 
+  find $pkgdir/usr/share/ -type f | xargs chmod -x 
 }
 
 ## convert paths from .install and other files: "debian/" -> "contrib/debian/"
@@ -109,7 +109,7 @@ deb_paths_pp() { sed -e 's@^\(debian\)@contrib/\1@'; }
 ## reading input in "<from> <to>"-manner and convert it
 apply_deb_install() {
     while read from to ; do
-		install $from $pkgdir/$to
+    install $from $pkgdir/$to
     done
 }
 
@@ -117,9 +117,9 @@ apply_deb_install() {
 ## FIXME Uber-fat crunch. It should another, simple way...
 install_man() {
     while read man; do
-		local man_d="$pkgdir/usr/share/man/man${man#${man%?}}/"
-		mkdir -p $man_d
-		install -D $man $man_d
+    local man_d="$pkgdir/usr/share/man/man${man#${man%?}}/"
+    mkdir -p $man_d
+    install -D $man $man_d
     done
 
   msg 'Cleaning up pkgdir...'

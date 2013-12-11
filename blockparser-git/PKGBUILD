@@ -17,21 +17,21 @@ sha256sums=('SKIP')
 install=blockparser.install
 
 pkgver() {
-	cd $_gitname
+  cd $_gitname
   git describe --always | sed 's|-|.|g'
 }
 
 build() {
-	cd $_gitname
+  cd $_gitname
 
-	msg 'Building...'
-	make
+  msg 'Building...'
+  make
 }
 
 package() {
-	cd $_gitname
+  cd $_gitname
 
-	msg 'Installing...'
+  msg 'Installing...'
   install -D -m755 parser "${pkgdir}/usr/bin/blockparser"
 
   msg 'Cleaning up pkgdir...'

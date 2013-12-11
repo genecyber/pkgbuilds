@@ -32,7 +32,7 @@ build() {
 
   msg 'Running configure...'
   export PYTHON=/usr/bin/python2
-	./configure \
+  ./configure \
       LDFLAGS="-L/usr/lib/python2.7/config -lpython2.7" \
       --enable-warnings \
       --prefix=/usr \
