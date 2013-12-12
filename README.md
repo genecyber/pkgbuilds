@@ -233,6 +233,10 @@ Index
 
 **Description:** Dead simple configuration file parser.
 
+## [python2-twiggy](https://aur.archlinux.org/packages/python2-twiggy/)
+
+**Description:** A more Pythonic logger.
+
 ## [python2-verlib](https://aur.archlinux.org/packages/python2-verlib/)
 
 **Description:** A version comparison tool for distutils.
