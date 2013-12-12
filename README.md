@@ -213,6 +213,10 @@ Index
 
 **Description:** Python mimetype library.
 
+## [python2-palm](https://aur.archlinux.org/packages/python2-palm/)
+
+**Description:** Protobufs Are Lightweight Messages.
+
 ## [python2-pbp](https://aur.archlinux.org/packages/python2-pbp/)
 
 **Description:** Simple PGP-like CLI for libsodium, with scrypt KDF.
