@@ -261,6 +261,10 @@ Index
 
 **Description:** Client for the Ripple payment network.
 
+## [ruby-eye](https://aur.archlinux.org/packages/ruby-eye/)
+
+**Description:** Process monitoring tool.
+
 ## [ruby-god](https://aur.archlinux.org/packages/ruby-god/)
 
 **Description:** Process monitoring framework.
