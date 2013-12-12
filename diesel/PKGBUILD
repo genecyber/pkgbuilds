@@ -10,7 +10,7 @@ makedepends=('python2-distribute')
 optdepends=('python2-palm: lightweight, fast library for using protobufs in Python')
 url="http://diesel.io/"
 license=('custom')
-source=(http://jamwt.com/diesel/diesel-3.0.16.tar.gz)
+source=(http://jamwt.com/diesel/$pkgname-$pkgver.tar.gz)
 sha256sums=('d4f08804071458e5ddb3cb24b6f2cc719a5385e3211e60b13b18e424e3184594')
 
 prepare() {
