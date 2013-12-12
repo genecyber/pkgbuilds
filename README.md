@@ -273,6 +273,10 @@ Index
 
 **Description:** System Information Gatherer And Reporter.
 
+## [ruby-state_machine](https://aur.archlinux.org/packages/ruby-state_machine/)
+
+**Description:** Create state machines for attributes on any Ruby class.
+
 ## [salt-vim-git](https://aur.archlinux.org/packages/salt-vim-git/)
 
 **Description:** Vim files for editing Salt files.
