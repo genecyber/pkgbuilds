@@ -21,6 +21,10 @@ Index
 
 **Description:** Easy to use scripting for C++.
 
+## [diesel](https://aur.archlinux.org/packages/diesel/)
+
+**Description:** Coroutine-based networking library for Python.
+
 ## [electrum](https://aur.archlinux.org/packages/electrum/)
 
 **Description:** Lightweight Bitcoin wallet.
