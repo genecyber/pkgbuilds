@@ -193,6 +193,10 @@ Index
 
 **Description:** Converts HTML documents to Markdown.
 
+## [python2-http-parser](https://aur.archlinux.org/packages/python2-http-parser/)
+
+**Description:** HTTP request/response parser.
+
 ## [python2-jsonrpclib](https://aur.archlinux.org/packages/python2-jsonrpclib/)
 
 **Description:** An implementation of the JSON-RPC v2.0 specification.
