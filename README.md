@@ -269,6 +269,10 @@ Index
 
 **Description:** Process monitoring framework.
 
+## [ruby-sigar](https://aur.archlinux.org/packages/ruby-sigar/)
+
+**Description:** System Information Gatherer And Reporter.
+
 ## [salt-vim-git](https://aur.archlinux.org/packages/salt-vim-git/)
 
 **Description:** Vim files for editing Salt files.
