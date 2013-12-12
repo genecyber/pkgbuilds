@@ -11,9 +11,12 @@ makedepends=('python2-setuptools')
 url="http://twiggy.wearpants.org/"
 license=('BSD')
 options=(!emptydirs)
-source=(https://pypi.python.org/packages/source/T/$_realname/$_realname-$pkgver.tar.gz)
-md5sums=('b0dfbbb7f56342e448af4d22a47a339c')
-sha256sums=('4e8f1894e5aee522db6cb245ccbfde3c5d1aa08d31330c7e3af783b0e66eec23')
+source=(https://pypi.python.org/packages/source/T/$_realname/$_realname-$pkgver.tar.gz
+        https://pypi.python.org/packages/source/T/$_realname/$_realname-$pkgver.tar.gz.asc)
+md5sums=('b0dfbbb7f56342e448af4d22a47a339c'
+         '28442f4261b3989c6a0d97b8f882da01')
+sha256sums=('4e8f1894e5aee522db6cb245ccbfde3c5d1aa08d31330c7e3af783b0e66eec23'
+            '334c5926aac36b6f898b4b2ad8cc1d3a8440499f2c56144159bd9375f48d31e4')
 
 prepare(){
   cd $srcdir/$_realname-$pkgver
