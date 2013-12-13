@@ -2,7 +2,7 @@
 
 pkgname=obelisk-git
 _gitname='obelisk'
-pkgver=6c23a92
+pkgver=v0.2.25.g3740fe9
 pkgrel=1
 pkgdesc="Obelisk of light scalable Bitcoin infrastructure"
 arch=('i686' 'x86_64')
