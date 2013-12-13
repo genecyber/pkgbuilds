@@ -61,6 +61,10 @@ Index
 
 **Description:** PSYC library in C.
 
+## [libwallet-git](https://aur.archlinux.org/packages/libwallet-git/)
+
+**Description:** Bitcoin client-side library for wallet functionality.
+
 ## [mickey](https://aur.archlinux.org/packages/mickey/)
 
 **Description:** Simple, self-contained and easily reviewable Bitcoin address generator.
