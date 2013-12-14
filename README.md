@@ -369,6 +369,10 @@ Index
 
 **Description:** Clojure REPL tease.
 
+## [vim-flavored-markdown-git](https://aur.archlinux.org/packages/vim-flavored-markdown-git/)
+
+**Description:** Github Flavored Markdown for Vim.
+
 ## [vim-gtk-syntax-git](https://aur.archlinux.org/packages/vim-gtk-syntax-git/)
 
 **Description:** Vim syntax highlighting for GLib, Gtk+, Xlib, Gimp, Gnome, and more.
