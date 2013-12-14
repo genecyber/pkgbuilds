@@ -17,10 +17,6 @@ Index
 
 **Description:** Bitcoin arbitration marketplace.
 
-## [chaiscript-boost](https://aur.archlinux.org/packages/chaiscript-boost)
-
-**Description:** Easy to use scripting for C++.
-
 ## [concoord](https://aur.archlinux.org/packages/concoord)
 
 **Description:** Coordination service for distributed systems.
@@ -45,10 +41,6 @@ Index
 
 **Description:** Transparent file encryption in Git.
 
-## [irssyc-git](https://aur.archlinux.org/packages/irssyc-git)
-
-**Description:** Native PSYC client designed to work with psycd.
-
 ## [ledger.py-git](https://aur.archlinux.org/packages/ledger.py-git/)
 
 **Description:** Command-line, double-entry accounting system written in Python.
@@ -56,10 +48,6 @@ Index
 ## [libbitcoin-leveldb-git](https://aur.archlinux.org/packages/libbitcoin-leveldb-git/)
 
 **Description:** Asynchronous C++ library for Bitcoin.
-
-## [libpsyc-git](https://aur.archlinux.org/packages/libpsyc-git/)
-
-**Description:** PSYC library in C.
 
 ## [libwallet-git](https://aur.archlinux.org/packages/libwallet-git/)
 
@@ -99,7 +87,7 @@ Index
 
 ## [nodejs-gorillascript](https://aur.archlinux.org/packages/nodejs-gorillascript/)
 
-**Description:** Compile-to-JavaScript language designed to empower the user while attempting to prevent some common errors.
+**Description:** Compile-to-JavaScript language.
 
 ## [nodejs-grasp](https://aur.archlinux.org/packages/nodejs-grasp/)
 
@@ -121,10 +109,6 @@ Index
 
 **Description:** Node.js native addon build tool.
 
-## [nodejs-ripple-lib](https://aur.archlinux.org/packages/nodejs-ripple-lib/)
-
-**Description:** Ripple JavaScript client library.
-
 ## [nodejs-sx](https://aur.archlinux.org/packages/nodejs-sx/)
 
 **Description:** Node library for sx.
@@ -140,26 +124,6 @@ Index
 ## [obelisk-git](https://aur.archlinux.org/packages/obelisk-git/)
 
 **Description:** Scalable Bitcoin infrastructure.
-
-## [open-transactions](https://aur.archlinux.org/packages/open-transactions/)
-
-**Description:** Decentralized digital asset management system.
-
-## [psycd-git](https://aur.archlinux.org/packages/psycd-git/)
-
-**Description:** Generic messaging daemon.
-
-## [pybitmessage](https://aur.archlinux.org/packages/pybitmessage/)
-
-**Description:** Decentralized and trustless P2P communications protocol.
-
-## [pybitmessage-git](https://aur.archlinux.org/packages/pybitmessage-git/)
-
-**Description:** P2P messaging client for Bitmessage.
-
-## [pybitmessage-daemon-git](https://aur.archlinux.org/packages/pybitmessage-daemon-git/)
-
-**Description:** PyBitmessage API.
 
 ## [python2-bitcoinrpc-git](https://aur.archlinux.org/packages/python2-bitcoinrpc-git/)
 
@@ -261,10 +225,6 @@ Index
 
 **Description:** Python bindings for zbar.
 
-## [ripple-client-git](https://aur.archlinux.org/packages/ripple-client-git/)
-
-**Description:** Client for the Ripple payment network.
-
 ## [ruby-eye](https://aur.archlinux.org/packages/ruby-eye/)
 
 **Description:** Process monitoring tool.
@@ -284,10 +244,6 @@ Index
 ## [salt-vim-git](https://aur.archlinux.org/packages/salt-vim-git/)
 
 **Description:** Vim files for editing Salt files.
-
-## [secushare-git](https://aur.archlinux.org/packages/secushare-git/)
-
-**Description:** P2P encrypted social network framework.
 
 ## [socklog](https://aur.archlinux.org/packages/socklog/)
 
@@ -316,10 +272,6 @@ Index
 ## [vanitygen-git](https://aur.archlinux.org/packages/vanitygen-git/)
 
 **Description:** Bitcoin vanity address generator written in C.
-
-## [viacrypt-git](https://aur.archlinux.org/packages/viacrypt-git/)
-
-**Description:** One-time-read messaging system.
 
 ## [vim-after-syntax-perl-git](https://aur.archlinux.org/packages/vim-after-syntax-perl-git/)
 
@@ -552,10 +504,6 @@ Index
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
 **Description:** Downloads AUR packages with wget.
-
-## [zbar-v4l](https://aur.archlinux.org/packages/zbar-v4l/)
-
-**Description:** QR code & bar code reader patched for video support.
 
 Licensing
 ---------
