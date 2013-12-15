@@ -2,7 +2,7 @@
 
 pkgname=bitrated-git
 _gitname="bitrated"
-pkgver=ceebb44
+pkgver=40543ca
 pkgrel=1
 pkgdesc="Bitcoin arbitration marketplace"
 arch=('any')
