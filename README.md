@@ -261,6 +261,10 @@ Index
 
 **Description:** Modular Bitcoin command line utilities.
 
+## [telegram-git](https://aur.archlinux.org/packages/telegram-git/)
+
+**Description:** Telegram messenger CLI.
+
 ## [trousseau-git](https://aur.archlinux.org/packages/trousseau-git/)
 
 **Description:** Networked and encrypted key-value database.
