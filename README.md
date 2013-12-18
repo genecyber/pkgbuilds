@@ -193,6 +193,10 @@ Index
 
 **Description:** Simple PGP-like CLI for libsodium, with scrypt KDF.
 
+## [python2-pycoin](https://aur.archlinux.org/packages/python2-pycoin/)
+
+**Description:** Python-based Bitcoin utility library.
+
 ## [python2-pycparser](https://aur.archlinux.org/packages/python2-pycparser/)
 
 **Description:** Complete C99 parser in pure Python.
