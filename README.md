@@ -285,6 +285,10 @@ Index
 
 **Description:** Bitcoin vanity address generator written in C.
 
+## [vim-accordion-git](https://aur.archlinux.org/packages/vim-accordion-git/)
+
+**Description:** Vim window manager for people who love vsplits.
+
 ## [vim-after-syntax-perl-git](https://aur.archlinux.org/packages/vim-after-syntax-perl-git/)
 
 **Description:** Extended syntax highlighting rules for Perl.
