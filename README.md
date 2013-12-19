@@ -497,6 +497,10 @@ Index
 
 **Description:** Define a different filetype syntax on regions of a Vim buffer.
 
+## [vim-unstack-git](https://aur.archlinux.org/packages/vim-unstack-git/)
+
+**Description:** Vim plugin for parsing stack traces and opening the files.
+
 ## [vim-vis-git](https://aur.archlinux.org/packages/vim-vis-git/)
 
 **Description:** Extended Vim visual mode commands, substitutes, and searches.
