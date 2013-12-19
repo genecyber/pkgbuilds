@@ -17,6 +17,10 @@ Index
 
 **Description:** Bitcoin arbitration marketplace.
 
+## [coinmessage-git](https://aur.archlinux.org/packages/coinmessage-git)
+
+**Description:** Bitcoin-based secure messaging system.
+
 ## [concoord](https://aur.archlinux.org/packages/concoord)
 
 **Description:** Coordination service for distributed systems.
