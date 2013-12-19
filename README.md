@@ -233,6 +233,10 @@ Index
 
 **Description:** Python bindings for zbar.
 
+## [ruby-bitcoin-ruby](https://aur.archlinux.org/packages/ruby-bitcoin-ruby/)
+
+**Description:** Bitcoin utils and protocol in Ruby.
+
 ## [ruby-eye](https://aur.archlinux.org/packages/ruby-eye/)
 
 **Description:** Process monitoring tool.
