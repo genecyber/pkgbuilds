@@ -233,6 +233,10 @@ Index
 
 **Description:** Python bindings for zbar.
 
+## [ruby-bitcoin](https://aur.archlinux.org/packages/ruby-bitcoin/)
+
+**Description:** Ruby library for interacting with the Bitcoin protocol/network.
+
 ## [ruby-bitcoin-ruby](https://aur.archlinux.org/packages/ruby-bitcoin-ruby/)
 
 **Description:** Bitcoin utils and protocol in Ruby.
