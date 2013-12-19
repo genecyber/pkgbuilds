@@ -245,6 +245,10 @@ Index
 
 **Description:** Process monitoring framework.
 
+## [ruby-sequel](https://aur.archlinux.org/packages/ruby-sequel/)
+
+**Description:** Database toolkit.
+
 ## [ruby-sigar](https://aur.archlinux.org/packages/ruby-sigar/)
 
 **Description:** System Information Gatherer And Reporter.
