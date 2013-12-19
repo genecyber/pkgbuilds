@@ -237,6 +237,10 @@ Index
 
 **Description:** Process monitoring tool.
 
+## [ruby-gir_ffi](https://aur.archlinux.org/packages/ruby-gir_ffi/)
+
+**Description:** FFI-based GObject binding.
+
 ## [ruby-god](https://aur.archlinux.org/packages/ruby-god/)
 
 **Description:** Process monitoring framework.
