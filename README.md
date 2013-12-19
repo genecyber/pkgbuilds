@@ -381,6 +381,10 @@ Index
 
 **Description:** The Erlang plugin for Vim.
 
+## [vim-file-line-git](https://aur.archlinux.org/packages/vim-file-line-git/)
+
+**Description:** Open a file in Vim on a given line.
+
 ## [vim-fireplace-git](https://aur.archlinux.org/packages/vim-fireplace-git/)
 
 **Description:** Clojure REPL tease.
