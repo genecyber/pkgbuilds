@@ -465,6 +465,10 @@ Index
 
 **Description:** Node.js shebang filetype detect plugin for Vim.
 
+## [vim-numbered-git](https://aur.archlinux.org/packages/vim-numbered-git/)
+
+**Description:** Vim plugin for numbering items in a list.
+
 ## [vim-pacmanlog-git](https://aur.archlinux.org/packages/vim-pacmanlog-git/)
 
 **Description:** Vim syntax highlighting for Pacman log files.
