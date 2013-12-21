@@ -1,0 +1,34 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=python2-bitcoinlib
+pkgver=0.1
+pkgrel=1
+pkgdesc="An easy interface to the Bitcoin protocol and data structures"
+arch=('any')
+depends=('python2')
+makedepends=('python2-setuptools')
+url="https://github.com/petertodd/python-bitcoinlib"
+license=('custom')
+options=(!emptydirs)
+source=(https://github.com/petertodd/python-bitcoinlib/archive/pythonize.zip)
+md5sums=('e2818b738393ad7fc7f51ef06eb41e42')
+sha256sums=('976255cc6d28817ef84e3c53a21a99b3a345506c5fefc3cf8f0ec350f844453d')
+provides=('python2-bitcoinlib')
+
+prepare(){
+  cd python-bitcoinlib-pythonize
+
+  msg 'Fixing Python version...'
+  find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/python#/usr/bin/python2#g'
+  find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/env python#/usr/bin/env python2#g'
+}
+
+package() {
+  cd python-bitcoinlib-pythonize
+
+  msg 'Installing license...'
+  install -Dm644 COPYING "$pkgdir/usr/share/licenses/$pkgname/COPYING"
+
+  msg 'Installing...'
+  python2 setup.py install --root="$pkgdir" --optimize=1 
+}
