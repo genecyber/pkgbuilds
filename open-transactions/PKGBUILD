@@ -2,7 +2,7 @@
 
 pkgname=open-transactions
 _realname=opentxs
-pkgver=0.89.d
+pkgver=0.90.b
 pkgrel=1
 pkgdesc="Decentralized digital asset management system with support for higher-level, contract-based transactions including payment plans and markets with trades"
 arch=('i686' 'x86_64')
@@ -21,7 +21,6 @@ source=(http://downloads.sourceforge.net/project/${_realname}/${_realname}-${pkg
 sha1sums=('1c5719ff0096aa24223b43e280a67e16db4c29d4')
 sha256sums=('5e0e0c8db05fb75e5caf646b7c3f332c55ad0d540fa2aca587baf57dcc881b18')
 provides=('createmint' 'opentxs' 'open-transactions' 'ot' 'otserver')
-conflicts=('open-transactions-git')
 install=open-transactions.install
 
 build() {
