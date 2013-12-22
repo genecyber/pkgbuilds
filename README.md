@@ -129,6 +129,10 @@ Index
 
 **Description:** Scalable Bitcoin infrastructure.
 
+## [open-transactions](https://aur.archlinux.org/packages/open-transactions/)
+
+**Description:** Decentralized digital asset management system.
+
 ## [python2-bitcoinrpc-git](https://aur.archlinux.org/packages/python2-bitcoinrpc-git/)
 
 **Description:** Python interface to Bitcoin's JSON-RPC API.
