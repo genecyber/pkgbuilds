@@ -8,7 +8,7 @@ arch=('any')
 depends=('gettext' 'python2' 'python2-ecdsa' 'python2-pyqt4' 'python2-sip' 'python2-slowaes' 'qt4' 'sip')
 makedepends=('gcc' 'make' 'python2-pycurl' 'python2-setuptools')
 optdepends=('python2-zbar: QR code reading support')
-url="http://electrum.org/"
+url="https://electrum.org"
 license=('GPL3')
 source=(https://download.electrum.org/${pkgname^}-${pkgver}.tar.gz
         https://download.electrum.org/${pkgname^}-${pkgver}.tar.gz.asc
