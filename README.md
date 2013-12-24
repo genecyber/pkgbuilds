@@ -373,6 +373,10 @@ Index
 
 **Description:** Vim global plugin for dragging virtual blocks, by Damien Conway.
 
+## [vim-easydir-git](https://aur.archlinux.org/packages/vim-easydir-git/)
+
+**Description:** Create, edit and save files in new parent directories.
+
 ## [vim-egs-git](https://aur.archlinux.org/packages/vim-egs-git/)
 
 **Description:** EGS template for Vim.
