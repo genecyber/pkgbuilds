@@ -18,7 +18,7 @@ build() {
   cd $pkgname-$pkgver
 
   msg 'Building...'
-  ./configure --prefix="/usr" --sbindir="/usr/bin" --libexecdir="/usr/lib/rerun" --sysconfdir="/etc" --sharedstatedir="/etc" --localstatedir="/etc"
+  ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib/rerun --sysconfdir=/etc --sharedstatedir=/usr/share/rerun --localstatedir=/var/lib/rerun
   make
 }
 
