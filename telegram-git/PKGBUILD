@@ -22,7 +22,7 @@ build() {
   cd ${pkgname%-git}
 
   msg 'Building...'
-  ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/bin --sysconfdir=/etc --sharedstatedir=/etc --localstatedir=/etc
+  ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib/telegram --sysconfdir=/etc --sharedstatedir=/etc --localstatedir=/etc
   make
 }
 

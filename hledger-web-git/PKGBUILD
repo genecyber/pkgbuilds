@@ -31,5 +31,5 @@ package() {
 
   msg 'Installing...'
   mkdir -p "$pkgdir/usr/bin"
-  cabal install --prefix="$pkgdir/usr" --bindir="$pkgdir/usr/bin" --libexecdir="$pkgdir/usr/bin" ./hledger-web
+  cabal install --prefix="$pkgdir/usr" --bindir="$pkgdir/usr/bin" --libexecdir="$pkgdir/usr/lib/hledger" ./hledger-web
 }
