@@ -241,6 +241,10 @@ Index
 
 **Description:** Python bindings for zbar.
 
+## [rerun](https://aur.archlinux.org/packages/rerun/)
+
+**Description:** Modular shell scripts.
+
 ## [ruby-bitcoin](https://aur.archlinux.org/packages/ruby-bitcoin/)
 
 **Description:** Ruby library for interacting with the Bitcoin protocol/network.
