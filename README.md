@@ -137,6 +137,10 @@ Index
 
 **Description:** Python interface to Bitcoin's JSON-RPC API.
 
+## [python2-buildozer](https://aur.archlinux.org/packages/python2-buildozer/)
+
+**Description:** Generic Python packager for Android / iOS and Desktop.
+
 ## [python2-camlistore](https://aur.archlinux.org/packages/python2-camlistore/)
 
 **Description:** Unofficial Python client for Camlistore.
