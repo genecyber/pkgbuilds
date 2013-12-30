@@ -5,9 +5,13 @@ After=network.target
 [Service]
 User=bitcoin
 Group=bitcoin
+Type=forking
+TimeoutStartSec=30
 PIDFile=/run/bitcoind.pid
-WorkingDirectory=/srv/bitcoin
-ExecStart=/usr/bin/bitcoind -pid=/run/bitcoind.pid -daemon=0
+ExecStart=/usr/bin/bitcoind -daemon \
+                            -conf=/srv/bitcoin/.bitcoin/bitcoin.conf \
+                            -pid=/run/bitcoind.pid \
+                            -datadir=/srv/bitcoin/.bitcoin
 ExecReload=/usr/bin/kill -HUP $MAINPID
 ExecStop=/usr/bin/bitcoind stop
 

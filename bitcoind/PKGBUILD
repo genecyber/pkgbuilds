@@ -20,7 +20,7 @@ source=(http://sourceforge.net/projects/bitcoin/files/Bitcoin/${pkgname%d}-$pkgv
 sha256sums=('73495de53d1a30676884961e39ff46c3851ff770eeaa767331d065ff0ce8dd0c'
             'dee24333ca3d9c09c2fafed72aa52a75d58cbb4c34366765d9581c77ac5061c5'
             'f9f68d36ba1aabf5c768b92ac27ebe3161485663b4fcf0f9d1a35c5c202558f9'
-            '846f9f96cbcf777b097dc88b5a9f79010e6ff4a9633d3d471f2d50d3ea1e0c23'
+            '8f95656429fed7040be6eae48f90ed55d768550bdcff95ec4b010bd84019088f'
             'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
             'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
 backup=('etc/logrotate.d/bitcoind')
