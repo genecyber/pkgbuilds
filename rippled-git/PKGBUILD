@@ -1,7 +1,6 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=rippled-git
-_gitname="rippled"
 pkgver=c568988
 pkgrel=1
 pkgdesc="Ripple peer-to-peer network daemon"
@@ -16,15 +15,15 @@ provides=('rippled')
 conflicts=('rippled')
 install=rippled.install
 
-_insdir="/opt/${_gitname}"
+_insdir="/opt/${pkgname%-git}"
 
 pkgver() {
-  cd $_gitname
-  git describe --always | sed 's|-|.|g'
+  cd ${pkgname%-git}
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   msg 'Building with scons...'
   scons
@@ -34,7 +33,7 @@ package() {
   mkdir -p "${pkgdir}/${_insdir}"
 
   msg 'Installing...'
-  cp -rf "${_gitname}/"* "${pkgdir}/${_insdir}"
+  cp -rf "${pkgname%-git}/"* "${pkgdir}/${_insdir}"
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +

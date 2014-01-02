@@ -2,7 +2,7 @@
 
 pkgname=chromawallet-git
 pkgver=6348222
-pkgrel=1
+pkgrel=2
 pkgdesc="The colored coins wallet"
 arch=('x86_64')
 depends=('bitcoin-daemon' 'python2' 'python2-bitcoinlib' 'python2-python-jsonrpc' 'python2-pycoin' 'python2-pyqt4' 'python2-sip' 'qt4' 'sip')
@@ -15,7 +15,7 @@ provides=('chromawallet')
 
 pkgver() {
   cd ${pkgname%-git}
-  git describe --always | sed 's|-|.|g'
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 prepare() {

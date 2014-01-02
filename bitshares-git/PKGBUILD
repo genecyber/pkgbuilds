@@ -1,35 +1,34 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=bitshares-git
-_gitname=bitshares
 pkgver=f6f3ee3
-pkgrel=1
+pkgrel=2
 pkgdesc="Bitcoin P2P exchange system"
 arch=('i686' 'x86_64')
 url="https://github.com/InvictusInnovations/BitShares"
 depends=('boost' 'openssl' 'qt5-base')
 makedepends=('cmake' 'gcc' 'make')
-conflicts=('bitshares')
-provides=('bitshares')
 license=('custom')
-source=($_gitname::git+https://github.com/InvictusInnovations/BitShares)
+source=(${pkgname%-git}::git+https://github.com/InvictusInnovations/BitShares)
 sha256sums=('SKIP')
+provides=('bitshares')
+conflicts=('bitshares')
 install=bitshares.install
 
 pkgver() {
-  cd $_gitname
-  git describe --always | sed 's|-|.|g'
+  cd ${pkgname%-git}
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 prepare() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   msg 'Cloning fc build tool...'
-  git clone https://github.com/InvictusInnovations/fc.git
+  git clone https://github.com/InvictusInnovations/fc
 }
 
 build() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   msg 'Building...'
   export BOOST_ROOT=/usr/include/boost
@@ -38,7 +37,7 @@ build() {
 }
 
 package() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   msg 'Installing...'
   mkdir -p "$pkgdir/usr/share/bitshares"

@@ -1,11 +1,10 @@
+# Maintainer: Andreas Wagner <AndreasBWagner@pointfree.net>
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 # Contributor: Asta <gatien.bovyn@gmail.com>
 # Contributor: ptrv <mail@petervasil.net>
 
 pkgname=pybitmessage-git
-_gitname='PyBitmessage'
-_realname='pybitmessage'
-pkgver=d93d923
+pkgver=r1202.a756e44
 pkgrel=1
 pkgdesc="Bitcoin inspired P2P encrypted messenger"
 arch=('any')
@@ -14,25 +13,20 @@ makedepends=('git')
 optdepends=('python2-gevent')
 url="https://github.com/Bitmessage/PyBitmessage"
 license=('MIT')
-source=(git+https://github.com/Bitmessage/PyBitmessage
-        pybitmessage.sh
-        qt-init.patch)
+source=(${pkgname%-git}::git+https://github.com/Bitmessage/PyBitmessage
+        pybitmessage.sh)
 sha256sums=('SKIP'
-            'c20eeeffd4931d8bcd50de5e6e1a974323ebbd3f5ad1d34483c6adeb3b5f3ae1'
-            '70607ea42e46602ab5eb0a815def01a6455068e832820025544787c96af9685e')
+            'c20eeeffd4931d8bcd50de5e6e1a974323ebbd3f5ad1d34483c6adeb3b5f3ae1')
 provides=('pybitmessage')
 conflicts=('pybitmessage')
 
 pkgver() {
-  cd $_gitname
-  git describe --always | sed 's|-|.|g'
+  cd ${pkgname%-git}
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 prepare() {
-  cd $_gitname
-
-  msg 'Patching init to find translations...'
-  patch -p1 < ${srcdir}/qt-init.patch
+  cd ${pkgname%-git}
 
   msg 'Fixing Python version...'
   find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/python#/usr/bin/python2#g'
@@ -40,17 +34,17 @@ prepare() {
 }
 
 package() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   msg 'Installing shared files...'
-  mkdir -p "$pkgdir"/usr/share/${_realname}
-  cp -R src/* "$pkgdir"/usr/share/${_realname}
+  mkdir -p "$pkgdir"/usr/share/${pkgname%-git}
+  cp -R src/* "$pkgdir"/usr/share/${pkgname%-git}
 
   msg 'Installing desktop icons...'
-  install -D -m644 desktop/${_realname}.desktop "${pkgdir}/usr/share/applications/${_realname}.desktop"
-  install -D -m644 src/images/can-icon-24px.png "${pkgdir}/usr/share/icons/hicolor/24x24/apps/${_realname}.png"
-  install -D -m644 desktop/can-icon.svg "${pkgdir}/usr/share/icons/hicolor/scalable/apps/${_realname}.svg"
-  install -D -m644 desktop/can-icon.svg "${pkgdir}/usr/share/pixmaps/${_realname}.svg"
+  install -D -m644 desktop/${pkgname%-git}.desktop "${pkgdir}/usr/share/applications/${pkgname%-git}.desktop"
+  install -D -m644 src/images/can-icon-24px.png "${pkgdir}/usr/share/icons/hicolor/24x24/apps/${pkgname%-git}.png"
+  install -D -m644 desktop/can-icon.svg "${pkgdir}/usr/share/icons/hicolor/scalable/apps/${pkgname%-git}.svg"
+  install -D -m644 desktop/can-icon.svg "${pkgdir}/usr/share/pixmaps/${pkgname%-git}.svg"
 
   msg 'Installing executable...'
   install -D -m755 ${srcdir}/pybitmessage.sh "${pkgdir}/usr/bin/pybitmessage"

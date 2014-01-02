@@ -1,9 +1,8 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=namecoin-git
-_gitname=namecoin
 pkgver=nc0.3.50.00.74.g8b3530d
-pkgrel=1
+pkgrel=2
 pkgdesc="Peer to peer naming system based on Bitcoin"
 arch=('i686' 'x86_64')
 url="https://dot-bit.org/"
@@ -12,7 +11,7 @@ makedepends=('git' 'boost' 'gcc' 'make' 'automoc4')
 conflicts=('namecoin-bin' 'namecoin' 'namecoind' 'namecoin-daemon' 'namecoin-qt')
 provides=('namecoin')
 license=('MIT')
-source=($_gitname::git+https://github.com/namecoin-qt/namecoin-qt
+source=(${pkgname%-git}::git+https://github.com/namecoin-qt/namecoin-qt
         Makefile.patch)
 sha256sums=('SKIP'
             'f19a9091180ec055ba0d6e37ee48403133f09cdaa1abda214dd823f7cd585ab9')
@@ -23,19 +22,19 @@ makefile_unix=Makefile
 qmake=qmake-qt4
 
 pkgver() {
-  cd $_gitname
+  cd ${pkgname%-git}
   git describe --always | sed 's|-|.|g'
 }
 
 prepare() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   msg "Patching $makefile_unix..."
   patch -p1 < ${srcdir}/Makefile.patch
 }
 
 build() {
-  cd $_gitname/src
+  cd ${pkgname%-git}/src
 
   msg "Patching $makefile_unix..."
   sed -i $makefile_unix \
@@ -55,7 +54,7 @@ build() {
 }
 
 package() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   find $pkgdir/usr/share/ -type f | xargs chmod -x 
 

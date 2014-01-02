@@ -1,7 +1,6 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=rs-serve-git
-_gitname='rs-serve'
 pkgver=6fb93b0
 pkgrel=1
 pkgdesc="a remotestorage server for POSIX systems"
@@ -18,19 +17,19 @@ provides=('rs-serve')
 conflicts=('rs-serve')
 
 pkgver() {
-  cd $_gitname
-  git describe --always | sed 's|-|.|g'
+  cd ${pkgname%-git}
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 prepare() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   msg 'Patching Makefile...'
   patch -p1 < ${srcdir}/Makefile.patch
 }
 
 build() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   export PYTHON=python2
 
@@ -42,7 +41,7 @@ build() {
 }
 
 package() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   mkdir -p "$pkgdir"/usr/bin
   mkdir -p "$pkgdir"/var/lib/rs-serve/authorizations

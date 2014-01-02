@@ -1,7 +1,6 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=zotonic-git
-_gitname='zotonic'
 pkgver=0.0.0
 pkgrel=1
 pkgdesc="High speed, real-time Web framework and CMS, built with Erlang (latest development version)"
@@ -18,19 +17,19 @@ conflicts=('zotonic')
 install=zotonic.install
 
 pkgver() {
-  cd $_gitname
-  git describe --always | sed 's|-|.|g'
+  cd ${pkgname%-git}
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   msg 'Building...'
   make
 }
 
 package() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   msg 'Installing...'
   mkdir -p "${pkgdir}"/opt/zotonic

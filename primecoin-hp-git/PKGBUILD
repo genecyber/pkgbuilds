@@ -1,7 +1,6 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=primecoin-hp-git
-_gitname=primecoin
 pkgver=0.0.0
 pkgrel=1
 pkgdesc="Primecoin high performance version (mikaelh)"
@@ -13,8 +12,8 @@ conflicts=('primecoin-bin' 'primecoin' 'primecoind' 'primecoin-daemon' 'primecoi
 provides=('primecoin-hp')
 license=('MIT')
 #source=(git+https://github.com/mikaelh2/primecoin)
-#source=($_gitname::git+https://bitbucket.org/pankkake/mikaelh2-primecoin/)
-source=($_gitname::git+https://bitbucket.org/mikaelh/primecoin-hp)
+#source=(${pkgname%-git}::git+https://bitbucket.org/pankkake/mikaelh2-primecoin/)
+source=(${pkgname%-git}::git+https://bitbucket.org/mikaelh/primecoin-hp)
 sha256sums=('SKIP')
 install=primecoin-qt.install
 
@@ -23,12 +22,12 @@ makefile_unix=makefile.unix
 qmake="qmake-qt4 bitcoin-qt.pro"
 
 pkgver() {
-  cd $_gitname
-  git describe --always | sed 's|-|.|g'
+  cd ${pkgname%-git}
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 prepare() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   msg "Patching bitcoind to primecoind..."
   find contrib -type f -print0 | xargs -0 sed -i 's#bitcoin#primecoin#g'
@@ -65,7 +64,7 @@ prepare() {
 }
 
 build() {
-  cd $_gitname/src
+  cd ${pkgname%-git}/src
 
   msg "Patching $makefile_unix..."
   sed -i $makefile_unix \
@@ -84,7 +83,7 @@ build() {
 }
 
 package() {
-  cd $_gitname
+  cd ${pkgname%-git}
 
   ## Grab debian .install files here.
   ## First, create directories:

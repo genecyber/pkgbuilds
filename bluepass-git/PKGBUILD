@@ -2,7 +2,7 @@
 
 pkgname=bluepass-git
 pkgver=1cc1f01
-pkgrel=1
+pkgrel=2
 pkgdesc="Next-generation password manager"
 arch=('any')
 depends=('python2' 'python2-gevent' 'python2-greenlet' 'python2-six' 'python2-python-tdbus')
@@ -16,7 +16,7 @@ conflicts=('bluepass')
 
 pkgver() {
   cd ${pkgname%-git}
-  git describe --always | sed 's|-|.|g'
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 prepare() {

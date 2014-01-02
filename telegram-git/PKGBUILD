@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=telegram-git
-pkgver=d39a4e4
+pkgver=r200.c68c916
 pkgrel=1
 pkgdesc="Telegram messenger CLI"
 arch=('i686' 'x86_64')
@@ -15,7 +15,7 @@ conflicts=('telegram')
 
 pkgver() {
   cd ${pkgname%-git}
-  git describe --always | sed 's|-|.|g'
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
 }
 
 build() {
