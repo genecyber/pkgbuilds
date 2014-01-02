@@ -10,9 +10,10 @@ arch=('any')
 url='http://pypi.python.org/pypi/pyutil'
 license=('GPL2')
 depends=('python2')
-makedepends=('setuptools' 'darcsver' 'setuptools_darcs' 'python2-simplejson' 'zbase32') # missing: setuptools_trial
-source=( http://pypi.python.org/packages/source/p/pyutil/pyutil-$pkgver.tar.gz )
+makedepends=('darcsver' 'python2-simplejson' 'setuptools' 'setuptools_darcs' 'zbase32') # missing: setuptools_trial
+source=(https://pypi.python.org/packages/source/p/$pkgname/$pkgname-$pkgver.tar.gz)
 md5sums=('5a20ccae479d967d3fa11b905d0e10f6')
+sha256sums=('0aaa2dad8f280bc26311799622d5fdda392a0ecd7ad1a1b80ec79fbf2fcfbd74')
 
 build(){
   cd "$srcdir/$pkgname-$pkgver"
@@ -22,5 +23,5 @@ build(){
 
 package(){
   cd "$srcdir/$pkgname-$pkgver"
-  python2 setup.py install --root="$pkgdir"
+  python2 setup.py install --root="$pkgdir" --optimize=1
 }
