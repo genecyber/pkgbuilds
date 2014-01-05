@@ -1,19 +1,10 @@
 post_install() {
   update-desktop-database -q
-  echo "******"
-  echo "*"
-  echo "* Electrum must be started in GTK mode on first run:"
-  echo "* electrum -g gtk"
-  echo "*"
-  echo "* Once ~/.electrum/blockchain_headers has finished downloading"
-  echo "* (~20MB), Electrum can run in the default QT mode."
-  echo "*"
-  echo "******"
+  printf "$ecdsa\n"
 }
 
 post_upgrade() {
-  update-desktop-database -q
-  printf "$ecdsa\n"
+  post_install
 }
 
 post_remove() {
