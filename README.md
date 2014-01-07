@@ -25,6 +25,10 @@ Index
 
 **Description:** Coordination service for distributed systems.
 
+## [cryptsetup-nuke-keys](https://aur.archlinux.org/packages/cryptsetup-nuke-keys)
+
+**Description:** Patched cryptsetup.
+
 ## [diesel](https://aur.archlinux.org/packages/diesel/)
 
 **Description:** Coroutine-based networking library for Python.
