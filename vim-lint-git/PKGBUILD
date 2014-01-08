@@ -23,7 +23,7 @@ pkgver() {
 
 prepare() {
   cd ${pkgname%-git}
-  
+
   msg 'Removing stray files...'
   rm README.markdown LICENSE
 }

@@ -56,7 +56,7 @@ build() {
 package() {
   cd ${pkgname%-git}
 
-  find $pkgdir/usr/share/ -type f | xargs chmod -x 
+  find $pkgdir/usr/share/ -type f | xargs chmod -x
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +

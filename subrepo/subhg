@@ -2,7 +2,7 @@
 
 # subhg
 #
-# A tiny wrapper around hg to help you manage 
+# A tiny wrapper around hg to help you manage
 # Mercurial sub-projects easily, safely, and simply.
 #
 # Created by Rusty Klophaus (@rklophaus)

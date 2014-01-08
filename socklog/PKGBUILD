@@ -52,7 +52,7 @@ check() {
 
 package() {
   cd "$srcdir/admin/$pkgname-$pkgver/src"
-  
+
   msg 'Installing license...'
   install -D -m644 "$srcdir/admin/$pkgname-$pkgver/package/COPYING" "$pkgdir/usr/share/licenses/$pkgname/COPYING"
 

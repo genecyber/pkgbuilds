@@ -40,7 +40,7 @@ package() {
   install -D -m755 ngccc-cli.py "$pkgdir/usr/bin/ngccc-cli"
   install -D -m755 ngccc-gui.py "$pkgdir/usr/bin/ngccc-gui"
   install -D -m755 ngccc-server.py "$pkgdir/usr/bin/ngccc-server"
-  python2 setup.py install --root="${pkgdir}" --optimize=1 
+  python2 setup.py install --root="${pkgdir}" --optimize=1
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +

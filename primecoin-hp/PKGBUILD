@@ -99,7 +99,7 @@ package() {
   mkdir -p $pkgdir/usr/share/primecoin
   cat contrib/debian/*.examples | deb_paths_pp | xargs -I{} install {} $pkgdir/usr/share/primecoin/
 
-  find $pkgdir/usr/share/ -type f | xargs chmod -x 
+  find $pkgdir/usr/share/ -type f | xargs chmod -x
 }
 
 ## convert paths from .install and other files: "debian/" -> "contrib/debian/"

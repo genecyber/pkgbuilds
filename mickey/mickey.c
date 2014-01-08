@@ -122,7 +122,7 @@ int main(int argc, char **argv)
 	char pbuf[1024];
 	EC_KEY *pkey;
 	unsigned char *pend = (unsigned char *) pbuf;
-	
+
 	int count = argc > 1 ? atoi(argv[1]) : 1;
 
 	OpenSSL_add_all_algorithms();

@@ -29,5 +29,5 @@ package() {
   install -D -m644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 
   msg 'Installing...'
-  python2 setup.py install --root="$pkgdir" --optimize=1 
+  python2 setup.py install --root="$pkgdir" --optimize=1
 }

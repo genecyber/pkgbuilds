@@ -35,7 +35,7 @@ package() {
   cp docs/* "$pkgdir/usr/share/doc/${pkgname%-git}"
 
   msg 'Installing...'
-  python2 setup.py install --root="$pkgdir" --optimize=1 
+  python2 setup.py install --root="$pkgdir" --optimize=1
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +
