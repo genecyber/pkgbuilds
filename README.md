@@ -445,6 +445,10 @@ Index
 
 **Description:** Vim global plugin for heads-up digraph interactions, by Damien Conway.
 
+## [vim-hugefile-git](https://aur.archlinux.org/packages/vim-hugefile-git/)
+
+**Description:** Speed up loading of large files in Vim.
+
 ## [vim-javascript-git](https://aur.archlinux.org/packages/vim-javascript-git/)
 
 **Description:** Vim JavaScript indentation improvements.
