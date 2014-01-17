@@ -1,6 +1,6 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 # Maintainer: Timothy Redaelli <timothy.redaelli@gmail.com>
 # Contributor: shahid <helllamer@gmail.com>
-# Contributor: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=bitcoind
 pkgver=0.8.6
@@ -8,22 +8,19 @@ pkgrel=1
 pkgdesc="Bitcoin daemon for long-running server usage"
 arch=('i686' 'x86_64')
 url="http://bitcoin.org/"
-depends=('boost-libs' 'miniupnpc' 'openssl' 'runit-musl')
+depends=('boost-libs' 'miniupnpc' 'openssl')
 makedepends=('automoc4' 'boost' 'miniupnpc' 'qrencode')
 license=('MIT')
 source=(http://sourceforge.net/projects/bitcoin/files/Bitcoin/${pkgname%d}-$pkgver/${pkgname%d}-$pkgver-linux.tar.gz
         bitcoin.conf
         bitcoind.logrotate
-        bitcoind.service
-        bitcoind.sv.log
-        bitcoind.sv.run)
+        bitcoind.service)
 sha256sums=('73495de53d1a30676884961e39ff46c3851ff770eeaa767331d065ff0ce8dd0c'
-            'dee24333ca3d9c09c2fafed72aa52a75d58cbb4c34366765d9581c77ac5061c5'
-            'f9f68d36ba1aabf5c768b92ac27ebe3161485663b4fcf0f9d1a35c5c202558f9'
-            '8f95656429fed7040be6eae48f90ed55d768550bdcff95ec4b010bd84019088f'
-            'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
-            'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
-backup=('etc/logrotate.d/bitcoind')
+            '9c4edff7a3083f383a9e1a6cb1baf52019a0ab88115cc6b634cdda4852558174'
+            '8f05207b586916d489b7d25a68eaacf6e678d7cbb5bfbac551903506b32f904f'
+            'e213a00af48ad7009bec845153ab6d24a2a92426df9beb4ffa6503c54335091d')
+backup=('etc/bitcoin/bitcoin.conf'
+        'etc/logrotate.d/bitcoind')
 provides=('bitcoin' 'bitcoin-daemon')
 conflicts=('bitcoin' 'bitcoin-daemon')
 install=bitcoind.install
@@ -50,15 +47,10 @@ package() {
   install -Dm755 src/bitcoind "$pkgdir/usr/bin/bitcoind"
 
   msg 'Installing bitcoin.conf file...'
-  install -Dm600 "$srcdir/bitcoin.conf" "$pkgdir/srv/bitcoin/.bitcoin/bitcoin.conf"
+  install -Dm600 "$srcdir/bitcoin.conf" "$pkgdir/etc/bitcoin/bitcoin.conf"
 
   msg 'Installing systemd service files...'
   install -Dm644 "$srcdir/bitcoind.service" "$pkgdir/usr/lib/systemd/system/bitcoind.service"
-
-  msg 'Installing Runit start scripts...'
-  mkdir -p "$pkgdir/etc/sv/bitcoin/log"
-  install -m755 "$srcdir/bitcoind.sv.run" "$pkgdir/etc/sv/bitcoin"
-  install -m755 "$srcdir/bitcoind.sv.log" "$pkgdir/etc/sv/bitcoin/log"
 
   msg 'Readying logrotate...'
   install -Dm644 "$srcdir/bitcoind.logrotate" "$pkgdir/etc/logrotate.d/bitcoind"

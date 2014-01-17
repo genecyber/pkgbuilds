@@ -1,4 +1,4 @@
-/srv/bitcoin/.bitcoin/debug.log
+/srv/bitcoin/debug.log
 {
         rotate 5
         copytruncate
