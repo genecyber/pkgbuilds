@@ -9,6 +9,10 @@ Index
 
 **Description:** libvirt replacement in Bash.
 
+## [bitcoind](https://aur.archlinux.org/packages/bitcoind)
+
+**Description:** Bitcoin daemon for long-running server usage.
+
 ## [bitpaint](https://aur.archlinux.org/packages/bitpaint)
 
 **Description:** Bitcoin smart contracts.
