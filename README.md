@@ -165,6 +165,10 @@ Index
 
 **Description:** Simple tool for making Python functions accessible from the command line.
 
+## [python2-crtauth-git](https://aur.archlinux.org/packages/python2-crtauth-git/)
+
+**Description:** A public key backed client/server authentication system.
+
 ## [python2-dirtools](https://aur.archlinux.org/packages/python2-dirtools/)
 
 **Description:** Toolkit for working with directories.
