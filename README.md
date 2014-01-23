@@ -257,6 +257,10 @@ Index
 
 **Description:** Modular shell scripts.
 
+## [ruby-binman](https://aur.archlinux.org/packages/ruby-binman/)
+
+**Description:** Produces UNIX manual pages for executable scripts.
+
 ## [ruby-bitcoin](https://aur.archlinux.org/packages/ruby-bitcoin/)
 
 **Description:** Ruby library for interacting with the Bitcoin protocol/network.
