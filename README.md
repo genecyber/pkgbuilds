@@ -281,6 +281,10 @@ Index
 
 **Description:** Process monitoring framework.
 
+## [ruby-md2man](https://aur.archlinux.org/packages/ruby-md2man/)
+
+**Description:** Converts markdown documents into UNIX manual pages.
+
 ## [ruby-opener](https://aur.archlinux.org/packages/ruby-opener/)
 
 **Description:** A 33-line alternative to the popular launchy library.
