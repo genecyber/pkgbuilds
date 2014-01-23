@@ -277,6 +277,10 @@ Index
 
 **Description:** Process monitoring framework.
 
+## [ruby-opener](https://aur.archlinux.org/packages/ruby-opener/)
+
+**Description:** A 33-line alternative to the popular launchy library.
+
 ## [ruby-sequel](https://aur.archlinux.org/packages/ruby-sequel/)
 
 **Description:** Database toolkit.
