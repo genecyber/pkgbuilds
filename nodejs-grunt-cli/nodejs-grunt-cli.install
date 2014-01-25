@@ -6,6 +6,15 @@ post_install() {
   echo "* globally. For more information about why, please read this:"
   echo "* http://blog.nodejs.org/2011/03/23/npm-1-0-global-vs-local-installation"
   echo "*"
+  echo "*" To enable tab auto-completion for Grunt, add one of the
+  echo "*" following lines to your ~/.bashrc or ~/.zshrc file.
+  echo "*"
+  echo "*" Bash, ~/.bashrc:
+  echo "*" eval "$(grunt --completion=bash)"
+  echo "*"
+  echo "*" Zsh, ~/.zshrc:
+  echo "*" eval "$(grunt --completion=zsh)"
+  echo "*"
   echo "************************************************************************"
 }
 
