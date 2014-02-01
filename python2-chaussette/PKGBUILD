@@ -2,10 +2,10 @@
 
 pkgname=python2-chaussette
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="WSGI Server for Circus"
 arch=('any')
-depends=('python2' 'python2-argparse' 'python2-six')
+depends=('python2' 'python2-six')
 makedepends=('python2-setuptools')
 url="https://github.com/mozilla-services/chaussette"
 license=('Apache')
