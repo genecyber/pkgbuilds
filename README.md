@@ -305,6 +305,10 @@ Index
 
 **Description:** Vim files for editing Salt files.
 
+## [secp256k1](https://aur.archlinux.org/packages/secp256k1/)
+
+**Description:** Optimized C library for secp256k1 ECDSA.
+
 ## [socklog](https://aur.archlinux.org/packages/socklog/)
 
 **Description:** Small and secure syslogd replacement for use with Runit.
