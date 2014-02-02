@@ -45,6 +45,10 @@ Index
 
 **Description:** Lightweight Bitcoin wallet with additional entropy.
 
+## [ethereum-git](https://aur.archlinux.org/packages/ethereum-git/)
+
+**Description:** Next-generation distributed cryptographic ledger.
+
 ## [facron-git](https://aur.archlinux.org/packages/facron-git)
 
 **Description:** Advanced filesystem cron.
