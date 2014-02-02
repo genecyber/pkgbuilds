@@ -1,0 +1,68 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=ethereum
+pkgver=20140202
+pkgrel=1
+pkgdesc="Next-generation distributed cryptographic ledger, C++ client"
+arch=('i686' 'x86_64')
+depends=('boost' 'boost-libs' 'crypto++' 'gmp' 'leveldb' 'openssl' 'secp256k1')
+makedepends=('automake' 'cmake' 'gcc' 'yasm')
+url="https://code.ethereum.org/"
+license=('MIT')
+source=(https://code.ethereum.org/code/013114/cpp-ethereum-poc-1.tar.gz
+        miniupnpc.tar.gz::http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.6.20120509.tar.gz
+        Common.cpp.patch
+        Dagger.cpp.patch
+        State.cpp.patch)
+sha1sums=('c487d1a86eb1e42f3bea534971ccdde8ebaa72d3'
+          '7f2f005da4a6954328f4696d48b46996a548ce37'
+          'c50b81a633b235d651b3a5df89454b9211f55070'
+          '7f769b9e55eea78222e851217b1bf4998f7d7551'
+          '45d0e1696047be2c3c2f20383983a33ee26ee9c2')
+sha256sums=('92740f1c68944d3e56255e0889418b1a070d7f39ecc33b51f5b80c070ea23167'
+            'cd023862ae3882246102594fda7dc5efd4feb2531bf7903abc62aa02e76193d8'
+            '09d466474fbaafbe67da335515d44d27aef52164663bb56517a139e67c6e8bc8'
+            '5856c1d5425a01f34e47ee018d08efcf4f54991b23b3a1f770d05e2a2dd41d4b'
+            '44b1627815141096be1ea9f801c101fbb2fbaf03c139d42a8f980f19c2b45923')
+provides=('cpp-ethereum' 'ethereum')
+conflicts=('cpp-ethereum')
+
+prepare() {
+  cd "$srcdir"/cpp-ethereum-poc-1
+
+  msg 'Patching Common.cpp...'
+  patch -p1 < ${srcdir}/Common.cpp.patch
+
+  msg 'Patching Dagger.cpp...'
+  patch -p1 < ${srcdir}/Dagger.cpp.patch
+
+  msg 'Patching State.cpp...'
+  patch -p1 < ${srcdir}/State.cpp.patch
+
+  msg 'Preparing miniupnpc...'
+  tar -xvzf ${srcdir}/miniupnpc.tar.gz -C .
+}
+
+build() {
+  cd "$srcdir"/cpp-ethereum-poc-1
+
+  msg 'Building miniupnpc...'
+  make -C ./miniupnpc-1.6.20120509
+
+  msg 'Building ethereum...'
+  export CPPFLAGS=-I/../miniupnpc-1.6.20120509/
+  export LDFLAGS=-I/../miniupnpc-1.6.20120509/
+  cmake -DCMAKE_BUILD_TYPE=Release -DCPPFLAGS=-I/../miniupnpc-1.6.20120509/ -DLDFLAGS=-I/../miniupnpc-1.6.20120509/
+  make
+}
+
+package() {
+  cd "$srcdir"/cpp-ethereum-poc-1
+
+  msg 'Installing executable...'
+  install -Dm 755 eth/eth ${pkgdir}/usr/bin/ethereum
+
+  msg 'Installing...'
+  install -dm 755 ${pkgdir}/usr/share/ethereum
+  tar -c . | tar -x -C ${pkgdir}/usr/share/ethereum
+}
