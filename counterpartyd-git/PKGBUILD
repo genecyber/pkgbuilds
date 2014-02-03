@@ -11,7 +11,7 @@ optdepends=('bitcoind: Bitcoin daemon for long-running server usage'
             'python-sphinx: Generate counterpartyd man pages')
 url="https://counterparty.co/"
 license=('MIT')
-source=(${pkgname%-git}::git+https://github.com/PhantomPhreak/counterpartyd)
+source=(git+https://github.com/PhantomPhreak/counterpartyd)
 sha256sums=('SKIP')
 provides=('counterpartyd')
 conflicts=('counterpartyd')

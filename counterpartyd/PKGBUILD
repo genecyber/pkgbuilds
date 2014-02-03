@@ -18,10 +18,10 @@ package() {
   cd $srcdir/$pkgname-$pkgver
 
   msg 'Installing license...'
-  install -Dm 644 LICENSE ${pkgdir}/usr/share/licenses/counterparty/LICENSE
+  install -Dm 644 LICENSE $pkgdir/usr/share/licenses/counterparty/LICENSE
 
   msg 'Installing docs...'
-  install -Dm 644 README.md ${pkgdir}/usr/share/doc/counterparty/README.md
+  install -Dm 644 README.md $pkgdir/usr/share/doc/counterparty/README.md
 
   msg 'Installing libdirs...'
   install -dm 755 $pkgdir/usr/share/counterparty
