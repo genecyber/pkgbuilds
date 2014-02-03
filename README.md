@@ -145,6 +145,10 @@ Index
 
 **Description:** Decentralized digital asset management system.
 
+## [python-json-rpc](https://aur.archlinux.org/packages/python2-json-rpc/)
+
+**Description:** JSON-RPC transport realisation.
+
 ## [python2-bitcoinrpc-git](https://aur.archlinux.org/packages/python2-bitcoinrpc-git/)
 
 **Description:** Python interface to Bitcoin's JSON-RPC API.
