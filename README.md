@@ -33,6 +33,10 @@ Index
 
 **Description:** An open marketplace, built on Bitcoin.
 
+## [counterpartyd-git](https://aur.archlinux.org/packages/counterpartyd-git)
+
+**Description:** An open marketplace, built on Bitcoin (git version).
+
 ## [cryptsetup-nuke-keys](https://aur.archlinux.org/packages/cryptsetup-nuke-keys)
 
 **Description:** Patched cryptsetup.
