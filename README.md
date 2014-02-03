@@ -29,6 +29,10 @@ Index
 
 **Description:** Coordination service for distributed systems.
 
+## [counterpartyd](https://aur.archlinux.org/packages/counterpartyd)
+
+**Description:** An open marketplace, built on Bitcoin.
+
 ## [cryptsetup-nuke-keys](https://aur.archlinux.org/packages/cryptsetup-nuke-keys)
 
 **Description:** Patched cryptsetup.
