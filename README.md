@@ -149,6 +149,10 @@ Index
 
 **Description:** JSON-RPC transport realisation.
 
+## [python-pycoin](https://aur.archlinux.org/packages/python-pycoin/)
+
+**Description:** Python-based Bitcoin utility library.
+
 ## [python2-bitcoinrpc-git](https://aur.archlinux.org/packages/python2-bitcoinrpc-git/)
 
 **Description:** Python interface to Bitcoin's JSON-RPC API.
