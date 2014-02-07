@@ -53,10 +53,6 @@ Index
 
 **Description:** Lightweight Bitcoin wallet with additional entropy.
 
-## [ethereum-git](https://aur.archlinux.org/packages/ethereum-git/)
-
-**Description:** Next-generation distributed cryptographic ledger.
-
 ## [facron-git](https://aur.archlinux.org/packages/facron-git)
 
 **Description:** Advanced filesystem cron.
@@ -324,14 +320,6 @@ Index
 ## [salt-vim-git](https://aur.archlinux.org/packages/salt-vim-git/)
 
 **Description:** Vim files for editing Salt files.
-
-## [secp256k1](https://aur.archlinux.org/packages/secp256k1/)
-
-**Description:** Optimized C library for secp256k1 ECDSA.
-
-## [socklog](https://aur.archlinux.org/packages/socklog/)
-
-**Description:** Small and secure syslogd replacement for use with Runit.
 
 ## [stlviewer-git](https://aur.archlinux.org/packages/stlviewer-git/)
 
