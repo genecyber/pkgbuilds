@@ -5,9 +5,10 @@ pkgver=1.9.7
 pkgrel=1
 pkgdesc="Lightweight Bitcoin wallet"
 arch=('any')
-depends=('gettext' 'python2' 'python2-ecdsa' 'python2-pyqt4' 'python2-sip' 'python2-slowaes' 'qt4' 'sip')
-makedepends=('gcc' 'make' 'python2-pycurl' 'python2-setuptools')
-optdepends=('python2-zbar: QR code reading support')
+depends=('python2' 'python2-ecdsa' 'python2-pyqt4' 'python2-sip' 'python2-slowaes' 'qt4' 'sip')
+makedepends=('gettext' 'python2-pycurl' 'python2-setuptools')
+optdepends=('python2-zbar: QR code reading support'
+            'desktop-file-utils: update desktop database')
 url="https://electrum.org"
 license=('GPL3')
 source=(https://download.electrum.org/${pkgname^}-${pkgver}.tar.gz
