@@ -101,6 +101,10 @@ Index
 
 **Description:** Converts HTML documents to Markdown.
 
+## [python2-jsonrpclib](https://aur.archlinux.org/packages/python2-jsonrpclib/)
+
+**Description:** Implements the JSON-RPC v2.0 specification.
+
 ## [python2-pbp](https://aur.archlinux.org/packages/python2-pbp/)
 
 **Description:** Simple PGP-like CLI for libsodium, with scrypt KDF.
