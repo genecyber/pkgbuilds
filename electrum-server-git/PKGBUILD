@@ -1,12 +1,13 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=electrum-server-git
-pkgver=0a87244
+pkgver=r534.bbd6f78
 pkgrel=1
 pkgdesc="Electrum server"
 arch=('i686' 'x86_64')
-depends=('bitcoind' 'python2' 'python2-jsonrpclib' 'python2-leveldb-svn' 'python2-pyopenssl')
+depends=('python2' 'python2-jsonrpclib' 'python2-leveldb-svn' 'python2-pyopenssl')
 makedepends=('git')
+optdepends=('bitcoind: Bitcoin daemon for long-running server usage')
 url="https://github.com/spesmilo/electrum-server"
 license=('AGPL3')
 source=(git+https://github.com/spesmilo/electrum-server
