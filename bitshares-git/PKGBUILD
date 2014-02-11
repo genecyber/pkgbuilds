@@ -1,8 +1,8 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=bitshares-git
-pkgver=f6f3ee3
-pkgrel=2
+pkgver=20140208
+pkgrel=1
 pkgdesc="Bitcoin P2P exchange system"
 arch=('i686' 'x86_64')
 url="https://github.com/InvictusInnovations/BitShares"
@@ -17,7 +17,7 @@ install=bitshares.install
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

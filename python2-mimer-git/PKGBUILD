@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=python2-mimer-git
-pkgver=r5.e6d999e
+pkgver=20130922
 pkgrel=1
 pkgdesc="Python mimetype library"
 arch=('any')
@@ -16,7 +16,7 @@ conflicts=('mimer' 'python2-mimer')
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

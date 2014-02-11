@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=zotonic-git
-pkgver=0.0.0
+pkgver=20140210
 pkgrel=1
 pkgdesc="High speed, real-time Web framework and CMS, built with Erlang (latest development version)"
 arch=('i686' 'x86_64')
@@ -18,7 +18,7 @@ install=zotonic.install
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 build() {

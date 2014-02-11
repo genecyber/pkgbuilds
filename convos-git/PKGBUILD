@@ -1,8 +1,8 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=convos-git
-pkgver=4cb0a1b
-pkgrel=2
+pkgver=20140209
+pkgrel=1
 pkgdesc="The simplest way to use IRC"
 url="http://convos.by/"
 license=('unknown')
@@ -18,7 +18,7 @@ install=convos.install
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 build() {

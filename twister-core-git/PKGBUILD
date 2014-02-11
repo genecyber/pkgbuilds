@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=twister-core-git
-pkgver=r4519.6708cec
+pkgver=20140131
 pkgrel=1
 pkgdesc="Peer-to-peer microblogging"
 arch=('i686' 'x86_64')
@@ -19,7 +19,7 @@ _insdir="/opt/${pkgname%-git}"
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

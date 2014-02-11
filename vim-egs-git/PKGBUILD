@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=vim-egs-git
-pkgver=r2.899093d
+pkgver=20130607
 pkgrel=1
 pkgdesc="EGS template for Vim"
 arch=('any')
@@ -18,7 +18,7 @@ install=vimdoc.install
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

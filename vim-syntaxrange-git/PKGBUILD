@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=vim-syntaxrange-git
-pkgver=1.01.r0.g2312453
+pkgver=20131128
 pkgrel=1
 pkgdesc="Define a different filetype syntax on regions of a Vim buffer"
 arch=('any')
@@ -18,7 +18,7 @@ install=vimdoc.install
 
 pkgver() {
   cd ${pkgname%-git}
-  git describe --long --tags | sed -E 's/([^-]*-g)/r\1/;s/-/./g'
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

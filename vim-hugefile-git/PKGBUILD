@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=vim-hugefile-git
-pkgver=r16.d584b96
+pkgver=20131027
 pkgrel=1
 pkgdesc="Speed up loading of large files"
 arch=('any')
@@ -18,7 +18,7 @@ install=vimdoc.install
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

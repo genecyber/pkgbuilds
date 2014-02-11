@@ -4,7 +4,7 @@
 # Contributor: ptrv <mail@petervasil.net>
 
 pkgname=pybitmessage-git
-pkgver=r1202.a756e44
+pkgver=20140204
 pkgrel=1
 pkgdesc="Bitcoin inspired P2P encrypted messenger"
 arch=('any')
@@ -22,7 +22,7 @@ conflicts=('pybitmessage')
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

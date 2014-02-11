@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=primecoin-hp-git
-pkgver=0.0.0
+pkgver=20140205
 pkgrel=1
 pkgdesc="Primecoin high performance version (mikaelh)"
 arch=('i686' 'x86_64')
@@ -23,7 +23,7 @@ qmake="qmake-qt4 bitcoin-qt.pro"
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

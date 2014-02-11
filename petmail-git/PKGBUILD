@@ -2,8 +2,8 @@
 
 pkgname=petmail-git
 pkgdesc="Secure messaging, file-transfer, and directory synchronization"
-pkgver=6247af9
-pkgrel=2
+pkgver=20131105
+pkgrel=1
 url="https://github.com/warner/petmail"
 license=('MIT')
 depends=('python2' 'python2-pynacl' 'python2-scrypt' 'python2-zope-interface' 'twisted')
@@ -15,7 +15,7 @@ conflicts=('petmail')
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

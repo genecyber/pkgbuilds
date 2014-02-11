@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=salt-vim-git
-pkgver=r22.e0e7d4d
+pkgver=20130221
 pkgrel=1
 pkgdesc="Vim files for editing Salt files"
 arch=('any')
@@ -18,7 +18,7 @@ install=vimdoc.install
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=rippled-git
-pkgver=c568988
+pkgver=20140208
 pkgrel=1
 pkgdesc="Ripple peer-to-peer network daemon"
 arch=('i686' 'x86_64')
@@ -19,7 +19,7 @@ _insdir="/opt/${pkgname%-git}"
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 build() {

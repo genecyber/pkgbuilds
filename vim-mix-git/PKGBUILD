@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=vim-mix-git
-pkgver=v0.1.0.r2.ga2c655a
+pkgver=20130516
 pkgrel=1
 pkgdesc="Vim plugin for using Elixir's build tool, mix"
 arch=('any')
@@ -18,7 +18,7 @@ install=vimdoc.install
 
 pkgver() {
   cd ${pkgname%-git}
-  git describe --long --tags | sed -E 's/([^-]*-g)/r\1/;s/-/./g'
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

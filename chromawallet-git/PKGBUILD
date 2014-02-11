@@ -1,8 +1,8 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=chromawallet-git
-pkgver=6348222
-pkgrel=2
+pkgver=20140210
+pkgrel=1
 pkgdesc="The colored coins wallet"
 arch=('x86_64')
 depends=('bitcoin-daemon' 'python2' 'python2-bitcoinlib' 'python2-python-jsonrpc' 'python2-pycoin' 'python2-pyqt4' 'python2-sip' 'qt4' 'sip')
@@ -15,7 +15,7 @@ provides=('chromawallet')
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

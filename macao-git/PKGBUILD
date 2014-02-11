@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=macao-git
-pkgver=r6.2bf0c26
+pkgver=20130912
 pkgrel=1
 pkgdesc="Bitcoin point-of-sale system"
 arch=('i686' 'x86_64')
@@ -16,7 +16,7 @@ conflicts=('macao')
 
 pkgver() {
   cd ${pkgname%-git}
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {

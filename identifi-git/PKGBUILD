@@ -2,8 +2,8 @@
 
 pkgbase=identifi
 pkgname=('identifi-daemon' 'identifi-qt')
-pkgver=abbe251
-pkgrel=2
+pkgver=20140208
+pkgrel=1
 arch=('i686' 'x86_64')
 url="http://identifi.org/"
 makedepends=('automoc4' 'boost' 'miniupnpc' 'qrencode')
@@ -13,7 +13,7 @@ sha256sums=('SKIP')
 
 pkgver() {
   cd $pkgbase
-  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 build() {
