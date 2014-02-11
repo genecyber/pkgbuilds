@@ -21,19 +21,17 @@ pkgver() {
   git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
-prepare() {
-  cd ${pkgname%-git}
-
-  msg 'Removing unneeded files...'
-  rm README.mkd
-}
-
 package() {
   cd ${pkgname%-git}
 
-  msg 'Installing...'
-  install -dm 755 ${pkgdir}/usr/share/vim/vimfiles/
-  tar -c . | tar -x -C ${pkgdir}/usr/share/vim/vimfiles
+  msg 'Installing docs...'
+  install -Dm 644 README.mkd $pkgdir/usr/share/doc/vim-kivy/README.mkd
+
+  msg 'Installing dirs...'
+  install -dm 755 $pkgdir/usr/share/vim/vimfiles
+  for _dir in ftplugin plugin syntax; do
+    cp -R $_dir $pkgdir/usr/share/vim/vimfiles/$_dir
+  done
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +
