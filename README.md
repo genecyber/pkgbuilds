@@ -85,6 +85,10 @@ Index
 
 **Description:** Python-based Bitcoin utility library.
 
+## [python2-acrylamid](https://aur.archlinux.org/packages/python2-acrylamid/)
+
+**Description:** Static blog compiler with incremental updates.
+
 ## [python2-buildozer](https://aur.archlinux.org/packages/python2-buildozer/)
 
 **Description:** Generic Python packager for Android / iOS and Desktop.
