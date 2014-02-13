@@ -125,6 +125,10 @@ Index
 
 **Description:** Clears the contents of strings containing cryptographic material.
 
+## [python2-translitcodec](https://aur.archlinux.org/packages/python2-translitcodec/)
+
+**Description:** Unicode to 8-bit charset transliteration codec.
+
 ## [python2-verlib](https://aur.archlinux.org/packages/python2-verlib/)
 
 **Description:** A version comparison tool for distutils.
