@@ -10,6 +10,7 @@ depends=('python' 'python-jinja' 'python-markdown' 'python2-translitcodec')
 makedepends=('python-setuptools')
 optdepends=('discount: Discount'
             'python-asciimathml: AsciiMathML to MathML'
+            'python-ansi2html: ANSI escape codes in HTML code examples'
             'python-docutils: reStructuredText'
             'python-magic: Non-ASCII text detection'
             'python-mako: Mako Templating'
