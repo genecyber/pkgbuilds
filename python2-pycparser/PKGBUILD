@@ -1,8 +1,9 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+# Contributor: Yaron de Leeuw <jdlmail at gmail >
 
 pkgname=python2-pycparser
 pkgver=2.10
-pkgrel=2
+pkgrel=1
 pkgdesc="Complete C99 parser in pure Python"
 arch=('i686' 'x86_64')
 depends=('python2' 'python2-ply')
@@ -23,6 +24,9 @@ build() {
 
 package() {
   cd $srcdir/${pkgname#python2-}-$pkgver
+
+  msg 'Installing...'
+  install -D -m644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
 
   msg 'Installing...'
   python2 setup.py install --root="$pkgdir" --optimize=1

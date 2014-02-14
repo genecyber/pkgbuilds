@@ -117,6 +117,10 @@ Index
 
 **Description:** Python-based Bitcoin utility library.
 
+## [python2-pycparser](https://aur.archlinux.org/packages/python2-pycparser/)
+
+**Description:** Complete C99 parser in pure Python.
+
 ## [python2-pydown](https://aur.archlinux.org/packages/python2-pydown/)
 
 **Description:** HTML5 presentation builder written in Python.
