@@ -93,6 +93,10 @@ Index
 
 **Description:** Generic Python packager for Android / iOS and Desktop.
 
+## [python2-cffi](https://aur.archlinux.org/packages/python2-cffi/)
+
+**Description:** Foreign Function Interface for Python calling C code.
+
 ## [python2-commandr](https://aur.archlinux.org/packages/python2-commandr/)
 
 **Description:** Simple tool for making Python functions accessible from the command line.
