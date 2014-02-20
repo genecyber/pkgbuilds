@@ -177,6 +177,10 @@ Index
 
 **Description:** Modular shell scripts.
 
+## [secp256k1](https://aur.archlinux.org/packages/secp256k1/)
+
+**Description:** Optimized C library for secp256k1 ECDSA.
+
 ## [stlviewer-git](https://aur.archlinux.org/packages/stlviewer-git/)
 
 **Description:** Simple command line tool to view STL files.
