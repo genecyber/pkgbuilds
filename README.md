@@ -45,6 +45,14 @@ Index
 
 **Description:** Lightweight Bitcoin wallet with additional entropy.
 
+## [ethereum](https://aur.archlinux.org/packages/ethereum/)
+
+**Description:** Next-generation cryptographic ledger.
+
+## [ethereum-git](https://aur.archlinux.org/packages/ethereum-git/)
+
+**Description:** Next-generation cryptographic ledger, Git version.
+
 ## [ledger.py-git](https://aur.archlinux.org/packages/ledger.py-git/)
 
 **Description:** Command-line, double-entry accounting system written in Python.
