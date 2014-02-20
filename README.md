@@ -53,6 +53,10 @@ Index
 
 **Description:** Next-generation cryptographic ledger, Git version.
 
+## [go-ethereum](https://aur.archlinux.org/packages/go-ethereum/)
+
+**Description:** Go Ethereum client.
+
 ## [ledger.py-git](https://aur.archlinux.org/packages/ledger.py-git/)
 
 **Description:** Command-line, double-entry accounting system written in Python.
