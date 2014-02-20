@@ -85,6 +85,10 @@ Index
 
 **Description:** Decentralized digital asset management system.
 
+## [pyethereum-git](https://aur.archlinux.org/packages/pyethereum-git/)
+
+**Description:** Ethereum Python client.
+
 ## [python-json-rpc](https://aur.archlinux.org/packages/python2-json-rpc/)
 
 **Description:** JSON-RPC transport realisation.
