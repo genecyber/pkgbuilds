@@ -149,6 +149,10 @@ Index
 
 **Description:** HTML5 presentation builder written in Python.
 
+## [python2-pysha3](https://aur.archlinux.org/packages/python2-pysha3/)
+
+**Description:** SHA-3 wrapper for Python.
+
 ## [python2-pysodium](https://aur.archlinux.org/packages/python2-pysodium/)
 
 **Description:** Python wrapper for libsodium.
