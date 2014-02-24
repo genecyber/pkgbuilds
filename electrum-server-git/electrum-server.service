@@ -7,8 +7,9 @@ Type=forking
 PIDFile=/run/electrum-server.pid
 User=electrum-server
 Group=electrum-server
-ExecStart=/usr/bin/nohup /usr/bin/electrum-server > /var/log/electrum-server.log &
-ExecStop=/usr/bin/electrum-server stop
+WorkingDirectory=/usr/share/electrum-server
+ExecStart=/usr/bin/python2 -u server.py &> /var/log/electrum-server.log
+ExecStop=/usr/bin/python2 server.py stop
 Restart=always
 
 [Install]

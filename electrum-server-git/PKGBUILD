@@ -5,7 +5,7 @@ pkgver=20140124
 pkgrel=1
 pkgdesc="Electrum server"
 arch=('i686' 'x86_64')
-depends=('leveldb' 'python2' 'python2-jsonrpclib' 'python2-leveldb-svn' 'python2-plyvel' 'python2-pyopenssl' 'snappy')
+depends=('leveldb' 'python2' 'python2-jsonrpclib' 'python2-plyvel' 'python2-pyopenssl' 'snappy')
 makedepends=('git')
 optdepends=('bitcoin-daemon: Bitcoin wallet and private key management')
 url="https://github.com/spesmilo/electrum-server"
@@ -15,7 +15,7 @@ source=(git+https://github.com/spesmilo/electrum-server
         electrum-server.service)
 sha256sums=('SKIP'
             '31b5e99ef53c7fec8de420380f8cff9a6bfb80cc936af36a036ab3123b4e870f'
-            '6580430798487c30c8c4f5344892376dfd5004d57b42e673aab3f1a45569ce6e')
+            'd6b19cc51d3fe74c6ad311dec7297aa842dcf6c043784f4b79c682b72414aee9')
 backup=('etc/electrum-server.conf'
         'etc/logrotate.d/electrum-server')
 provides=('electrum-server')
