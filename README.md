@@ -133,6 +133,10 @@ Index
 
 **Description:** Simple PGP-like CLI for libsodium, with scrypt KDF.
 
+## [python2-plyvel](https://aur.archlinux.org/packages/python2-plyvel/)
+
+**Description:** Fast, feature-rich Python interface to LevelDB.
+
 ## [python2-pybitcointools](https://aur.archlinux.org/packages/python2-pybitcointools/)
 
 **Description:** Python library for Bitcoin signatures and transactions.
