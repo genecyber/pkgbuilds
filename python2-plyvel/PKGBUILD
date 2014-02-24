@@ -2,11 +2,11 @@
 
 pkgname=python2-plyvel
 pkgver=0.8
-pkgrel=1
+pkgrel=2
 pkgdesc="A fast and feature-rich Python interface to LevelDB"
-arch=('any')
-depends=('python2')
-makedepends=('gcc' 'python2-setuptools')
+arch=('i686' 'x86_64')
+depends=('leveldb' 'python2')
+makedepends=('cython2' 'gcc' 'python2-setuptools')
 url="https://github.com/wbolster/plyvel"
 license=('BSD')
 options=(!emptydirs)
@@ -18,6 +18,8 @@ prepare(){
   cd $srcdir/${pkgname#python2-}-$pkgver
 
   msg 'Fixing Python version...'
+  sed -i 's#python#python2#' Makefile
+  sed -i 's#cython#cython2#' Makefile
   find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/python#/usr/bin/python2#g'
   find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/env python#/usr/bin/env python2#g'
 }
@@ -26,7 +28,7 @@ build() {
   cd $srcdir/${pkgname#python2-}-$pkgver
 
   msg 'Building...'
-  python2 setup.py build
+  make
 }
 
 package() {
