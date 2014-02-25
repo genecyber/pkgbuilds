@@ -1,27 +1,58 @@
 post_install() {
+  _mkuser
+  _mklog
+  _rmsymlink
+  _mksymlink
+  printf "$ecdsa\n"
+}
+
+post_upgrade() {
+  post_install
+}
+
+post_remove() {
+  _rmuser
+  _rmlog
+  _rmsymlink
+}
+
+_mkuser() {
   getent passwd electrum-server &>/dev/null || {
     echo -n "Creating electrum-server user... "
     grep -E "^electrum-server:" /etc/group >/dev/null || groupadd electrum-server
     useradd -M -g electrum-server -s /bin/false electrum-server
     echo "done"
   }
-  touch /var/log/electrum-server.log
-  chown electrum-server:electrum-server /var/log/electrum-server.log
-  printf "$node\n"
 }
 
-post_upgrade() {
-  [[ ! -f /var/log/electrum-server.log ]] && touch /var/log/electrum-server.log; chown electrum-server:electrum-server /var/log/electrum-server.log
-  printf "$node\n"
-}
-
-post_remove() {
+_rmuser() {
   echo -n "Removing electrum-server user... "
   userdel -rf electrum-server 2>/dev/null
   echo "done"
 }
 
-read -d '' node <<"EOF"
+_mklog() {
+  [[ ! -f /var/log/electrum-server.log ]] && touch /var/log/electrum-server.log
+  chown electrum-server:electrum-server /var/log/electrum-server.log
+}
+
+_rmlog() {
+  rm -f /var/log/electrum-server.log
+}
+
+_mksymlink() {
+  echo -n "Symlinking server.py to /usr/bin/electrum-server..."
+  ln -s /usr/share/electrum-server/server.py /usr/bin/electrum-server
+  echo "done"
+}
+
+_rmsymlink() {
+  echo -n "Removing symlinks..."
+  rm -f /usr/bin/electrum-server
+  echo "done"
+}
+
+read -d '' ecdsa <<"EOF"
 ########################################################################
 ########################################################################
 ##                                                                    ##
