@@ -17,6 +17,10 @@ Index
 
 **Description:** Bitcoin arbitration marketplace.
 
+## [chromawallet-git](https://aur.archlinux.org/packages/chromawallet-git)
+
+**Description:** Bitcoin wallet for colored coins.
+
 ## [coinmessage-git](https://aur.archlinux.org/packages/coinmessage-git)
 
 **Description:** Bitcoin-based secure messaging system.

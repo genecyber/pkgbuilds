@@ -1,17 +1,19 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=chromawallet-git
-pkgver=20140210
+pkgver=20140212
 pkgrel=1
 pkgdesc="The colored coins wallet"
-arch=('x86_64')
-depends=('bitcoin-daemon' 'python2' 'python2-bitcoinlib' 'python2-python-jsonrpc' 'python2-pycoin' 'python2-pyqt4' 'python2-sip' 'qt4' 'sip')
+arch=('any')
+depends=('python2' 'python2-bitcoinlib' 'python2-python-jsonrpc' 'python2-pycoin' 'python2-pyqt4' 'python2-sip' 'qt4' 'sip' 'sqlite')
 makedepends=('git' 'python2-setuptools')
+optdepends=('bitcoin-daemon: Bitcoin wallet and private key management')
 url="http://chromawallet.com/"
 license=('MIT')
 source=(${pkgname%-git}::git+https://github.com/bitcoinx/ngcccbase)
 sha256sums=('SKIP')
 provides=('chromawallet')
+conflicts=('chromawallet')
 
 pkgver() {
   cd ${pkgname%-git}
@@ -37,9 +39,9 @@ package() {
   cd ${pkgname%-git}
 
   msg 'Installing...'
-  install -D -m755 ngccc-cli.py "$pkgdir/usr/bin/ngccc-cli"
-  install -D -m755 ngccc-gui.py "$pkgdir/usr/bin/ngccc-gui"
-  install -D -m755 ngccc-server.py "$pkgdir/usr/bin/ngccc-server"
+  install -D -m755 ngccc-cli.py "$pkgdir/usr/bin/chromawallet-cli"
+  install -D -m755 ngccc-gui.py "$pkgdir/usr/bin/chromawallet-gui"
+  install -D -m755 ngccc-server.py "$pkgdir/usr/bin/chromawallet-server"
   python2 setup.py install --root="${pkgdir}" --optimize=1
 
   msg 'Cleaning up pkgdir...'
