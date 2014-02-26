@@ -93,6 +93,10 @@ Index
 
 **Description:** Decentralized digital asset management system.
 
+## [open-transactions-git](https://aur.archlinux.org/packages/open-transactions-git/)
+
+**Description:** Decentralized digital asset management system, Git version.
+
 ## [pyethereum-git](https://aur.archlinux.org/packages/pyethereum-git/)
 
 **Description:** Ethereum Python client.
