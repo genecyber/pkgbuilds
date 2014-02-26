@@ -88,4 +88,8 @@ package() {
 
   msg 'Readying logrotate...'
   install -Dm644 "$srcdir/electrum-server.logrotate" "$pkgdir/etc/logrotate.d/electrum-server"
+
+  msg 'Cleaning up pkgdir...'
+  find "$pkgdir" -type d -name .git -exec rm -r '{}' +
+  find "$pkgdir" -type f -name .gitignore -exec rm -r '{}' +
 }
