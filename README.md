@@ -173,6 +173,10 @@ Index
 
 **Description:** Python wrapper for libsodium.
 
+## [python2-python-jsonrpc](https://aur.archlinux.org/packages/python2-python-jsonrpc/)
+
+**Description:** Simple to use Python JSONRPC-Library.
+
 ## [python2-securestring](https://aur.archlinux.org/packages/python2-securestring/)
 
 **Description:** Clears the contents of strings containing cryptographic material.
