@@ -113,6 +113,10 @@ Index
 
 **Description:** Static blog compiler with incremental updates.
 
+## [python2-bitcoinlib-git](https://aur.archlinux.org/packages/python2-bitcoinlib-git/)
+
+**Description:** An easy interface to the Bitcoin protocol and data structures.
+
 ## [python2-buildozer](https://aur.archlinux.org/packages/python2-buildozer/)
 
 **Description:** Generic Python packager for Android / iOS and Desktop.
