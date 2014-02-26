@@ -2,8 +2,8 @@
 
 pkgname=chromawallet-git
 pkgver=20140212
-pkgrel=1
-pkgdesc="The colored coins wallet"
+pkgrel=2
+pkgdesc="Colored Bitcoin wallet"
 arch=('any')
 depends=('python2' 'python2-bitcoinlib' 'python2-python-jsonrpc' 'python2-pycoin' 'python2-pyqt4' 'python2-sip' 'qt4' 'sip' 'sqlite')
 makedepends=('git' 'python2-setuptools')
