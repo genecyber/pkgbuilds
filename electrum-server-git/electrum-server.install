@@ -20,9 +20,10 @@ _mkuser() {
   getent passwd electrum-server &>/dev/null || {
     echo -n "Creating electrum-server user... "
     grep -E "^electrum-server:" /etc/group >/dev/null || groupadd electrum-server
-    useradd -M -g electrum-server -s /bin/false electrum-server
+    useradd -m -d /etc/electrum-server -g electrum-server -s /bin/false electrum-server
     echo "done"
   }
+  chown -R electrum-server:electrum-server /etc/electrum-server /usr/share/electrum-server
 }
 
 _rmuser() {
