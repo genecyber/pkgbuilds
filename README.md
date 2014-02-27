@@ -61,6 +61,10 @@ Index
 
 **Description:** Go Ethereum client.
 
+## [insight-bitcore-git](https://aur.archlinux.org/packages/insight-bitcore-git/)
+
+**Description:** Bitcoin blockchain explorer with complete REST and websocket APIs.
+
 ## [ledger.py-git](https://aur.archlinux.org/packages/ledger.py-git/)
 
 **Description:** Command-line, double-entry accounting system written in Python.
