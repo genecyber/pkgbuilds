@@ -19,8 +19,8 @@ optdepends=('gdc: Enable configuration for SWIG Digital Mars D Programing Langua
 url="http://opentransactions.org"
 license=('custom')
 source=(http://downloads.sourceforge.net/project/opentxs/opentxs-$pkgver.tar.gz)
-sha1sums=('6ddd55ae2bff60a3da704f4fb73a285f2c032b82')
-sha256sums=('6b9e9273118e1be513842443bdf173250b61f5e8752cdd3716e985e54fae39f1')
+sha1sums=('fbc6c2094a6e66b6c74a754e6affdbeb4c886854')
+sha256sums=('63f4e4b29502e917131e0528b93202e98f2fbf212bd765cd80ef3dae31123c35')
 provides=('createmint' 'open-transactions' 'opentxs' 'ot' 'otserver')
 install=open-transactions.install
 
@@ -49,15 +49,15 @@ build() {
       --disable-cxxtr1 \
       --disable-boost
       #--with-keyring=$_keyring \
-      #--with-go \
-      #--with-java \
-      #--with-python \
       #--with-csharp \
       #--with-d \
+      #--with-go \
+      #--with-java \
       #--with-perl5 \
       #--with-php \
-      #--with-tcl \
-      #--with-ruby
+      #--with-python \
+      #--with-ruby \
+      #--with-tcl
   make
 }
 
