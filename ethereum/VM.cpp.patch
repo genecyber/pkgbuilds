@@ -1,6 +1,6 @@
---- ./libethereum/State.cpp	2014-02-01 23:29:23.190143661 -0800
-+++ ./libethereum/State.cpp	2014-02-01 23:33:04.383467812 -0800
-@@ -27,9 +27,9 @@
+--- ./libethereum/VM.cpp	2014-02-28 22:57:12.036386155 -0800
++++ ./libethereum/VM.cpp	2014-02-28 22:57:42.059718693 -0800
+@@ -29,9 +29,9 @@
  #else
  #pragma GCC diagnostic ignored "-Wunused-function"
  #endif
