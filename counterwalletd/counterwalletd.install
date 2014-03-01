@@ -1,0 +1,16 @@
+post_install() {
+  echo -n "Symlinking counterwalletd.py to /usr/bin/counterwallet..."
+  ln -s /usr/share/counterwallet/counterwalletd.py /usr/bin/counterwalletd
+  echo "done"
+}
+
+post_upgrade() {
+  post_remove
+  post_install
+}
+
+post_remove() {
+  echo -n "Removing symlinks..."
+  rm -f /usr/bin/counterwalletd
+  echo "done"
+}
