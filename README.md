@@ -39,7 +39,7 @@ Index
 
 ## [cube-git](https://aur.archlinux.org/packages/cube-git)
 
-**Description:** A system for analyzing time series data using MongoDB and Node.
+**Description:** A system for analyzing time series data.
 
 ## [diesel](https://aur.archlinux.org/packages/diesel/)
 
@@ -140,6 +140,10 @@ Index
 ## [python2-crtauth-git](https://aur.archlinux.org/packages/python2-crtauth-git/)
 
 **Description:** A public key backed client/server authentication system.
+
+## [python2-cube-client](https://aur.archlinux.org/packages/python2-cube-client/)
+
+**Description:** A Python client for Cube.
 
 ## [python2-html2md](https://aur.archlinux.org/packages/python2-html2md/)
 
