@@ -37,6 +37,10 @@ Index
 
 **Description:** An open marketplace, built on Bitcoin (git version).
 
+## [cube-git](https://aur.archlinux.org/packages/cube-git)
+
+**Description:** A system for analyzing time series data using MongoDB and Node.
+
 ## [diesel](https://aur.archlinux.org/packages/diesel/)
 
 **Description:** Coroutine-based networking library for Python.
@@ -55,7 +59,7 @@ Index
 
 ## [ethereum-git](https://aur.archlinux.org/packages/ethereum-git/)
 
-**Description:** Next-generation cryptographic ledger, Git version.
+**Description:** Next-generation cryptographic ledger (git version).
 
 ## [go-ethereum](https://aur.archlinux.org/packages/go-ethereum/)
 
@@ -99,7 +103,7 @@ Index
 
 ## [open-transactions-git](https://aur.archlinux.org/packages/open-transactions-git/)
 
-**Description:** Decentralized digital asset management system, Git version.
+**Description:** Decentralized digital asset management system (git version).
 
 ## [pyethereum-git](https://aur.archlinux.org/packages/pyethereum-git/)
 
