@@ -149,6 +149,10 @@ Index
 
 **Description:** Simple PGP-like CLI for libsodium, with scrypt KDF.
 
+## [python2-plyer](https://aur.archlinux.org/packages/python2-plyer/)
+
+**Description:** Platform-independent wrapper for platform-dependent APIs.
+
 ## [python2-plyvel](https://aur.archlinux.org/packages/python2-plyvel/)
 
 **Description:** Fast, feature-rich Python interface to LevelDB.
