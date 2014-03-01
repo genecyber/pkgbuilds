@@ -45,9 +45,9 @@ Index
 
 **Description:** Lightweight Bitcoin wallet.
 
-## [electrum-entropy](https://aur.archlinux.org/packages/electrum-entropy/)
+## [electrum-lite](https://aur.archlinux.org/packages/electrum-lite/)
 
-**Description:** Lightweight Bitcoin wallet with additional entropy.
+**Description:** Lightweight Litecoin wallet.
 
 ## [ethereum](https://aur.archlinux.org/packages/ethereum/)
 
