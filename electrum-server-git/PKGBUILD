@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=electrum-server-git
-pkgver=20140124
+pkgver=20140225
 pkgrel=1
 pkgdesc="Electrum server"
 arch=('i686' 'x86_64')
@@ -21,10 +21,6 @@ backup=('etc/electrum-server.conf'
 provides=('electrum-server')
 conflicts=('electrum-server')
 install=electrum-server.install
-
-CFG_DIR="etc"
-DAT_DIR="usr/share/electrum-server"
-DOC_DIR="usr/share/doc/electrum-server"
 
 pkgver() {
   cd ${pkgname%-git}
@@ -49,45 +45,33 @@ prepare() {
 package() {
   cd ${pkgname%-git}
 
-  msg 'Making base directories...'
-  install -d "$pkgdir/$CFG_DIR"
-  install -d "$pkgdir/$DAT_DIR"
-  install -d "$pkgdir/$DOC_DIR"
-
-  msg 'Installing processor.py and version.py...'
-  install -m644 processor.py version.py "$pkgdir/$DAT_DIR"
-
-  msg 'Installing server.py...'
-  install -m755 server.py "$pkgdir/$DAT_DIR"
-
-  msg 'Installing transports...'
-  cp -R transports "$pkgdir/$DAT_DIR"
-
-  msg 'Installing backends...'
-  install -d "$pkgdir/$DAT_DIR/backends"
-  cp -R backends/irc "$pkgdir/$DAT_DIR/backends"
-  cp -R backends/bitcoind "$pkgdir/$DAT_DIR/backends"
-  install -m644 backends/__init__.py "$pkgdir/$DAT_DIR/backends"
-
-  msg 'Installing utils...'
-  install -d "$DAT_DIR/utils"
-  install -m644 utils/__init__.py "$pkgdir/$DAT_DIR/utils"
+  msg 'Installing license...'
+  install -Dm 644 LICENSE $pkgdir/usr/share/licenses/electrum-server/LICENSE
 
   msg 'Installing documentation...'
-  install -m644 *.md README.leveldb "$pkgdir/$DOC_DIR"
+  for _doc in HOWTO.md README-IRC.md README.leveldb README.md; do
+    install -Dm 644 $_doc $pkgdir/usr/share/doc/electrum-server/$_doc
+  done
+
+  msg 'Installing appdirs...'
+  install -dm 755 $pkgdir/usr/share/electrum-server
+  for _appdir in backends transports utils; do
+    mv $_appdir $pkgdir/usr/share/electrum-server/$_appdir
+  done
+
+  msg 'Installing appfiles...'
+  for _appfile in processor.py server.py start stop version.py; do
+    mv $_appfile $pkgdir/usr/share/electrum-server/$_appfile
+  done
 
   msg 'Installing electrum-server.conf...'
-  install -m640 electrum-server.conf.sample "$pkgdir/$CFG_DIR/electrum-server.conf"
+  install -Dm 640 electrum-server.conf.sample $pkgdir/etc/electrum-server.conf
 
   msg 'Installing systemd service file...'
-  install -Dm644 "$srcdir/electrum-server.service" "$pkgdir/usr/lib/systemd/system/electrum-server.service"
-
-  msg 'Symlinking executable...'
-  install -d "$pkgdir/usr/bin"
-  ln -s "/usr/share/electrum-server/server.py" "$pkgdir/usr/bin/electrum-server"
+  install -Dm 644 $srcdir/electrum-server.service $pkgdir/usr/lib/systemd/system/electrum-server.service
 
   msg 'Readying logrotate...'
-  install -Dm644 "$srcdir/electrum-server.logrotate" "$pkgdir/etc/logrotate.d/electrum-server"
+  install -Dm 644 $srcdir/electrum-server.logrotate $pkgdir/etc/logrotate.d/electrum-server
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +
