@@ -205,6 +205,10 @@ Index
 
 **Description:** A version comparison tool for distutils.
 
+## [python2-versiontools](https://aur.archlinux.org/packages/python2-versiontools/)
+
+**Description:** Smart replacement for plain tuple used in \_\_version\_\_.
+
 ## [python2-zbar](https://aur.archlinux.org/packages/python2-zbar/)
 
 **Description:** Python bindings for zbar.
