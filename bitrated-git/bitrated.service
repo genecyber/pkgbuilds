@@ -9,8 +9,7 @@ PIDFile=/run/bitrated.pid
 User=bitrated
 Group=bitrated
 WorkingDirectory=/usr/share/bitrated
-ExecStart=/usr/bin/npm run start
-ExecStartPost=-/usr/bin/cp /usr/share/bitrated/static/arbitrate.css /usr/share/bitrated/static/arbitrator.css /usr/share/bitrated/static/common.css /usr/share/bitrated/static/home.css /usr/share/bitrated/static/spinner.css /usr/share/bitrated/static/tx.css /usr/share/bitrated/static/user.css /usr/share/bitrated/public
+ExecStart=/bin/bash /usr/share/bitrated/bin/start.sh &
 ExecStop=/usr/bin/kill -HUP $MAINPID
 
 [Install]

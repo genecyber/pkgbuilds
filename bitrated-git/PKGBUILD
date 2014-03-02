@@ -12,10 +12,10 @@ license=('AGPL3')
 source=(git+https://github.com/shesek/bitrated
         bitrated.service)
 sha256sums=('SKIP'
-            '269aac97370a51881e56d0e93704a0cf6de65718ddbe2949ac20601965cdd2a2')
+            'b7d4aa36602d3dc0a533e00fae529a02fe56e20785b169c0b85af5e250af53ba')
 provides=('bitrated')
 conflicts=('bitrated')
-options=(!strip)
+options=('!emptydirs' '!strip')
 install=bitrated.install
 
 pkgver() {
