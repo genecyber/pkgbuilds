@@ -43,7 +43,7 @@ package() {
   install -Dm 644 README.md $pkgdir/usr/share/doc/insight/README.md
 
   msg 'Installing appdirs...'
-  install -dm 755 $pkgdir/usr/share/insight
+  install -dm 700 $pkgdir/usr/share/insight
   for _appdir in node_modules public; do
     mv $_appdir $pkgdir/usr/share/insight/$_appdir
   done
