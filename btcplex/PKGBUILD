@@ -8,33 +8,33 @@ arch=('i686' 'x86_64')
 depends=('leveldb' 'redis' 'snappy' 'ssdb')
 makedepends=('git' 'go' 'mercurial')
 optdepends=('bitcoin-daemon: Bitcoin wallet and private key management')
-url="https://github.com/ethereum/go-ethereum"
+url="https://btcplex.com"
 license=('MIT')
 options=('!strip' '!emptydirs')
 install=btcplex.install
 
 build() {
-  GOPATH="$srcdir" go get -fix -v -x github.com/ethereum/go-ethereum
+  GOPATH="$srcdir" go get -fix -v -x github.com/tsileo/btcplex
 }
 
 check() {
   [[ -f /etc/profile.d/go.sh ]] && source /etc/profile.d/go.sh
-  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/ethereum/go-ethereum || return 0
+  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/tsileo/btcplex || return 0
 }
 
 package() {
   [[ -f /etc/profile.d/go.sh ]] && source /etc/profile.d/go.sh
 
   msg 'Installing srclibs...'
-  install -dm 755 $pkgdir/usr/share/ethereum/src
+  install -dm 755 $pkgdir/usr/share/btcplex/src
   for _lib in `find $srcdir/src -mindepth 1 -maxdepth 1 -printf '%f\n'`; do
-    mv $srcdir/src/$_lib $pkgdir/usr/share/ethereum/src/$_lib
+    mv $srcdir/src/$_lib $pkgdir/usr/share/btcplex/src/$_lib
   done
 
   msg 'Installing pkglibs...'
-  install -dm 755 $pkgdir/usr/share/ethereum/pkg
+  install -dm 755 $pkgdir/usr/share/btcplex/pkg
   for _pkg in `find $srcdir/pkg -mindepth 1 -maxdepth 1 -printf '%f\n'`; do
-    mv $srcdir/pkg/$_pkg $pkgdir/usr/share/ethereum/pkg/$_pkg
+    mv $srcdir/pkg/$_pkg $pkgdir/usr/share/btcplex/pkg/$_pkg
   done
 
   msg 'Installing binaries...'
