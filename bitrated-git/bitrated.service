@@ -1,5 +1,5 @@
 [Unit]
-Description=Bitrated Web service
+Description=Bitrated
 Requires=mongodb.service
 After=mongodb.service
 
@@ -9,7 +9,8 @@ PIDFile=/run/bitrated.pid
 User=bitrated
 Group=bitrated
 WorkingDirectory=/usr/share/bitrated
-ExecStart=/bin/bash /usr/share/bitrated/bin/start.sh &
+ExecStart=/usr/bin/npm run start
+ExecStartPost=-/usr/bin/cp /usr/share/bitrated/static/arbitrate.css /usr/share/bitrated/static/arbitrator.css /usr/share/bitrated/static/common.css /usr/share/bitrated/static/home.css /usr/share/bitrated/static/spinner.css /usr/share/bitrated/static/tx.css /usr/share/bitrated/static/user.css /usr/share/bitrated/public
 ExecStop=/usr/bin/kill -HUP $MAINPID
 
 [Install]

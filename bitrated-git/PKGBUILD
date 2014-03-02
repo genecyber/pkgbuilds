@@ -1,20 +1,21 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=bitrated-git
-pkgver=20140206
-pkgrel=2
+pkgver=20140226
+pkgrel=1
 pkgdesc="Bitcoin arbitration marketplace"
 arch=('any')
 depends=('mongodb' 'nodejs')
-makedepends=('git')
+makedepends=('git' 'nodejs-browserify' 'nodejs-jade' 'nodejs-stylus')
 url="https://www.bitrated.com/"
-license=('MIT')
+license=('AGPL3')
 source=(git+https://github.com/shesek/bitrated
         bitrated.service)
 sha256sums=('SKIP'
-            '9f4ee1219cf94ed72e4abc5cd7acf9dd10a931e637038cd69e41b2251abacb9d')
+            '269aac97370a51881e56d0e93704a0cf6de65718ddbe2949ac20601965cdd2a2')
 provides=('bitrated')
 conflicts=('bitrated')
+options=(!strip)
 install=bitrated.install
 
 pkgver() {
@@ -54,11 +55,24 @@ build() {
 package() {
   cd ${pkgname%-git}
 
-  msg 'Installing...'
-  install -dm 755 $pkgdir/usr/share/bitrated
-  tar -c . | tar -x -C $pkgdir/usr/share/bitrated
+  msg 'Installing license...'
+  install -Dm 644 LICENSE $pkgdir/usr/share/license/bitrated/LICENSE
 
-  msg 'Installing systemd service file...'
+  msg 'Installing documentation...'
+  install -Dm 644 README.md $pkgdir/usr/share/doc/bitrated/README.md
+
+  msg 'Installing appdirs...'
+  install -dm 755 $pkgdir/usr/share/bitrated
+  for _appdir in bin client lib pages public server static views; do
+    mv $_appdir $pkgdir/usr/share/bitrated/$_appdir
+  done
+
+  msg 'Installing appfiles...'
+  for _appfile in example.env Procfile package.json; do
+    mv $_appfile $pkgdir/usr/share/bitrated/$_appfile
+  done
+
+  msg 'Installing bitrated.service...'
   install -Dm 644 $srcdir/bitrated.service $pkgdir/usr/lib/systemd/system/bitrated.service
 
   msg 'Cleaning up pkgdir...'
