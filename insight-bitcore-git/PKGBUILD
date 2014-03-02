@@ -53,10 +53,10 @@ package() {
     mv $_appfile $pkgdir/usr/share/insight/$_appfile
   done
 
-  msg 'Installing config...'
-  install -Dm 644 $srcdir/insight.conf $pkgdir/etc/conf.d/insight
+  msg 'Installing insight.conf...'
+  install -Dm 600 $srcdir/insight.conf $pkgdir/etc/conf.d/insight
 
-  msg 'Installing systemd service file...'
+  msg 'Installing insight.service...'
   install -Dm 644 $srcdir/insight.service $pkgdir/usr/lib/systemd/system/insight.service
 
   msg 'Cleaning up pkgdir...'
