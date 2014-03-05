@@ -69,7 +69,7 @@ package() {
   msg 'Installing bitcoin.service...'
   install -Dm 644 $srcdir/bitcoin.service $pkgdir/usr/lib/systemd/system/bitcoin.service
 
-  msg 'Readying logrotate...'
+  msg 'Installing bitcoin.logrotate...'
   install -Dm 644 $srcdir/bitcoin.logrotate $pkgdir/etc/logrotate.d/bitcoin
 
   msg 'Cleaning up pkgdir...'
