@@ -125,6 +125,10 @@ Index
 
 **Description:** Static blog compiler with incremental updates.
 
+## [python2-base58](https://aur.archlinux.org/packages/python2-base58/)
+
+**Description:** Bitcoin-compatible Base58 and Base58Check implementation.
+
 ## [python2-bitcoinlib-git](https://aur.archlinux.org/packages/python2-bitcoinlib-git/)
 
 **Description:** An easy interface to the Bitcoin protocol and data structures.
