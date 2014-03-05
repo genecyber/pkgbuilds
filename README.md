@@ -85,6 +85,10 @@ Index
 
 **Description:** Simple, self-contained and easily reviewable Bitcoin address generator.
 
+## [moneychanger-git](https://aur.archlinux.org/packages/moneychanger-git/)
+
+**Description:** A QT/C++ client for Open-Transactions.
+
 ## [nodejs-btc](https://aur.archlinux.org/packages/nodejs-btc/)
 
 **Description:** Bitcoin price board for geeks.
