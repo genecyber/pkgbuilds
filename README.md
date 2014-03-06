@@ -7,7 +7,7 @@ Index
 
 ## [bitcoind](https://aur.archlinux.org/packages/bitcoind)
 
-**Description:** Bitcoin daemon for long-running server usage.
+**Description:** Headless Bitcoin P2P node.
 
 ## [bitpaint](https://aur.archlinux.org/packages/bitpaint)
 
