@@ -1,13 +1,15 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+# Contributor: Duncan Townsend <duncant@mit.edu>
 
 pkgname=electrum-server-git
-pkgver=20140225
+pkgver=20140305
 pkgrel=1
 pkgdesc="Electrum server"
 arch=('i686' 'x86_64')
 depends=('leveldb' 'openssl' 'python2' 'python2-jsonrpclib' 'python2-plyvel' 'python2-pyopenssl' 'snappy')
 makedepends=('git')
-optdepends=('bitcoin-daemon: Bitcoin wallet and private key management')
+optdepends=('bitcoin-daemon: Bitcoin wallet and private key management'
+            'electrum: Bitcoin thin client')
 url="https://github.com/spesmilo/electrum-server"
 license=('AGPL3')
 source=(git+https://github.com/spesmilo/electrum-server

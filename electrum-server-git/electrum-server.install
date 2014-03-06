@@ -86,7 +86,7 @@ read -d '' ecdsa <<"EOF"
 ##  on supporting the community by running an Electrum node.          ##
 ##                                                                    ##
 ##  If you're operating a public Electrum server please subscribe     ##
-##  to or regulary check the following thread:                        ##
+##  to or regularly check the following thread:                       ##
 ##                                                                    ##
 ##  https://bitcointalk.org/index.php?topic=85475.0                   ##
 ##                                                                    ##
