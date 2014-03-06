@@ -4,7 +4,7 @@
 pkgname=electrum-server-git
 pkgver=20140305
 pkgrel=1
-pkgdesc="Electrum server"
+pkgdesc="Server to support Electrum python-based Bitcoin client"
 arch=('i686' 'x86_64')
 depends=('leveldb' 'openssl' 'python2' 'python2-jsonrpclib' 'python2-plyvel' 'python2-pyopenssl' 'snappy')
 makedepends=('git')
