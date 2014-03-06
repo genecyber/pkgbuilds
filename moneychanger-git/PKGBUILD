@@ -9,19 +9,19 @@ depends=('open-transactions' 'qt5-base')
 makedepends=('gcc' 'git' 'make')
 url="https://github.com/Open-Transactions/Moneychanger"
 license=('AGPL3')
-source=(git+https://github.com/Open-Transactions/Moneychanger)
+source=(${pkgname%-git}::git+https://github.com/Open-Transactions/Moneychanger)
 sha256sums=('SKIP')
 provides=('moneychanger' 'moneychanger-qt')
 conflicts=('moneychanger' 'moneychanger-qt')
 install=moneychanger.install
 
 pkgver() {
-  cd Moneychanger
+  cd ${pkgname%-git}
   git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {
-  cd Moneychanger
+  cd ${pkgname%-git}
 
   msg 'Fixing boost_system and boost_thread references...'
   find . -type f -print0 | xargs -0 sed -i "s#-lboost_system-mt#-lboost_system#g"
@@ -29,7 +29,7 @@ prepare() {
 }
 
 build() {
-  cd Moneychanger
+  cd ${pkgname%-git}
 
   msg 'Building...'
   qmake-qt5 "QMAKE_CXXFLAGS += -std=c++11" project/moneychanger.pro
@@ -37,7 +37,7 @@ build() {
 }
 
 package() {
-  cd Moneychanger
+  cd ${pkgname%-git}
 
   msg 'Installing license...'
   for _license in `find doc/license -type f -printf '%f\n'`; do
