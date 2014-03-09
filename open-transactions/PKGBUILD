@@ -37,27 +37,27 @@ build() {
   export PERL_EXT_LDFLAGS='-avoid-version -shared'
   export PYTHON_VERSION=2
   ./configure \
-      --prefix=/usr \
-      --sbindir=/usr/bin \
-      --libexecdir=/usr/lib/opentxs \
-      --sysconfdir=/etc \
-      --sharedstatedir=/usr/share/opentxs \
-      --localstatedir=/var/lib/opentxs \
-      --with-gnu-ld \
-      --with-script=chai5 \
-      --enable-cxx11 \
-      --disable-cxxtr1 \
-      --disable-boost
-      #--with-keyring=$_keyring \
-      #--with-csharp \
-      #--with-d \
-      #--with-go \
-      #--with-java \
-      #--with-perl5 \
-      #--with-php \
-      #--with-python \
-      #--with-ruby \
-      #--with-tcl
+    --prefix=/usr \
+    --sbindir=/usr/bin \
+    --libexecdir=/usr/lib/opentxs \
+    --sysconfdir=/etc \
+    --sharedstatedir=/usr/share/opentxs \
+    --localstatedir=/var/lib/opentxs \
+    --with-gnu-ld \
+    --with-script=chai5 \
+    --enable-cxx11 \
+    --disable-cxxtr1 \
+    --disable-boost
+    #--with-keyring=$_keyring \
+    #--with-csharp \
+    #--with-d \
+    #--with-go \
+    #--with-java \
+    #--with-perl5 \
+    #--with-php \
+    #--with-python \
+    #--with-ruby \
+    #--with-tcl
   make
 }
 

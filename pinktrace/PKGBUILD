@@ -24,7 +24,15 @@ build() {
 
   msg 'Building...'
   ./autogen.sh
-  ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib/pinktrace --sysconfdir=/etc --sharedstatedir=/usr/share/pinktrace --localstatedir=/var/lib/pinktrace --enable-easy --enable-ipv6
+  ./configure \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
+    --libexecdir=/usr/lib/pinktrace \
+    --sysconfdir=/etc \
+    --sharedstatedir=/usr/share/pinktrace \
+    --localstatedir=/var/lib/pinktrace \
+    --enable-easy \
+    --enable-ipv6
   make
 }
 

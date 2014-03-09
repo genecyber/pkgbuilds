@@ -22,7 +22,13 @@ build() {
   cd ${pkgname%-git}
 
   msg 'Building...'
-  ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib/telegram --sysconfdir=/etc --sharedstatedir=/usr/share/telegram --localstatedir=/var/lib/telegram
+  ./configure \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
+    --libexecdir=/usr/lib/telegram \
+    --sysconfdir=/etc \
+    --sharedstatedir=/usr/share/telegram \
+    --localstatedir=/var/lib/telegram
   make
 }
 

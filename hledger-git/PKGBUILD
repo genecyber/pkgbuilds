@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=hledger-git
-pkgver=20140210
+pkgver=20140306
 pkgrel=1
 pkgdesc="Track money, time, or any other commodity, using a simple, editable file format and double-entry accounting, inspired by and largely compatible with Ledger"
 url="http://hledger.org"
@@ -29,5 +29,9 @@ package() {
 
   msg 'Installing...'
   mkdir -p "$pkgdir/usr/bin"
-  cabal install --prefix="$pkgdir/usr" --bindir="$pkgdir/usr/bin" --libexecdir="$pkgdir/usr/lib/hledger" ./hledger-lib ./hledger
+  cabal install \
+    --prefix="$pkgdir/usr" \
+    --bindir="$pkgdir/usr/bin" \
+    --libexecdir="$pkgdir/usr/lib/hledger" \
+    ./hledger-lib ./hledger
 }

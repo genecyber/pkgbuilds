@@ -24,7 +24,13 @@ build() {
 
   msg 'Building...'
   autoreconf -i
-  ./configure --prefix=/usr --sbindir=/usr/bin --libexecdir=/usr/lib/libwallet --sysconfdir=/etc --sharedstatedir=/usr/share/libwallet --localstatedir=/var/lib/libwallet
+  ./configure \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
+    --libexecdir=/usr/lib/libwallet \
+    --sysconfdir=/etc \
+    --sharedstatedir=/usr/share/libwallet \
+    --localstatedir=/var/lib/libwallet
   make
 }
 

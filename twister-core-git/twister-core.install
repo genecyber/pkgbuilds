@@ -1,3 +1,0 @@
-postinstall() {
-  echo "Add /opt/twister-core/src to PATH (for src/twisterd)"
-}
