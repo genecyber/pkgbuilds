@@ -113,7 +113,7 @@ Index
 
 **Description:** Ethereum Python client.
 
-## [python-json-rpc](https://aur.archlinux.org/packages/python2-json-rpc/)
+## [python-json-rpc](https://aur.archlinux.org/packages/python-json-rpc/)
 
 **Description:** JSON-RPC transport realisation.
 
@@ -144,6 +144,14 @@ Index
 ## [python2-cffi](https://aur.archlinux.org/packages/python2-cffi/)
 
 **Description:** Foreign Function Interface for Python calling C code.
+
+## [python2-characters](https://aur.archlinux.org/packages/python2-characters/)
+
+**Description:** Tools for manipulating characters, strings, and character sets.
+
+## [python2-coinkit](https://aur.archlinux.org/packages/python2-coinkit/)
+
+**Description:** Keypair, address, brain wallet & deterministic wallet creation.
 
 ## [python2-commandr](https://aur.archlinux.org/packages/python2-commandr/)
 
