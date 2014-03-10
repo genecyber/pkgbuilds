@@ -13,8 +13,7 @@ optdepends=('python2-zbar: QR code reading support'
             'desktop-file-utils: update desktop database')
 url="https://electrum.org"
 license=('GPL3')
-source=(https://download.electrum.org/$_realname-$pkgver.tar.gz
-        https://download.electrum.org/$_realname-$pkgver.tar.gz.asc
+source=("https://download.electrum.org/${pkgname^}-${pkgver}.tar.gz"{,.asc}
         setup.py.patch)
 md5sums=('5764f38d6e4bc287a577c8d16e797882'
          '240c95dd9807db04922a0509c71f146d'
