@@ -133,9 +133,13 @@ Index
 
 **Description:** An easy interface to the Bitcoin protocol and data structures.
 
-## [python2-bitmerchant-git](https://aur.archlinux.org/packages/python2-bitmerchant-git/)
+## [python2-bitmerchant](https://aur.archlinux.org/packages/python2-bitmerchant/)
 
 **Description:** Bitcoin merchant tools.
+
+## [python2-bitmerchant-git](https://aur.archlinux.org/packages/python2-bitmerchant-git/)
+
+**Description:** Bitcoin merchant tools (git version).
 
 ## [python2-buildozer](https://aur.archlinux.org/packages/python2-buildozer/)
 
