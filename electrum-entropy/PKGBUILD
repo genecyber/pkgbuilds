@@ -3,17 +3,17 @@
 pkgname=electrum-entropy
 _realname=Electrum
 _entropy=256 # set to 192, 256, 512, 1024, 2048, 4096...
-pkgver=1.9.7
+pkgver=1.9.8
 pkgrel=1
 pkgdesc="Lightweight Bitcoin wallet with custom entropy (256+ bits)"
 arch=('any')
-depends=('python2' 'python2-ecdsa' 'python2-pyqt4' 'python2-sip' 'python2-slowaes' 'qt4' 'sip')
+depends=('python2' 'python2-ecdsa' 'python2-pbkdf2' 'python2-pyqt4' 'python2-sip' 'python2-slowaes' 'qt4' 'sip')
 makedepends=('gettext' 'python2-pycurl' 'python2-setuptools')
 optdepends=('python2-zbar: QR code reading support'
             'desktop-file-utils: update desktop database')
 url="https://electrum.org"
 license=('GPL3')
-source=("https://download.electrum.org/${pkgname^}-${pkgver}.tar.gz"{,.asc}
+source=("https://download.electrum.org/${_realname}-${pkgver}.tar.gz"{,.asc}
         setup.py.patch)
 md5sums=('5764f38d6e4bc287a577c8d16e797882'
          '240c95dd9807db04922a0509c71f146d'
