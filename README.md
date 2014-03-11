@@ -49,9 +49,17 @@ Index
 
 **Description:** Lightweight Bitcoin wallet.
 
+## [electrum-entropy](https://aur.archlinux.org/packages/electrum-entropy/)
+
+**Description:** Lightweight Bitcoin wallet with custom entropy.
+
 ## [electrum-lite](https://aur.archlinux.org/packages/electrum-lite/)
 
 **Description:** Lightweight Litecoin wallet.
+
+## [electrum-server-git](https://aur.archlinux.org/packages/electrum-server-git/)
+
+**Description:** Server to support Electrum thin client.
 
 ## [ethereum](https://aur.archlinux.org/packages/ethereum/)
 

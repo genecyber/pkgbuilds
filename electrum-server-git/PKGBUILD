@@ -2,7 +2,7 @@
 # Contributor: Duncan Townsend <duncant@mit.edu>
 
 pkgname=electrum-server-git
-pkgver=20140305
+pkgver=20140308
 pkgrel=1
 pkgdesc="Server to support Electrum python-based Bitcoin client"
 arch=('i686' 'x86_64')
