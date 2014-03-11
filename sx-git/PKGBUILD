@@ -1,12 +1,12 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=sx-git
-pkgver=20140204
+pkgver=20140311
 pkgrel=1
-pkgdesc="Modular Bitcoin cmdline utilities (SpesmiloXchange)"
+pkgdesc="S(pesmilo)X(changer) modular Bitcoin cmdline utilities"
 arch=('i686' 'x86_64')
-depends=('libbitcoin-leveldb-git' 'libwallet-git' 'ncurses' 'obelisk-git' 'python2')
-makedepends=('gcc' 'git' 'make' 'pkg-config')
+depends=('boost' 'libbitcoin-leveldb-git' 'libwallet-git' 'ncurses' 'obelisk-git' 'python2')
+makedepends=('autoconf' 'curl' 'gcc' 'git' 'libconfig' 'libtool' 'make' 'pkg-config')
 optdepends=('qrencode: Generate Bitcoin QR codes offline')
 url="https://github.com/spesmilo/sx/"
 license=('AGPL3')
