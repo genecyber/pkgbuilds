@@ -5,6 +5,10 @@ Index
 
 **Description:** A collection of libraries to simplify writing bash scripts.
 
+## [bitc-git](https://aur.archlinux.org/packages/bitc-git)
+
+**Description:** Thin SPV terminal-based Bitcoin client written in ANSI C.
+
 ## [bitcoind](https://aur.archlinux.org/packages/bitcoind)
 
 **Description:** Headless Bitcoin P2P node.
