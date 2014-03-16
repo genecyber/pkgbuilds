@@ -393,6 +393,10 @@ Index
 
 **Description:** Downloads AUR packages with wget.
 
+## [zeromq-git](https://aur.archlinux.org/packages/zeromq-git/)
+
+**Description:** ØMQ libzmq core library.
+
 Licensing
 ---------
 
