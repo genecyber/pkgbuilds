@@ -49,6 +49,10 @@ Index
 
 **Description:** High-level C binding for ØMQ.
 
+## [czmqpp-git](https://aur.archlinux.org/packages/czmqpp-git)
+
+**Description:** C++ wrapper for ZeroMQ/czmq.
+
 ## [diesel](https://aur.archlinux.org/packages/diesel/)
 
 **Description:** Coroutine-based networking library for Python.
