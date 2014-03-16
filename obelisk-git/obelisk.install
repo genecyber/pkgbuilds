@@ -25,3 +25,21 @@ _rmuser() {
   userdel -rf ob 2>/dev/null
   echo "done"
 }
+
+read -d '' obelisk <<"EOF"
+########################################################################
+########################################################################
+##                                                                    ##
+##  Obelisk of Light                                                  ##
+##  ________________                                                  ##
+##                                                                    ##
+##  * sx-git required before running obelisk binaries (sx initchain)  ##
+##  * general idea is to load balance multiple blockchains            ##
+##    * systemctl start obworker                                      ##
+##    * systemctl start obbalancer                                    ##
+##    * systemctl start obworker@1                                    ##
+##    * systemctl start obworker@2                                    ##
+##                                                                    ##
+########################################################################
+########################################################################
+EOF

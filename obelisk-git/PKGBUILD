@@ -1,12 +1,12 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=obelisk-git
-pkgver=20140315
+pkgver=20140316
 pkgrel=1
 pkgdesc="Obelisk of light scalable Bitcoin infrastructure"
 arch=('i686' 'x86_64')
-depends=('czmq' 'libbitcoin-leveldb-git' 'zeromq')
-makedepends=('gcc' 'git' 'libconfig' 'make' 'python2-sphinx')
+depends=('czmq-git' 'czmqpp-git' 'libbitcoin-leveldb-git' 'libsodium' 'zeromq-git')
+makedepends=('gcc' 'git' 'libconfig' 'libtool' 'make' 'python2-sphinx')
 url="https://github.com/spesmilo/obelisk/"
 license=('AGPL3')
 source=(git+https://github.com/spesmilo/obelisk
@@ -18,7 +18,7 @@ sha256sums=('SKIP'
             '135376afc6cdea0dd60c9c4618753b8cd56c880b36d31c773932e0f75a5f421c'
             '3e3131748ce179ea5f9f78bc45f97d5cda3b8a12867a36eef2a06f21d4ca171d'
             '3acff9a8a6a405fb7074693fa411e2779c971a32bf536b9feefeb6e5f2821818'
-            'bebc009ed6473e22f3139ecb4196f3479a096ad941d534cd4e21aaa1600e4f6c')
+            'a304c954a76e304914718c5527b4f0aaedbc3b16cc8c57bafbe8cee94bd8617f')
 provides=('obelisk')
 conflicts=('obelisk')
 install=obelisk.install
@@ -48,7 +48,8 @@ build() {
     --libexecdir=/usr/lib/obelisk \
     --sysconfdir=/etc \
     --sharedstatedir=/usr/share/obelisk \
-    --localstatedir=/var/lib/obelisk
+    --localstatedir=/var/lib/obelisk \
+    --with-gnu-ld
   make
 
   msg 'Building obelisk man pages...'
@@ -84,10 +85,12 @@ package() {
   msg 'Installing obelisk.service files...'
   install -Dm 644 $srcdir/obbalancer.service $pkgdir/usr/lib/systemd/system/obbalancer.service
   install -Dm 644 $srcdir/obworker.service $pkgdir/usr/lib/systemd/system/obworker.service
+  install -Dm 644 $srcdir/obworker@.service $pkgdir/usr/lib/systemd/system/obworker@.service
 
   msg 'Installing obelisk.logrotate...'
   install -Dm 644 $srcdir/obelisk.logrotate $pkgdir/etc/logrotate.d/obelisk
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +
+  find "$pkgdir" -type f -name .gitignore -exec rm -r '{}' +
 }
