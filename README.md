@@ -45,6 +45,10 @@ Index
 
 **Description:** A system for analyzing time series data.
 
+## [czmq-git](https://aur.archlinux.org/packages/czmq-git)
+
+**Description:** High-level C binding for ØMQ.
+
 ## [diesel](https://aur.archlinux.org/packages/diesel/)
 
 **Description:** Coroutine-based networking library for Python.

@@ -1,0 +1,56 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+# Contributor: Brian Knox <taotetek at gmail.com>
+
+pkgname=czmq-git
+pkgver=20140313
+pkgrel=1
+pkgdesc="High-level C binding for ØMQ"
+arch=('i686' 'x86_64')
+depends=('gcc-libs' 'libsodium' 'zeromq-git')
+makedepends=('asciidoc' 'autoconf' 'gcc' 'git' 'libtool' 'make' 'pkg-config' 'xmlto')
+url="https://github.com/zeromq/czmq"
+license=('LGPL3')
+source=(git+https://github.com/zeromq/czmq)
+sha256sums=('SKIP')
+provides=('czmq')
+conflicts=('czmq')
+
+pkgver() {
+  cd ${pkgname%-git}
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
+}
+
+build() {
+  cd ${pkgname%-git}
+
+  msg 'Building...'
+  ./autogen.sh
+  ./configure \
+    --prefix=/usr \
+    --sbindir=/usr/bin \
+    --libexecdir=/usr/lib/czmq \
+    --sysconfdir=/etc \
+    --sharedstatedir=/usr/share/czmq \
+    --localstatedir=/var/lib/czmq \
+    --with-gnu-ld \
+    --with-libsodium
+  make
+}
+
+package() {
+  cd ${pkgname%-git}
+
+  msg 'Installing license...'
+  install -D -m644 COPYING        $pkgdir/usr/share/licenses/czmq/COPYING
+  install -D -m644 COPYING.LESSER $pkgdir/usr/share/licenses/czmq/COPYING.LESSER
+
+  msg 'Installing...'
+  make DESTDIR="$pkgdir" install
+
+  msg 'Renaming binary...'
+  mv $pkgdir/usr/bin/makecert $pkgdir/usr/bin/makecert.czmq
+
+  msg 'Cleaning up pkgdir...'
+  find "$pkgdir" -type d -name .git -exec rm -r '{}' +
+  find "$pkgdir" -type f -name .gitignore -exec rm -r '{}' +
+}
