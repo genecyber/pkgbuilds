@@ -1,0 +1,16 @@
+[Unit]
+Description=Obelisk worker %i
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/run/obworker-%i.pid
+User=ob
+Group=ob
+ExecStartPre=/usr/bin/mkdir -p /srv/blockchain/blockchain-%i
+ExecStartPre=/usr/bin/sx initchain /srv/blockchain/blockchain-%i
+ExecStart=/usr/bin/obworker
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
