@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=electrum-lite
-pkgver=1.9.7
+pkgver=1.9.8
 pkgrel=1
 pkgdesc="Lightweight Litecoin wallet"
 arch=('any')
@@ -11,7 +11,7 @@ optdepends=('python2-zbar: QR code reading support'
             'desktop-file-utils: update desktop database')
 url="https://electrum-lite.org"
 license=('GPL3')
-source=(https://electrum-lite.org/Electrum-Lite-1.9.7.tar.gz)
+source=(https://electrum-lite.org/Electrum-Lite-$pkgver.tar.gz)
 sha256sums=('10a49ef34abd2609067d1a7974e91b3338da08a3a5f03732f00cf64fd5c72ec7')
 install=electrum-lite.install
 
