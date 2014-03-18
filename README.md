@@ -65,17 +65,9 @@ Index
 
 **Description:** Lightweight Bitcoin wallet with custom entropy.
 
-## [electrum-headless](https://aur.archlinux.org/packages/electrum-headless/)
-
-**Description:** Lightweight Bitcoin wallet (headless version).
-
 ## [electrum-lite](https://aur.archlinux.org/packages/electrum-lite/)
 
 **Description:** Lightweight Litecoin wallet.
-
-## [electrum-lite-headless](https://aur.archlinux.org/packages/electrum-lite-headless/)
-
-**Description:** Lightweight Litecoin wallet (headless version).
 
 ## [electrum-server-git](https://aur.archlinux.org/packages/electrum-server-git/)
 
