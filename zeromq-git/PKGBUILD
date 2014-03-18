@@ -44,13 +44,6 @@ build() {
   make
 }
 
-check() {
-  cd ${pkgname%-git}
-
-  msg 'Checking...'
-  make -k check
-}
-
 package() {
   cd ${pkgname%-git}
 
