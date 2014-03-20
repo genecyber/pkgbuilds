@@ -24,9 +24,8 @@ provides=('createmint' 'open-transactions' 'opentxs' 'ot' 'otserver')
 conflicts=('createmint' 'open-transactions' 'opentxs' 'ot' 'otserver')
 install=open-transactions.install
 
-# keyring can be 'gnome' or 'kwallet'
-# keyring option is not configured by default
-_keyring=gnome
+# keyring can be 'flatfile', 'gnome' or 'kwallet'
+_keyring=flatfile
 
 pkgver() {
   cd ${pkgname%-git}
@@ -48,8 +47,8 @@ build() {
     --sysconfdir=/etc \
     --sharedstatedir=/usr/share/opentxs \
     --localstatedir=/var/lib/opentxs \
-    --with-gnu-ld
-    #--with-keyring=$_keyring \
+    --with-gnu-ld \
+    --with-keyring=$_keyring
     #--with-csharp \
     #--with-d \
     #--with-go \
