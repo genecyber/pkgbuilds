@@ -5,16 +5,20 @@ pkgver=0.1
 pkgrel=1
 pkgdesc="Daemon to support Counterparty Web wallet"
 arch=('any')
-depends=('cube-git' 'leveldb' 'mongodb' 'python2' 'python2-appdirs' 'python2-apsw' 'python2-boto' 'python2-cherrypy' 'python2-cube-client' 'python2-dateutil' 'python2-gevent' 'python2-gevent-socketio' 'python2-json-rpc' 'python2-prettytable' 'python2-pycoin' 'python2-pymongo' 'python2-pytest' 'python2-pyzmq' 'python2-redis' 'python2-requests' 'redis' 'sqlite' 'zeromq')
+depends=('cube-git' 'leveldb' 'mongodb' 'python2' 'python2-appdirs' 'python2-apsw' 'python2-boto' 'python2-cherrypy' 'python2-cube-client' 'python2-dateutil' 'python2-gevent' 'python2-gevent-socketio' 'python2-grequests' 'python2-json-rpc' 'python2-prettytable' 'python2-pycoin' 'python2-pymongo' 'python2-pytest' 'python2-pyzmq' 'python2-redis' 'python2-requests' 'redis' 'sqlite' 'zeromq')
 makedepends=('python-sphinx')
-optdepends=('bitcoin-daemon: Bitcoin wallet and private key management'
-            'counterpartyd: Counterparty protocol')
-url="https://counterparty.co"
+optdepends=('counterpartyd: Counterparty protocol'
+            'insight-bitcore: Bitcoin blockchain explorer with complete REST and websocket APIs')
+url="https://counterwallet.co"
 license=('MIT')
-source=($pkgname-$pkgver.tar.gz::https://github.com/PhantomPhreak/counterpartyd/archive/v$pkgver.tar.gz
-        counterwalletd.conf)
+source=($pkgname-$pkgver.tar.gz::https://github.com/PhantomPhreak/counterwalletd/archive/v$pkgver.tar.gz
+        counterwalletd.conf
+        counterwalletd.logrotate
+        counterwalletd.service)
 sha256sums=('e10322a7689a7ec6b73b087cf2b64dac75380585384d4b876525d93d78da63f1'
-            '6356c2d7cc356ba010187301f37385ff436494b6b6c8203098fe9beaaa6e91ba')
+            'fdab297e19b9d5c4c1abe364e5b3680960176c0075d3a31b4d2b5c38a0b658b5'
+            'alkjsdfljk'
+            'alksdjlfka')
 install=counterwalletd.install
 
 build() {
@@ -28,32 +32,39 @@ package() {
   cd $srcdir/$pkgname-$pkgver
 
   msg 'Installing license...'
-  install -Dm 644 LICENSE $pkgdir/usr/share/licenses/counterparty/LICENSE
+  install -Dm 644 LICENSE $pkgdir/usr/share/licenses/counterwallet/LICENSE
 
-  msg 'Installing man pages...'
+  msg 'Installing user manual...'
   for _manpage in `find docs/_build/man/ -type f -name "*.1" -printf '%f\n'`; do
     install -Dm 644 docs/_build/man/$_manpage $pkgdir/usr/share/man/man1/$_manpage
   done
 
-  msg 'Installing docs...'
-  install -Dm 644 README.md $pkgdir/usr/share/doc/counterparty/README.md
+  msg 'Installing documentation...'
+  install -Dm 644 README.md $pkgdir/usr/share/doc/counterwallet/README.md
 
-  msg 'Installing libdirs...'
-  install -dm 755 $pkgdir/usr/share/counterparty
-  for _libdir in lib test; do
-    mv $_libdir $pkgdir/usr/share/counterparty/$_libdir
+  msg 'Installing appdirs...'
+  install -dm 755 $pkgdir/usr/share/counterwallet
+  install -dm 700 $pkgdir/var/log/counterwallet
+  for _appdir in lib test; do
+    mv $_appdir $pkgdir/usr/share/counterwallet/$_appdir
   done
 
-  msg 'Installing files...'
-  for _file in __init__.py versions.json; do
-    install -Dm 644 $_file $pkgdir/usr/share/counterparty/$_file
+  msg 'Installing appfiles...'
+  for _appfile in __init__.py versions.json; do
+    install -Dm 644 $_appfile $pkgdir/usr/share/counterwallet/$_appfile
   done
 
-  msg 'Installing config...'
-  install -Dm 644 $srcdir/counterwalletd.conf $pkgdir/etc/counterwalletd.conf
+  msg 'Installing counterwalletd executable...'
+  install -Dm 755 counterwalletd.py $pkgdir/usr/share/counterwallet/counterwalletd.py
 
-  msg 'Installing executable...'
-  install -Dm 755 counterpartyd.py $pkgdir/usr/share/counterparty/counterpartyd.py
+  msg 'Installing counterwalletd.conf...'
+  install -Dm 600 $srcdir/counterwalletd.conf $pkgdir/etc/counterwalletd.conf
+
+  msg 'Installing counterwalletd.service'
+  install -Dm 644 $srcdir/counterwalletd.service $pkgdir/usr/lib/systemd/system/counterwalletd.service
+
+  msg 'Installing counterwalletd.logrotate...'
+  install -Dm 644 $srcdir/counterwalletd.logrotate $pkgdir/etc/logrotate.d/counterwalletd
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type f -name .gitignore -exec rm -r '{}' +
