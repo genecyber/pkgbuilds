@@ -7,9 +7,9 @@ After=bitcoin.service insight.service
 User=counterparty
 Group=counterparty
 ExecStart=/usr/bin/counterpartyd \
-                   --config-file='/etc/counterparty/counterpartyd.conf'        \
-                   --data-dir='/usr/share/counterparty'                        \
-                   --log-file='/var/log/counterparty/counterpartyd-server.log' \
+                   --config-file=/etc/counterparty/counterpartyd.conf        \
+                   --data-dir=/usr/share/counterparty                        \
+                   --log-file=/var/log/counterparty/counterpartyd-server.log \
                    --verbose --force server
 
 [Install]
