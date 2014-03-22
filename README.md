@@ -1,55 +1,63 @@
 Index
 -----
 
-## [bashful-git](https://aur.archlinux.org/packages/bashful-git)
+## [bashful-git](https://aur.archlinux.org/packages/bashful-git/)
 
 **Description:** A collection of libraries to simplify writing bash scripts.
 
-## [bitc-git](https://aur.archlinux.org/packages/bitc-git)
+## [bitc-git](https://aur.archlinux.org/packages/bitc-git/)
 
 **Description:** Thin SPV terminal-based Bitcoin client written in ANSI C.
 
-## [bitcoind](https://aur.archlinux.org/packages/bitcoind)
+## [bitcoind](https://aur.archlinux.org/packages/bitcoind/)
 
 **Description:** Headless Bitcoin P2P node.
 
-## [bitpaint](https://aur.archlinux.org/packages/bitpaint)
+## [bitpaint](https://aur.archlinux.org/packages/bitpaint/)
 
 **Description:** Bitcoin smart contracts.
 
-## [bitrated-git](https://aur.archlinux.org/packages/bitrated-git)
+## [bitrated-git](https://aur.archlinux.org/packages/bitrated-git/)
 
 **Description:** Bitcoin arbitration marketplace.
 
-## [chromawallet-git](https://aur.archlinux.org/packages/chromawallet-git)
+## [chromawallet-git](https://aur.archlinux.org/packages/chromawallet-git/)
 
 **Description:** Bitcoin wallet for colored coins.
 
-## [coinmessage-git](https://aur.archlinux.org/packages/coinmessage-git)
+## [coinmessage-git](https://aur.archlinux.org/packages/coinmessage-git/)
 
 **Description:** Bitcoin-based secure messaging system.
 
-## [concoord](https://aur.archlinux.org/packages/concoord)
+## [concoord](https://aur.archlinux.org/packages/concoord/)
 
 **Description:** Coordination service for distributed systems.
 
-## [counterpartyd](https://aur.archlinux.org/packages/counterpartyd)
+## [counterpartyd](https://aur.archlinux.org/packages/counterpartyd/)
 
 **Description:** An open marketplace, built on Bitcoin.
 
-## [counterpartyd-git](https://aur.archlinux.org/packages/counterpartyd-git)
+## [counterpartyd-git](https://aur.archlinux.org/packages/counterpartyd-git/)
 
 **Description:** An open marketplace, built on Bitcoin (git version).
 
-## [cube-git](https://aur.archlinux.org/packages/cube-git)
+## [counterwalletd](https://aur.archlinux.org/packages/counterwalletd/)
+
+**Description:** Daemon for Counterwallet features.
+
+## [counterwalletd-git](https://aur.archlinux.org/packages/counterwalletd-git/)
+
+**Description:** Daemon for Counterwallet features (git version).
+
+## [cube-git](https://aur.archlinux.org/packages/cube-git/)
 
 **Description:** A system for analyzing time series data.
 
-## [czmq-git](https://aur.archlinux.org/packages/czmq-git)
+## [czmq-git](https://aur.archlinux.org/packages/czmq-git/)
 
 **Description:** High-level C binding for ØMQ.
 
-## [czmqpp-git](https://aur.archlinux.org/packages/czmqpp-git)
+## [czmqpp-git](https://aur.archlinux.org/packages/czmqpp-git/)
 
 **Description:** C++ wrapper for ZeroMQ/czmq.
 
