@@ -197,6 +197,10 @@ Index
 
 **Description:** Converts HTML documents to Markdown.
 
+## [python2-json-rpc](https://aur.archlinux.org/packages/python2-json-rpc/)
+
+**Description:** JSON-RPC transport realisation.
+
 ## [python2-jsonrpclib](https://aur.archlinux.org/packages/python2-jsonrpclib/)
 
 **Description:** Implements the JSON-RPC v2.0 specification.
