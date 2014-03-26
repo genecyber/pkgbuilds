@@ -177,10 +177,6 @@ Index
 
 **Description:** Generic Python packager for Android / iOS and Desktop.
 
-## [python2-cffi](https://aur.archlinux.org/packages/python2-cffi/)
-
-**Description:** Foreign Function Interface for Python calling C code.
-
 ## [python2-characters](https://aur.archlinux.org/packages/python2-characters/)
 
 **Description:** Tools for manipulating characters, strings, and character sets.
@@ -232,10 +228,6 @@ Index
 ## [python2-pycoin](https://aur.archlinux.org/packages/python2-pycoin/)
 
 **Description:** Python-based Bitcoin utility library.
-
-## [python2-pycparser](https://aur.archlinux.org/packages/python2-pycparser/)
-
-**Description:** Complete C99 parser in pure Python.
 
 ## [python2-pydown](https://aur.archlinux.org/packages/python2-pydown/)
 
