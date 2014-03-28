@@ -3,7 +3,7 @@
 pkgname=insight-bitcore-git
 pkgver=20140322
 pkgrel=1
-pkgdesc="Bitcoin blockchain explorer with complete REST and websocket APIs"
+pkgdesc="Bitcoin blockchain API for web wallets"
 arch=('i686' 'x86_64')
 depends=('leveldb' 'nodejs')
 makedepends=('git' 'nodejs-bower' 'nodejs-grunt-cli')
