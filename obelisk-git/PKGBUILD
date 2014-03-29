@@ -4,7 +4,7 @@
 pkgname=obelisk-git
 pkgver=20140323
 pkgrel=2
-pkgdesc="Obelisk of light scalable Bitcoin infrastructure"
+pkgdesc="scalable Bitcoin backend"
 arch=('i686' 'x86_64')
 depends=('czmq-git' 'czmqpp-git' 'libbitcoin-leveldb-git' 'libsodium' 'zeromq-git')
 makedepends=('gcc' 'git' 'libconfig' 'libtool' 'make')
