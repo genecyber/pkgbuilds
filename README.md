@@ -313,6 +313,10 @@ Index
 
 **Description:** Vim global plugin for better digraph interactions, by Damien Conway.
 
+## [vim-colors-eddie-git](https://aur.archlinux.org/packages/vim-colors-eddie-git/)
+
+**Description:** Eddie colors for Vim.
+
 ## [vim-colors-github](https://aur.archlinux.org/packages/vim-colors-github/)
 
 **Description:** GitHub colors for Vim.
