@@ -397,9 +397,17 @@ Index
 
 **Description:** Simple REPL inside Vim.
 
+## [vim-searchparty-git](https://aur.archlinux.org/packages/vim-searchparty-git/)
+
+**Description:** Extended search commands and maps for Vim.
+
 ## [vim-syntaxrange-git](https://aur.archlinux.org/packages/vim-syntaxrange-git/)
 
 **Description:** Define a different filetype syntax on regions of a Vim buffer.
+
+## [vim-tmux-navigator-git](https://aur.archlinux.org/packages/vim-tmux-navigator-git/)
+
+**Description:** Seamless navigation between tmux panes and Vim splits.
 
 ## [vim-vis-git](https://aur.archlinux.org/packages/vim-vis-git/)
 
@@ -408,10 +416,6 @@ Index
 ## [vim-vmath-git](https://aur.archlinux.org/packages/vim-vmath-git/)
 
 **Description:** Vim global plugin for math on visual regions, by Damien Conway.
-
-## [vim-tmux-navigator-git](https://aur.archlinux.org/packages/vim-tmux-navigator-git/)
-
-**Description:** Seamless navigation between tmux panes and Vim splits.
 
 ## [wgetpkg](https://aur.archlinux.org/packages/wgetpkg/)
 
