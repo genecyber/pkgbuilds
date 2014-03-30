@@ -341,6 +341,10 @@ Index
 
 **Description:** Vim plugin for toggling background and color scheme.
 
+## [vim-ctrlsf-git](https://aur.archlinux.org/packages/vim-ctrlsf-git/)
+
+**Description:** ack.vim alternative like Ctrl-Shift-F on Sublime Text.
+
 ## [vim-dragvisuals](https://aur.archlinux.org/packages/vim-dragvisuals/)
 
 **Description:** Vim global plugin for dragging virtual blocks, by Damien Conway.
