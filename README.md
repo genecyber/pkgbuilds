@@ -145,6 +145,10 @@ Index
 
 **Description:** Ethereum Python client.
 
+## [python-bitcoinlib-git](https://aur.archlinux.org/packages/python-bitcoinlib-git/)
+
+**Description:** An easy interface to the Bitcoin protocol and data structures.
+
 ## [python-json-rpc](https://aur.archlinux.org/packages/python-json-rpc/)
 
 **Description:** JSON-RPC transport realisation.
