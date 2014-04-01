@@ -9,9 +9,9 @@ Index
 
 **Description:** Thin SPV terminal-based Bitcoin client written in ANSI C.
 
-## [bitcoind](https://aur.archlinux.org/packages/bitcoind/)
+## [bitcoin-core](https://aur.archlinux.org/packages/bitcoin-core/)
 
-**Description:** Headless Bitcoin P2P node.
+**Description:** Bitcoin core headless P2P node.
 
 ## [bitpaint](https://aur.archlinux.org/packages/bitpaint/)
 

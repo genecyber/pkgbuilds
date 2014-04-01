@@ -8,7 +8,7 @@ pkgdesc="Server to support Electrum python-based Bitcoin client"
 arch=('i686' 'x86_64')
 depends=('leveldb' 'openssl' 'python2' 'python2-jsonrpclib' 'python2-plyvel' 'python2-pyopenssl' 'snappy')
 makedepends=('git')
-optdepends=('bitcoind: Bitcoin core headless P2P node'
+optdepends=('bitcoin-core: Bitcoin core headless P2P node'
             'electrum: Bitcoin thin client')
 url="https://github.com/spesmilo/electrum-server"
 license=('AGPL3')
