@@ -149,6 +149,10 @@ Index
 
 **Description:** An easy interface to the Bitcoin protocol and data structures.
 
+## [python-commandr](https://aur.archlinux.org/packages/python-commandr/)
+
+**Description:** Simple tool for making Python functions accessible from the command line.
+
 ## [python-json-rpc](https://aur.archlinux.org/packages/python-json-rpc/)
 
 **Description:** JSON-RPC transport realisation.
