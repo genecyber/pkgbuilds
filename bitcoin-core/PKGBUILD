@@ -1,6 +1,6 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
-pkgname=bitcoind
+pkgname=bitcoin-core
 pkgver=0.9.0
 pkgrel=1
 pkgdesc="Bitcoin core headless P2P node"
@@ -9,7 +9,7 @@ url="http://bitcoin.org/"
 depends=('boost' 'boost-libs' 'miniupnpc' 'openssl')
 makedepends=('binutils' 'gcc' 'make' 'pkg-config')
 license=('MIT')
-source=(${pkgname%d}-$pkgver.tar.gz::https://codeload.github.com/bitcoin/bitcoin/tar.gz/v$pkgver
+source=(${pkgname%-core}-$pkgver.tar.gz::https://codeload.github.com/bitcoin/bitcoin/tar.gz/v$pkgver
         bitcoin.conf
         bitcoin.logrotate
         bitcoin.service)
@@ -24,7 +24,7 @@ conflicts=('bitcoin-daemon')
 install=bitcoin.install
 
 build() {
-  cd $srcdir/${pkgname%d}-$pkgver
+  cd $srcdir/${pkgname%-core}-$pkgver
 
   msg 'Building...'
   ./autogen.sh
@@ -42,10 +42,10 @@ build() {
 }
 
 package() {
-  cd $srcdir/${pkgname%d}-$pkgver
+  cd $srcdir/${pkgname%-core}-$pkgver
 
   msg 'Installing license...'
-  install -Dm 644 COPYING $pkgdir/usr/share/licenses/${pkgname%d}/COPYING
+  install -Dm 644 COPYING $pkgdir/usr/share/licenses/${pkgname%-core}/COPYING
 
   msg 'Installing man pages...'
   install -Dm 644 contrib/debian/manpages/bitcoind.1 $pkgdir/usr/share/man/man1/bitcoind.1
