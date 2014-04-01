@@ -153,10 +153,6 @@ Index
 
 **Description:** Python-based Bitcoin utility library.
 
-## [python2-acrylamid](https://aur.archlinux.org/packages/python2-acrylamid/)
-
-**Description:** Static blog compiler with incremental updates.
-
 ## [python2-base58](https://aur.archlinux.org/packages/python2-base58/)
 
 **Description:** Bitcoin-compatible Base58 and Base58Check implementation.
