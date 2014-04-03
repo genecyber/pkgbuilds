@@ -57,7 +57,7 @@ build() {
   npm install --development
 
   msg 'Fetching Web assets...'
-  bower install --allow-root
+  bower install --allow-root --config.interactive=false
 }
 
 package() {

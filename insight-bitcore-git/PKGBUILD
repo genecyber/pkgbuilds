@@ -33,7 +33,7 @@ build() {
   npm install
 
   msg 'Fetching Web assets...'
-  bower install --allow-root
+  bower install --allow-root --config.interactive=false
 
   msg 'Compiling Web assets...'
   grunt compile
