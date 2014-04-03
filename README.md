@@ -41,6 +41,14 @@ Index
 
 **Description:** An open marketplace, built on Bitcoin (git version).
 
+## [counterwallet](https://aur.archlinux.org/packages/counterwallet/)
+
+**Description:** Deterministic Web wallet for Counterparty.
+
+## [counterwallet-git](https://aur.archlinux.org/packages/counterwallet-git/)
+
+**Description:** Deterministic Web wallet for Counterparty (git version).
+
 ## [counterwalletd](https://aur.archlinux.org/packages/counterwalletd/)
 
 **Description:** Daemon for Counterwallet features.
