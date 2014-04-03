@@ -12,6 +12,7 @@ url="https://github.com/xnova/counterwallet"
 license=('CDDL')
 source=(git+https://github.com/xnova/counterwallet)
 sha256sums=('SKIP')
+options=('!strip')
 install=counterwallet.install
 
 pkgver() {
