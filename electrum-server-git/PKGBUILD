@@ -15,7 +15,7 @@ license=('AGPL3')
 source=(git+https://github.com/spesmilo/electrum-server
         electrum-server.service)
 sha256sums=('SKIP'
-            'bd8bc4ca0a44cb75637ea95ea58bef275b4b547cf9d750bcf21b423261ff5295')
+            '69364e294099786d5fb0eac7f1ffecf3adf8cefc8ee82e4096c0b59ac4b28e37')
 backup=('etc/electrum-server.conf')
 provides=('electrum-server')
 conflicts=('electrum-server')
