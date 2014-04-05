@@ -153,6 +153,14 @@ Index
 
 **Description:** Ethereum Python client.
 
+## [pyspv](https://aur.archlinux.org/packages/pyspv/)
+
+**Description:** Programmable Bitcoin SPV node in Python.
+
+## [pyspv-git](https://aur.archlinux.org/packages/pyspv-git/)
+
+**Description:** Programmable Bitcoin SPV node in Python (git version).
+
 ## [python-bitcoinlib-git](https://aur.archlinux.org/packages/python-bitcoinlib-git/)
 
 **Description:** An easy interface to the Bitcoin protocol and data structures.
