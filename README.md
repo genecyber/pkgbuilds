@@ -241,9 +241,9 @@ Index
 
 **Description:** Fast, feature-rich Python interface to LevelDB.
 
-## [python2-pybitcointools](https://aur.archlinux.org/packages/python2-pybitcointools/)
+## [python2-bitcoin](https://aur.archlinux.org/packages/python2-bitcoin/)
 
-**Description:** Python library for Bitcoin signatures and transactions.
+**Description:** Python Bitcoin tools.
 
 ## [python2-pycoin](https://aur.archlinux.org/packages/python2-pycoin/)
 
