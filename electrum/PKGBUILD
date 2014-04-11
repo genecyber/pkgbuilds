@@ -22,7 +22,6 @@ md5sums=('e3918fec0254267f08e41a1fb8691382'
 sha256sums=('8fc144a32013e4a747fea27fff981762a6b9e14cde9ffb405c4c721975d846ff'
             '181b88ceecd8701844d79110d31fe71b16d943c47612989f3c51e19270f2a87b'
             '5f8d846dedce20601f3131e687bd2dc54ca8df0137cbdaa1b06eab11eb6a52da')
-provides=('electrum')
 install=electrum.install
 
 prepare() {
