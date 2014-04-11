@@ -85,6 +85,10 @@ Index
 
 **Description:** Lightweight Litecoin wallet.
 
+## [electrum-ltc](https://aur.archlinux.org/packages/electrum-ltc/)
+
+**Description:** Lightweight Litecoin wallet.
+
 ## [electrum-server-git](https://aur.archlinux.org/packages/electrum-server-git/)
 
 **Description:** Server to support Electrum thin client.
@@ -244,6 +248,10 @@ Index
 ## [python2-bitcoin](https://aur.archlinux.org/packages/python2-bitcoin/)
 
 **Description:** Python Bitcoin tools.
+
+## [python2-ltc_scrypt](https://aur.archlinux.org/packages/python2-ltc_scrypt/)
+
+**Description:** Bindings for scrypt proof of work used by Litecoin.
 
 ## [python2-pycoin](https://aur.archlinux.org/packages/python2-pycoin/)
 
