@@ -101,6 +101,10 @@ Index
 
 **Description:** Next-generation cryptographic ledger (git version).
 
+## [ethereum-serpent-git](https://aur.archlinux.org/packages/ethereum-serpent-git/)
+
+**Description:** Serpent contract programming language tools.
+
 ## [geturl-git](https://aur.archlinux.org/packages/geturl-git/)
 
 **Description:** A CLI tool to get a public link for any file.
@@ -153,9 +157,13 @@ Index
 
 **Description:** Decentralized digital asset management system (git version).
 
-## [pyethereum-git](https://aur.archlinux.org/packages/pyethereum-git/)
+## [pyethereum](https://aur.archlinux.org/packages/pyethereum/)
 
 **Description:** Ethereum Python client.
+
+## [pyethereum-git](https://aur.archlinux.org/packages/pyethereum-git/)
+
+**Description:** Ethereum Python client (git version).
 
 ## [pyspv](https://aur.archlinux.org/packages/pyspv/)
 

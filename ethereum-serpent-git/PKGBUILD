@@ -1,18 +1,18 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
-pkgname=pyethereum-git
+pkgname=ethereum-serpent-git
 pkgver=20140416
 pkgrel=1
-pkgdesc="Ethereum Python client"
+pkgdesc="Serpent contract programming language tools"
 arch=('any')
-depends=('leveldb' 'python2' 'python2-leveldb-svn' 'python2-bitcoin' 'python2-pysha3' 'python2-six')
+depends=('python2' 'python2-bitcoin' 'python2-pysha3')
 makedepends=('git' 'python2-setuptools')
-url="https://github.com/ethereum/pyethereum"
+url="https://github.com/ethereum/serpent"
 license=('MIT')
-source=(git+https://github.com/ethereum/pyethereum)
+source=(${pkgname%-git}::git+https://github.com/ethereum/serpent)
 sha256sums=('SKIP')
-provides=('pyethereum')
-conflicts=('pyethereum')
+provides=('ethereum-serpent' 'serpent')
+conflicts=('ethereum-serpent' 'serpent')
 
 pkgver() {
   cd ${pkgname%-git}
@@ -37,17 +37,8 @@ building() {
 package() {
   cd ${pkgname%-git}
 
-  msg 'Installing license...'
-  install -Dm 644 LICENSE $pkgdir/usr/share/licenses/pyethereum/LICENSE
-
-  msg 'Installing docs...'
-  install -Dm 644 README.rst $pkgdir/usr/share/doc/pyethereum/README.rst
-
   msg 'Installing...'
   python2 setup.py install --root="${pkgdir}" --optimize=1
-
-  msg 'Renaming eth binary to pyeth...'
-  mv $pkgdir/usr/bin/eth $pkgdir/usr/bin/pyeth
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +
