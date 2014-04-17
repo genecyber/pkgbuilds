@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=moneychanger-git
-pkgver=20140309
+pkgver=20140417
 pkgrel=1
 pkgdesc="A QT/C++ client for Open-Transactions"
 arch=('i686' 'x86_64')
@@ -18,14 +18,6 @@ install=moneychanger.install
 pkgver() {
   cd ${pkgname%-git}
   git log -1 --format="%cd" --date=short | sed "s|-||g"
-}
-
-prepare() {
-  cd ${pkgname%-git}
-
-  msg 'Fixing boost_system and boost_thread references...'
-  find . -type f -print0 | xargs -0 sed -i "s#-lboost_system-mt#-lboost_system#g"
-  find . -type f -print0 | xargs -0 sed -i "s#-lboost_thread-mt#-lboost_thread#g"
 }
 
 build() {
@@ -45,13 +37,14 @@ package() {
   done
 
   msg 'Installing documentation...'
+  install -Dm 644 README.md $pkgdir/usr/share/doc/moneychanger/README.md
   for _doc in `find doc -mindepth 1 -maxdepth 1 -type f -printf '%f\n'`; do
     install -Dm 644 doc/$_doc $pkgdir/usr/share/doc/moneychanger/$_doc
   done
 
   msg 'Installing appdirs...'
   install -dm 755 $pkgdir/usr/share/moneychanger
-  for _appdir in bitcoin-api jsoncpp moneychanger-qt project src; do
+  for _appdir in bitcoin-api jsoncpp moneychanger-qt nmcrpc project src; do
     mv $_appdir $pkgdir/usr/share/moneychanger/$_appdir
   done
 
