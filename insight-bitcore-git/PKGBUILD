@@ -8,7 +8,7 @@ arch=('i686' 'x86_64')
 depends=('leveldb' 'nodejs')
 makedepends=('git' 'nodejs-bower' 'nodejs-grunt-cli')
 optdepends=('bitcoin-core: Bitcoin core headless P2P node')
-url="https://github.com/bitpay/insight"
+url="http://insight.is"
 license=('MIT')
 source=(git+https://github.com/bitpay/insight
         insight.conf
