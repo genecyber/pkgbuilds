@@ -393,6 +393,10 @@ Index
 
 **Description:** Vim configuration files for Elixir.
 
+## [vim-expand-region-git](https://aur.archlinux.org/packages/vim-expand-region-git/)
+
+**Description:** Visually select increasingly larger regions of text using the same key combination.
+
 ## [vimerl-git](https://aur.archlinux.org/packages/vimerl-git/)
 
 **Description:** The Erlang plugin for Vim.
