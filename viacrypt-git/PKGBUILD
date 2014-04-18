@@ -7,6 +7,7 @@ pkgdesc="One-time-read messaging system"
 arch=('any')
 depends=('mongodb' 'nodejs' 'redis')
 makedepends=('git' 'nodejs-grunt-cli')
+optdepends=('nodejs-handlebars-xgettext: for better results with grunt xgettext locale update task')
 url="https://viacry.pt"
 license=('MIT')
 source=(git+https://github.com/vialink/viacrypt

@@ -145,6 +145,10 @@ Index
 
 **Description:** 30-second slideshows for hackers.
 
+## [nodejs-handlebars-xgettext](https://aur.archlinux.org/packages/nodejs-handlebars-xgettext/)
+
+**Description:** Extract strings from Handlebars source.
+
 ## [obelisk-git](https://aur.archlinux.org/packages/obelisk-git/)
 
 **Description:** Scalable Bitcoin infrastructure.
@@ -332,6 +336,10 @@ Index
 ## [vanitygen-git](https://aur.archlinux.org/packages/vanitygen-git/)
 
 **Description:** Bitcoin vanity address generator written in C.
+
+## [viacrypt-git](https://aur.archlinux.org/packages/viacrypt-git/)
+
+**Description:** One-time-read messaging system.
 
 ## [vim-after-syntax-perl-git](https://aur.archlinux.org/packages/vim-after-syntax-perl-git/)
 
