@@ -2,8 +2,8 @@
 # pooler PGP key: gpg --recv-key 6FC4C9F7F1BE8FEA
 
 pkgname=electrum-ltc
-pkgver=1.9.8
-pkgrel=3
+pkgver=1.9.8.1
+pkgrel=1
 pkgdesc="Lightweight Litecoin wallet"
 arch=('any')
 depends=('python2' 'python2-ecdsa' 'python2-ltc_scrypt' 'python2-pbkdf2' 'python2-pyqt4' 'python2-sip' 'python2-slowaes' 'qt4' 'sip')
@@ -15,9 +15,9 @@ url="https://litecointalk.org/index.php?topic=18608.0"
 license=('GPL3')
 source=("http://electrum-ltc.org/download/Electrum-LTC-${pkgver}.tar.gz"{,.asc}
         setup.py.patch)
-sha256sums=('4c02f8b1bc86c9a13a4755619b53fd056ea8c1c0a51d8892ee2a4691da6142cd'
-            'bf8b96d3f6420ebc34bc29896650d116f572258aa4d30ab6c19bd10de519b069'
-            '7dcd4e3f7f1c9ff578c823737e921a67fb876eeccbbfc0943fed632161ac6275')
+sha256sums=('5fe724837964387731c4a67ef2df86779aa171fcb51f88baa5a3c6b88e167b06'
+            'd7cfe4ee0072183f9a9cc1ac01db0ebd91200b855bfde13539a382bcbdd866cb'
+            '484659556260789ddd8eca1d878e719988479a3aa2ec8f139b10683c5c03843e')
 install=electrum-ltc.install
 
 prepare() {
