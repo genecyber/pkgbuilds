@@ -125,9 +125,17 @@ Index
 
 **Description:** Asynchronous C++ library for Bitcoin.
 
+## [libbitcoin-leveldb-devel-git](https://aur.archlinux.org/packages/libbitcoin-leveldb-devel-git/)
+
+**Description:** Asynchronous C++ library for Bitcoin (development branch).
+
 ## [libwallet-git](https://aur.archlinux.org/packages/libwallet-git/)
 
 **Description:** Bitcoin client-side library for wallet functionality.
+
+## [libwallet-devel-git](https://aur.archlinux.org/packages/libwallet-devel-git/)
+
+**Description:** Bitcoin client-side library for wallet functionality (development branch).
 
 ## [mickey](https://aur.archlinux.org/packages/mickey/)
 
@@ -153,6 +161,10 @@ Index
 
 **Description:** Scalable Bitcoin infrastructure.
 
+## [obelisk-devel-git](https://aur.archlinux.org/packages/obelisk-devel-git/)
+
+**Description:** Scalable Bitcoin infrastructure (development branch).
+
 ## [open-transactions](https://aur.archlinux.org/packages/open-transactions/)
 
 **Description:** Decentralized digital asset management system.
@@ -168,6 +180,10 @@ Index
 ## [pyethereum-git](https://aur.archlinux.org/packages/pyethereum-git/)
 
 **Description:** Ethereum Python client (git version).
+
+## [pyrpcwallet-git](https://aur.archlinux.org/packages/pyrpcwallet-git/)
+
+**Description:** Lightweight JSON-RPC wallet compatible with bitcoind.
 
 ## [pyspv](https://aur.archlinux.org/packages/pyspv/)
 
@@ -285,6 +301,10 @@ Index
 
 **Description:** Simple to use Python JSONRPC-Library.
 
+## [python2-rollbar](https://aur.archlinux.org/packages/python2-rollbar/)
+
+**Description:** Logs exceptions and other data to Rollbar.
+
 ## [python2-scrypt](https://aur.archlinux.org/packages/python2-scrypt/)
 
 **Description:** Bindings for the scrypt key derivation function library.
@@ -328,6 +348,10 @@ Index
 ## [sx-git](https://aur.archlinux.org/packages/sx-git/)
 
 **Description:** Modular Bitcoin command line utilities.
+
+## [sx-devel-git](https://aur.archlinux.org/packages/sx-devel-git/)
+
+**Description:** Modular Bitcoin command line utilities (development branch).
 
 ## [tscat](https://aur.archlinux.org/packages/tscat/)
 

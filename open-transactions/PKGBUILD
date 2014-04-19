@@ -60,8 +60,11 @@ package() {
   cd $srcdir/opentxs-$pkgver
 
   msg 'Installing license...'
-  install -D -m644 docs/LICENSE-AND-CREDITS.txt "$pkgdir/usr/share/licenses/opentxs/LICENSE"
+  install -D -m644 docs/LICENSE-AND-CREDITS.txt $pkgdir/usr/share/licenses/opentxs/LICENSE
 
   msg 'Installing...'
   make DESTDIR="$pkgdir" install
+
+  msg 'Installing bash completion...'
+  install -D -m644 scripts/bash_completion.d/opentxs-bash-completion.sh $pkgdir/etc/bash_completion.d/opentxs
 }

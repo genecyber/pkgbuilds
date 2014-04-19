@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=counterwallet-git
-pkgver=20140403
+pkgver=20140419
 pkgrel=1
 pkgdesc="Deterministic Web wallet for Counterparty"
 arch=('any')

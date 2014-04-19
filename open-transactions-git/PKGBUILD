@@ -70,6 +70,9 @@ package() {
   msg 'Installing...'
   make DESTDIR="$pkgdir" install
 
+  msg 'Installing bash completion...'
+  install -D -m644 scripts/bash_completion.d/opentxs-bash-completion.sh $pkgdir/etc/bash_completion.d/opentxs
+
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +
   find "$pkgdir" -type f -name .gitignore -exec rm -r '{}' +
