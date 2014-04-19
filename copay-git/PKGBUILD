@@ -1,0 +1,58 @@
+# Maintainer: Andy Weidenbaum <archbaum@gmail.com>
+
+pkgname=copay-git
+pkgver=0.0.0
+pkgrel=1
+pkgdesc="Multisignature Bitcoin wallet"
+arch=('i686' 'x86_64')
+depends=('nodejs')
+makedepends=('git' 'nodejs-bower')
+url="https://github.com/bitpay/copay"
+license=('MIT')
+source=(git+https://github.com/bitpay/copay)
+sha256sums=('SKIP')
+provides=('copay' 'nodejs-copay')
+conflicts=('copay' 'nodejs-copay')
+options=('!strip')
+
+pkgver() {
+  cd ${pkgname%-git}
+  git log -1 --format="%cd" --date=short | sed "s|-||g"
+}
+
+build() {
+  cd ${pkgname%-git}
+
+  msg 'Fetching NPM dependencies...'
+  npm install
+
+  msg 'Fetching Web assets...'
+  bower install --allow-root --config.interactive=false
+}
+
+package() {
+  cd ${pkgname%-git}
+
+  msg 'Installing docs...'
+  install -Dm 644 README.md $pkgdir/usr/share/doc/copay/README.md
+
+  msg 'Installing appdirs...'
+  install -dm 700 $pkgdir/usr/share/copay
+  for _appdir in bin css font img js lib node_modules test util; do
+    mv $_appdir $pkgdir/usr/share/copay/$_appdir
+  done
+
+  msg 'Installing appfiles...'
+  for _appfile in API.js bower.json copay.js Gruntfile.js index.html karma.conf.js package.json; do
+    mv $_appfile $pkgdir/usr/share/copay/$_appfile
+  done
+
+  msg 'Installing binaries...'
+  for _bin in concat.sh; do
+    install -Dm 755 $_bin $pkgdir/usr/share/copay/$_bin
+  done
+
+  msg 'Cleaning up pkgdir...'
+  find "$pkgdir" -type d -name .git -exec rm -r '{}' +
+  find "$pkgdir" -type f -name .gitignore -exec rm -r '{}' +
+}
