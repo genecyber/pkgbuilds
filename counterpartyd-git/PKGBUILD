@@ -54,7 +54,7 @@ package() {
   install -dm 755 $pkgdir/usr/share/counterparty
   install -dm 700 $pkgdir/var/log/counterparty
   for _appdir in lib test; do
-    mv $_appdir $pkgdir/usr/share/counterparty/$_appdir
+    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/counterparty/$_appdir
   done
 
   msg 'Installing appfiles...'

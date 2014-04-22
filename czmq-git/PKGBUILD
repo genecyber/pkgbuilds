@@ -57,7 +57,7 @@ package() {
               build-vs2013.gsl   \
               makecert           \
               project.gsl; do
-    mv $pkgdir/usr/bin/${_bin} $pkgdir/usr/bin/czmq_${_bin}
+    cp -dpr --no-preserve=ownership $pkgdir/usr/bin/${_bin} $pkgdir/usr/bin/czmq_${_bin}
   done
 
   msg 'Cleaning up pkgdir...'

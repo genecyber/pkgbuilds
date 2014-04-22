@@ -32,7 +32,7 @@ package() {
   msg 'Installing appdirs...'
   install -dm 755 $pkgdir/usr/share/vim/vimfiles
   for _appdir in after autoload doc plugin syntax; do
-    mv $_appdir $pkgdir/usr/share/vim/vimfiles/$_appdir
+    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/vim/vimfiles/$_appdir
   done
 
   msg 'Cleaning up pkgdir...'

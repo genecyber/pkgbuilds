@@ -54,7 +54,7 @@ package() {
   install -dm 755 $pkgdir/usr/share/counterwallet
   install -dm 700 $pkgdir/var/log/counterwallet
   for _appdir in lib; do
-    mv $_appdir $pkgdir/usr/share/counterwallet/$_appdir
+    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/counterwallet/$_appdir
   done
 
   msg 'Installing appfiles...'

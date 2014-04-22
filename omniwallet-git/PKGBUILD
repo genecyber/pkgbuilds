@@ -69,7 +69,7 @@ package() {
   msg 'Installing documentation...'
   install -dm 755 $pkgdir/usr/share/doc/omniwallet
   for _doc in design README.md; do
-    mv $_doc $pkgdir/usr/share/doc/omniwallet/$_doc
+    cp -dpr --no-preserve=ownership $_doc $pkgdir/usr/share/doc/omniwallet/$_doc
   done
 
   msg 'Installing omniwallet...'
@@ -77,10 +77,10 @@ package() {
   install -dm 755 $pkgdir/var/lib/omniwallet
   install -dm 755 $pkgdir/var/log/omniwallet
   for _appdir in api lib www; do
-    mv $_appdir $pkgdir/usr/share/omniwallet/$_appdir
+    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/omniwallet/$_appdir
   done
   for _appfile in app.sh bower.json .bowerrc Gruntfile.js package.json serve-static.js; do
-    mv $_appfile $pkgdir/usr/share/omniwallet/$_appfile
+    cp -dpr --no-preserve=ownership $_appfile $pkgdir/usr/share/omniwallet/$_appfile
   done
 
   msg 'Installing nginx sites-available...'

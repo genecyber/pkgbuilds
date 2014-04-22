@@ -28,13 +28,13 @@ package() {
   msg 'Installing srclibs...'
   install -dm 755 $pkgdir/usr/share/ethereum/src
   for _lib in `find $srcdir/src -mindepth 1 -maxdepth 1 -printf '%f\n'`; do
-    mv $srcdir/src/$_lib $pkgdir/usr/share/ethereum/src/$_lib
+    cp -dpr --no-preserve=ownership $srcdir/src/$_lib $pkgdir/usr/share/ethereum/src/$_lib
   done
 
   msg 'Installing pkglibs...'
   install -dm 755 $pkgdir/usr/share/ethereum/pkg
   for _pkg in `find $srcdir/pkg -mindepth 1 -maxdepth 1 -printf '%f\n'`; do
-    mv $srcdir/pkg/$_pkg $pkgdir/usr/share/ethereum/pkg/$_pkg
+    cp -dpr --no-preserve=ownership $srcdir/pkg/$_pkg $pkgdir/usr/share/ethereum/pkg/$_pkg
   done
 
   msg 'Installing binaries...'

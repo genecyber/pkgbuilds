@@ -64,12 +64,12 @@ package() {
   msg 'Installing appdirs...'
   install -dm 755 $pkgdir/usr/share/bitrated
   for _appdir in bin client lib pages public server static views; do
-    mv $_appdir $pkgdir/usr/share/bitrated/$_appdir
+    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/bitrated/$_appdir
   done
 
   msg 'Installing appfiles...'
   for _appfile in example.env Procfile package.json; do
-    mv $_appfile $pkgdir/usr/share/bitrated/$_appfile
+    cp -dpr --no-preserve=ownership $_appfile $pkgdir/usr/share/bitrated/$_appfile
   done
 
   msg 'Installing bitrated.service...'

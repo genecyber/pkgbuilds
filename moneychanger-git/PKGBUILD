@@ -45,7 +45,7 @@ package() {
   msg 'Installing appdirs...'
   install -dm 755 $pkgdir/usr/share/moneychanger
   for _appdir in bitcoin-api jsoncpp moneychanger-qt nmcrpc project src; do
-    mv $_appdir $pkgdir/usr/share/moneychanger/$_appdir
+    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/moneychanger/$_appdir
   done
 
   msg 'Cleaning up pkgdir...'

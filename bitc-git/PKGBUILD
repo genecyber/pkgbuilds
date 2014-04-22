@@ -41,7 +41,7 @@ package() {
   msg 'Installing appdirs...'
   install -dm 755 $pkgdir/usr/share/bitc
   for _appdir in bld src; do
-    mv $_appdir $pkgdir/usr/share/bitc/$_appdir
+    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/bitc/$_appdir
   done
 
   msg 'Installing appfiles...'

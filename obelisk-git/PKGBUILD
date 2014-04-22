@@ -63,7 +63,7 @@ package() {
   install -dm 755 $pkgdir/usr/share/obelisk
   install -dm 700 $pkgdir/var/log/obelisk
   for _appdir in scripts; do
-    mv $_appdir $pkgdir/usr/share/obelisk/$_appdir
+    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/obelisk/$_appdir
   done
 
   msg 'Installing...'

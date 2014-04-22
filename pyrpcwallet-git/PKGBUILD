@@ -28,7 +28,7 @@ package() {
   msg 'Installing appdirs...'
   install -dm 755 $pkgdir/usr/share/pyrpcwallet
   for _appdir in lib; do
-    mv $_appdir $pkgdir/usr/share/pyrpcwallet/$_appdir
+    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/pyrpcwallet/$_appdir
   done
 
   msg 'Installing appfiles...'

@@ -39,12 +39,12 @@ package() {
   msg 'Installing appdirs...'
   install -dm 700 $pkgdir/usr/share/copay
   for _appdir in bin css font img js lib node_modules test util; do
-    mv $_appdir $pkgdir/usr/share/copay/$_appdir
+    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/copay/$_appdir
   done
 
   msg 'Installing appfiles...'
   for _appfile in API.js bower.json copay.js Gruntfile.js index.html karma.conf.js package.json; do
-    mv $_appfile $pkgdir/usr/share/copay/$_appfile
+    cp -dpr --no-preserve=ownership $_appfile $pkgdir/usr/share/copay/$_appfile
   done
 
   msg 'Installing binaries...'
