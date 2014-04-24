@@ -17,7 +17,7 @@ post_remove() {
   echo "done."
 }
 
-read -d '' hudigraphs <<"EOF"
+read -d '' hudigraphs <<'EOF'
 
   # vim-hudigraphs
 

@@ -17,7 +17,7 @@ post_remove() {
   echo "done."
 }
 
-read -d '' dragvisuals <<"EOF"
+read -d '' dragvisuals <<'EOF'
 
   # vim-dragvisuals
 

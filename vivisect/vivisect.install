@@ -2,7 +2,7 @@ post_install() {
   printf "$vivisect\n"
 }
 
-read -d '' vivisect <<"EOF"
+read -d '' vivisect <<'EOF'
 === Vivisect / Vdb / Vtrace
 
 Now all as one project! ( made sense once vivisect went public )

@@ -17,7 +17,7 @@ post_remove() {
   echo "done."
 }
 
-read -d '' vmath <<"EOF"
+read -d '' vmath <<'EOF'
 
   # vim-vmath
 

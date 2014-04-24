@@ -20,7 +20,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' accordion <<"EOF"
+read -d '' accordion <<'EOF'
 # vim-accordion-git
 
 To enforce that the current tab always shows at most 3 vsplits, run

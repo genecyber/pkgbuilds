@@ -17,7 +17,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' pipe2eval <<"EOF"
+read -d '' pipe2eval <<'EOF'
 # vim-pipe2eval-git
 
 ## Overview

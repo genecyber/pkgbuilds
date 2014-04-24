@@ -17,7 +17,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' fireplace <<"EOF"
+read -d '' fireplace <<'EOF'
 # vim-fireplace-git
 
 Fireplace.vim doesn't provide indenting or syntax highlighting, so you'll

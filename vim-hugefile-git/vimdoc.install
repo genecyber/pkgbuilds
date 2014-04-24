@@ -20,7 +20,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' hugefile <<"EOF"
+read -d '' hugefile <<'EOF'
 # vim-hugefile-git
 
 Vim always loads entire files. Therefore loading huge files (logfiles?) is

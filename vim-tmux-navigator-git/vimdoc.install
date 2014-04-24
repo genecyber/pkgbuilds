@@ -17,7 +17,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' tmuxnav <<"EOF"
+read -d '' tmuxnav <<'EOF'
 # vim-tmux-navigator-git complete installation instructions
 
 Add the following to your tmux.conf file to configure the tmux side of

@@ -17,7 +17,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' colortoggle <<"EOF"
+read -d '' colortoggle <<'EOF'
 # vim-colortoggle-git
 
 Color toggling plugin for ViM

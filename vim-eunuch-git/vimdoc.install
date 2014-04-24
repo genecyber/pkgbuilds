@@ -17,7 +17,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' eunuch <<"EOF"
+read -d '' eunuch <<'EOF'
 # vim-eunuch-git
 
 Vim sugar for the UNIX shell commands that need it the most. Commands include:

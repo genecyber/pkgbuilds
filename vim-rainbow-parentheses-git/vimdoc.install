@@ -17,7 +17,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' parens <<"EOF"
+read -d '' parens <<'EOF'
 # vim-rainbow-parentheses-git
 
 Better Rainbow Parentheses

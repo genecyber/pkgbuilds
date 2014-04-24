@@ -17,7 +17,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' classpath <<"EOF"
+read -d '' classpath <<'EOF'
 # vim-classpath-git
 
 This plugin sets the 'path' for JVM languages to match the class path

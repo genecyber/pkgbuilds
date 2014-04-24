@@ -17,7 +17,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' syntaxrange <<"EOF"
+read -d '' syntaxrange <<'EOF'
 # vim-syntaxrange-git
 
 USAGE

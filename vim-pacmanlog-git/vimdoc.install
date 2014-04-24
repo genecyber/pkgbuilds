@@ -17,7 +17,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' pacmanlog <<"EOF"
+read -d '' pacmanlog <<'EOF'
 # vim-pacmanlog-git
 
 Highlight the time, different actions, warnings and errors in Pacman

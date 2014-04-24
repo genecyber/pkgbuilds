@@ -17,7 +17,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' gtk <<"EOF"
+read -d '' gtk <<'EOF'
 # vim-gtk-syntax-git
 
 A collection of C extension syntax files for xlib, glib (gobject,

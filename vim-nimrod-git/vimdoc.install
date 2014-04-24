@@ -17,7 +17,7 @@ post_remove() {
     echo "done."
 }
 
-read -d '' nimrod <<"EOF"
+read -d '' nimrod <<'EOF'
 Next you need to add this to your ~/.vimrc:
 
 fun! JumpToDef()

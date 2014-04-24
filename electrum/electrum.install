@@ -11,7 +11,7 @@ post_remove() {
   update-desktop-database -q
 }
 
-read -d '' ecdsa <<"EOF"
+read -d '' ecdsa <<'EOF'
 :'::.:::::.:::.::.:
 : :.: ' ' ' ' : :':
 :.:     _.__    '.:             Welcome to ecdsa.org
