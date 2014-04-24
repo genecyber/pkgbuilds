@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=libbitcoin-leveldb-devel-git
-pkgver=20140415
+pkgver=20140423
 pkgrel=1
 pkgdesc="libbitcoin asynchronous C++ library for Bitcoin, with leveldb enabled (development branch)"
 arch=('i686' 'x86_64')
@@ -9,7 +9,7 @@ depends=('boost' 'curl' 'leveldb' 'openssl')
 makedepends=('gcc' 'git' 'libtool' 'pkg-config')
 url="https://github.com/libbitcoin/libbitcoin"
 license=('AGPL3')
-source=(git+https://github.com/libbitcoin/libbitcoin#branch=devel)
+source=(git+https://github.com/libbitcoin/libbitcoin#branch=develop)
 sha256sums=('SKIP')
 provides=('libbitcoin')
 conflicts=('libbitcoin')

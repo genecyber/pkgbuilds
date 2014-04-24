@@ -1,28 +1,28 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
-pkgname=sx-git
-pkgver=20140324
+pkgname=sx-devel-git
+pkgver=20140423
 pkgrel=1
 pkgdesc="S(pesmilo)X(changer) modular Bitcoin cmdline utilities (development branch)"
 arch=('i686' 'x86_64')
-depends=('boost' 'czmq-git' 'czmqpp-git' 'libbitcoin-leveldb-git' 'libsodium' 'libwallet-git' 'ncurses' 'obelisk-git' 'python2')
+depends=('boost' 'czmq-git' 'czmqpp-git' 'libbitcoin-leveldb-devel-git' 'libsodium' 'libwallet-devel-git' 'ncurses' 'obelisk-devel-git' 'python2')
 makedepends=('autoconf' 'curl' 'gcc' 'git' 'libconfig' 'libtool' 'make' 'pkg-config')
 optdepends=('qrencode: Generate Bitcoin QR codes offline')
 url="https://github.com/spesmilo/sx"
 license=('AGPL3')
-source=(git+https://github.com/spesmilo/sx#branch=devel)
+source=(git+https://github.com/spesmilo/sx#branch=develop)
 sha256sums=('SKIP')
 provides=('sx')
 conflicts=('sx')
 install=sx.install
 
 pkgver() {
-  cd ${pkgname%-git}
+  cd ${pkgname%-devel*}
   git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {
-  cd ${pkgname%-git}
+  cd ${pkgname%-devel*}
 
   msg 'Fixing Python version...'
   find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/python#/usr/bin/python2#g'
@@ -30,7 +30,7 @@ prepare() {
 }
 
 build() {
-  cd ${pkgname%-git}
+  cd ${pkgname%-devel*}
 
   msg 'Building...'
   ./autogen.sh
@@ -46,7 +46,7 @@ build() {
 }
 
 package() {
-  cd ${pkgname%-git}
+  cd ${pkgname%-devel*}
 
   msg 'Installing license...'
   install -Dm 644 COPYING $pkgdir/usr/share/licenses/sx/COPYING

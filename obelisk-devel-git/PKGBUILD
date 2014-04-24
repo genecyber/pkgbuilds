@@ -1,15 +1,15 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
-pkgname=obelisk-git
-pkgver=20140416
+pkgname=obelisk-devel-git
+pkgver=20140422
 pkgrel=1
 pkgdesc="libbitcoin-based blockchain query server (development branch)"
 arch=('i686' 'x86_64')
-depends=('czmq-git' 'czmqpp-git' 'libbitcoin-leveldb-git' 'libsodium' 'zeromq-git')
+depends=('czmq-git' 'czmqpp-git' 'libbitcoin-leveldb-devel-git' 'libsodium' 'zeromq-git')
 makedepends=('gcc' 'git' 'libconfig' 'libtool' 'make')
 url="https://github.com/libbitcoin/obelisk"
 license=('AGPL3')
-source=(git+https://github.com/libbitcoin/obelisk#branch=devel
+source=(git+https://github.com/libbitcoin/obelisk#branch=develop
         obelisk.logrotate
         obelisk.service
         sx-initchain.service)
@@ -22,12 +22,12 @@ conflicts=('obelisk')
 install=obelisk.install
 
 pkgver() {
-  cd ${pkgname%-git}
+  cd ${pkgname%-devel*}
   git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 prepare() {
-  cd ${pkgname%-git}
+  cd ${pkgname%-devel*}
 
   msg 'Configuring...'
   sed -i 's!^output-file.*!output-file = "/var/log/obelisk/debug.log"!' src/worker/worker.cfg
@@ -36,7 +36,7 @@ prepare() {
 }
 
 build() {
-  cd ${pkgname%-git}
+  cd ${pkgname%-devel*}
 
   msg 'Building...'
   ./autogen.sh
@@ -52,7 +52,7 @@ build() {
 }
 
 package() {
-  cd ${pkgname%-git}
+  cd ${pkgname%-devel*}
 
   msg 'Installing license...'
   install -Dm 644 COPYING $pkgdir/usr/share/licenses/obelisk/COPYING

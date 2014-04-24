@@ -1,26 +1,26 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
-pkgname=libwallet-git
-pkgver=20140416
+pkgname=libwallet-devel-git
+pkgver=20140423
 pkgrel=1
 pkgdesc="Bitcoin client side library for wallet functionality such as working with addresses, deterministic wallets and different key formats (development branch)"
 arch=('i686' 'x86_64')
-depends=('boost-libs' 'libbitcoin-leveldb-git')
+depends=('boost-libs' 'libbitcoin-leveldb-devel-git')
 makedepends=('gcc' 'git' 'make' 'pkg-config')
 url="https://github.com/libbitcoin/libwallet"
 license=('AGPL3')
-source=(git+https://github.com/libbitcoin/libwallet#branch=devel)
+source=(git+https://github.com/libbitcoin/libwallet#branch=develop)
 sha256sums=('SKIP')
 provides=('libwallet')
 conflicts=('libwallet')
 
 pkgver() {
-  cd ${pkgname%-git}
+  cd ${pkgname%-devel*}
   git log -1 --format="%cd" --date=short | sed "s|-||g"
 }
 
 build() {
-  cd ${pkgname%-git}
+  cd ${pkgname%-devel*}
 
   msg 'Building...'
   ./autogen.sh
@@ -36,7 +36,7 @@ build() {
 }
 
 package() {
-  cd ${pkgname%-git}
+  cd ${pkgname%-devel*}
 
   msg 'Installing license...'
   install -Dm 644 LICENSE "${pkgdir}/usr/share/licenses/libwallet/LICENSE"

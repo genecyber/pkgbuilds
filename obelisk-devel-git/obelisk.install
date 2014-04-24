@@ -23,12 +23,12 @@ _mkuser() {
 }
 
 _rmuser() {
-  echo -n "Removing ob user... "
+  echo -n "Removing obelisk user... "
   userdel -rf obelisk 2>/dev/null
   echo "done"
 }
 
-read -d '' obelisk <<"EOF"
+read -d '' obelisk <<'EOF'
 ########################################################################
 ########################################################################
 ##                                                                    ##
