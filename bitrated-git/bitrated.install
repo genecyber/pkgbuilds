@@ -1,6 +1,5 @@
 post_install() {
   _mkuser
-  mv /usr/share/bitrated/example.env /usr/share/bitrated/.env
   chown -R bitrated:bitrated /etc/bitrated /usr/share/bitrated
   printf "$bitrated\n"
 }
@@ -36,8 +35,16 @@ read -d '' bitrated <<'EOF'
 ##  Bitrated                                                          ##
 ##  ________                                                          ##
 ##                                                                    ##
-##  pages/terms.jade should be removed from any public websites       ##
-##  running this code.                                                ##
+##  Start bitrated:                                                   ##
+##                                                                    ##
+##      # systemctl start bitrated                                    ##
+##                                                                    ##
+##  Then point your browser at:                                       ##
+##                                                                    ##
+##      127.0.0.1:8070                                                ##
+##                                                                    ##
+##  NOTE: /usr/share/bitrated/pages/terms.jade should be removed      ##
+##  from any public websites running this code.                       ##
 ##                                                                    ##
 ########################################################################
 ########################################################################

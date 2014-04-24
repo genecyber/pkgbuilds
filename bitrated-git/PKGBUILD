@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=bitrated-git
-pkgver=20140226
+pkgver=20140331
 pkgrel=1
 pkgdesc="Bitcoin arbitration marketplace"
 arch=('any')
@@ -40,6 +40,8 @@ prepare() {
 
   msg 'Serving assets...'
   sed -i 's!#export SERVE_ASSETS!export SERVE_ASSETS!' example.env
+
+  cp -dpr --no-preserve=ownership example.env .env
 }
 
 build() {
@@ -63,12 +65,12 @@ package() {
 
   msg 'Installing appdirs...'
   install -dm 755 $pkgdir/usr/share/bitrated
-  for _appdir in bin client lib pages public server static views; do
+  for _appdir in bin client lib node_modules pages public server static views; do
     cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/bitrated/$_appdir
   done
 
   msg 'Installing appfiles...'
-  for _appfile in example.env Procfile package.json; do
+  for _appfile in .env example.env Procfile package.json; do
     cp -dpr --no-preserve=ownership $_appfile $pkgdir/usr/share/bitrated/$_appfile
   done
 
