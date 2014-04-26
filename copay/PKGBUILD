@@ -1,41 +1,36 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
-pkgname=copay-git
-pkgver=20140425
+pkgname=copay
+pkgver=0.0.6
 pkgrel=1
 pkgdesc="Multisignature Bitcoin wallet"
 arch=('i686' 'x86_64')
 depends=('nodejs')
-makedepends=('git' 'nodejs-bower' 'nodejs-grunt-cli')
+makedepends=('nodejs-bower' 'nodejs-grunt-cli')
 optdepends=('insight-bitcore-git: Bitcoin blockchain API'
             'peerjs-server: peer-to-peer API built on top of WebRTC')
 url="https://github.com/bitpay/copay"
 license=('MIT')
-source=(git+https://github.com/bitpay/copay
+source=($pkgname-$pkgver.tar.gz::https://github.com/bitpay/copay/archive/v$pkgver.tar.gz
         copay.conf
         copay.service)
-sha256sums=('SKIP'
+sha256sums=('184828003b597bc7673a4f9cb89e69bd6a02f809a5effc88ec164341ad919b4a'
             '95f4682736658e8e7d728c6709721206f7275ec41d495b892bbaf0fa2b174329'
             'f097a988f5f9e170a15a62691475bed9ffb87446cca7e4cceaf3608feda31228')
 provides=('copay' 'nodejs-copay')
-conflicts=('copay' 'nodejs-copay')
+conflicts=('nodejs-copay')
 options=('!strip')
 install=copay.install
 
-pkgver() {
-  cd ${pkgname%-git}
-  git log -1 --format="%cd" --date=short | sed "s|-||g"
-}
-
 prepare() {
-  cd ${pkgname%-git}
+  cd $srcdir/$pkgname-$pkgver
 
   msg 'Creating config.js...'
   cp -dpr --no-preserve=ownership config.template.js config.js
 }
 
 build() {
-  cd ${pkgname%-git}
+  cd $srcdir/$pkgname-$pkgver
 
   msg 'Fetching NPM dependencies...'
   npm install
@@ -48,7 +43,7 @@ build() {
 }
 
 package() {
-  cd ${pkgname%-git}
+  cd $srcdir/$pkgname-$pkgver
 
   msg 'Installing docs...'
   install -Dm 644 README.md $pkgdir/usr/share/doc/copay/README.md
