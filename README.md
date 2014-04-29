@@ -49,13 +49,13 @@ Index
 
 **Description:** Deterministic Web wallet for Counterparty (git version).
 
-## [counterwalletd](https://aur.archlinux.org/packages/counterwalletd/)
+## [counterblockd](https://aur.archlinux.org/packages/counterwalletd/)
 
-**Description:** Daemon for Counterwallet features.
+**Description:** Provides extended API services to Counterwallet.
 
-## [counterwalletd-git](https://aur.archlinux.org/packages/counterwalletd-git/)
+## [counterblockd-git](https://aur.archlinux.org/packages/counterwalletd-git/)
 
-**Description:** Daemon for Counterwallet features (git version).
+**Description:** Provides extended API services to Counterwallet (git version).
 
 ## [cube-git](https://aur.archlinux.org/packages/cube-git/)
 

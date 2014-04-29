@@ -1,26 +1,26 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
-pkgname=counterwalletd-git
-pkgver=20140421
+pkgname=counterblockd-git
+pkgver=20140426
 pkgrel=1
-pkgdesc="Daemon for Counterwallet features"
+pkgdesc="Provides extended API services to Counterwallet, as well as Counterparty 3rd-party applications"
 arch=('any')
 depends=('cube-git' 'leveldb' 'mongodb' 'perl-image-exiftool' 'python2' 'python2-appdirs' 'python2-apsw' 'python2-boto' 'python2-cherrypy' 'python2-cube-client' 'python2-dateutil' 'python2-gevent' 'python2-gevent-socketio' 'python2-grequests' 'python2-json-rpc' 'python2-lxml' 'python2-numpy' 'python2-pillow' 'python2-prettytable' 'python2-pycoin' 'python2-pymongo' 'python2-pytest' 'python2-pyzmq' 'python2-redis' 'python2-requests' 'python2-rollbar' 'redis' 'sqlite' 'zeromq')
 makedepends=('git' 'python2-sphinx')
 optdepends=('counterpartyd: Counterparty protocol'
             'insight-bitcore-git: Bitcoin blockchain API')
 groups=('counterparty')
-url="https://github.com/xnova/counterwalletd"
+url="https://github.com/xnova/counterblockd"
 license=('MIT')
-source=(git+https://github.com/xnova/counterwalletd
-        counterwallet.conf
-        counterwallet.logrotate
-        counterwallet.service)
+source=(git+https://github.com/xnova/counterblockd
+        counterblock.conf
+        counterblock.logrotate
+        counterblock.service)
 sha256sums=('SKIP'
-            'd59e604f0f63a3bf96176e22b74a96f1b16cfd87c0af9d0c1fd94b71fd29385a'
-            'b652ad3d61caee6ca83a22a03c4a750e56dd46e08dcc322bee616db560a3f94e'
-            '838290fa325649b4b0551d18156b279df995c2cc75636674d08f34b7cf2dbc9c')
-install=counterwallet.install
+            '68f253df89f63981c3ce7cc2e95d4a802e26152a03d153de35b7b0acec66c1d1'
+            'efc4901376dbb89a506112e92ea257d536a0e7d3f056de12d7dd2e7adf6e14f1'
+            'cdcbbe30181b3022ed07922b5bc7b395edd30ec5b1f3d24942c1de8b8f09cc7d')
+install=counterblock.install
 
 pkgver() {
   cd ${pkgname%-git}
@@ -46,7 +46,7 @@ package() {
   cd ${pkgname%-git}
 
   msg 'Installing license...'
-  install -Dm 644 LICENSE $pkgdir/usr/share/licenses/counterwallet/LICENSE
+  install -Dm 644 LICENSE $pkgdir/usr/share/licenses/counterblock/LICENSE
 
   msg 'Installing user manual...'
   for _manpage in `find docs/_build/man/ -type f -name "*.1" -printf '%f\n'`; do
@@ -54,33 +54,32 @@ package() {
   done
 
   msg 'Installing documentation...'
-  install -Dm 644 README.md $pkgdir/usr/share/doc/counterwallet/README.md
+  install -Dm 644 README.md $pkgdir/usr/share/doc/counterblock/README.md
 
   msg 'Installing appdirs...'
-  install -dm 755 $pkgdir/usr/share/counterwallet
-  install -dm 700 $pkgdir/var/log/counterwallet
+  install -dm 755 $pkgdir/usr/share/counterblock
+  install -dm 700 $pkgdir/var/log/counterblock
   for _appdir in lib; do
-    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/counterwallet/$_appdir
+    cp -dpr --no-preserve=ownership $_appdir $pkgdir/usr/share/counterblock/$_appdir
   done
 
   msg 'Installing appfiles...'
   for _appfile in __init__.py; do
-    install -Dm 644 $_appfile $pkgdir/usr/share/counterwallet/$_appfile
+    install -Dm 644 $_appfile $pkgdir/usr/share/counterblock/$_appfile
   done
 
-  msg 'Installing counterwalletd executable...'
-  install -Dm 755 counterwalletd.py $pkgdir/usr/share/counterwallet/counterwalletd.py
+  msg 'Installing counterblock executable...'
+  install -Dm 755 counterblockd.py $pkgdir/usr/share/counterblock/counterblockd.py
 
-  msg 'Installing counterwalletd.conf...'
-  #Workaround due to upstream improper handling of config-file directive
-  #install -Dm 600 $srcdir/counterwallet.conf $pkgdir/etc/counterwallet/counterwallet.conf
-  install -Dm 600 $srcdir/counterwallet.conf $pkgdir/etc/conf.d/counterwallet
+  msg 'Installing counterblock.conf...'
+  #install -Dm 600 $srcdir/counterblock.conf $pkgdir/etc/counterblock/counterblock.conf
+  install -Dm 600 $srcdir/counterblock.conf $pkgdir/etc/conf.d/counterblock
 
-  msg 'Installing counterwalletd.service'
-  install -Dm 644 $srcdir/counterwallet.service $pkgdir/usr/lib/systemd/system/counterwallet.service
+  msg 'Installing counterblock.service'
+  install -Dm 644 $srcdir/counterblock.service $pkgdir/usr/lib/systemd/system/counterblock.service
 
-  msg 'Installing counterwalletd.logrotate...'
-  install -Dm 644 $srcdir/counterwallet.logrotate $pkgdir/etc/logrotate.d/counterwallet
+  msg 'Installing counterblock.logrotate...'
+  install -Dm 644 $srcdir/counterblock.logrotate $pkgdir/etc/logrotate.d/counterblock
 
   msg 'Cleaning up pkgdir...'
   find "$pkgdir" -type d -name .git -exec rm -r '{}' +
