@@ -5,8 +5,9 @@ pkgver=20140429
 pkgrel=1
 pkgdesc="S(pesmilo)X(changer) modular Bitcoin cmdline utilities (development branch)"
 arch=('i686' 'x86_64')
-depends=('boost' 'czmq-git' 'czmqpp-git' 'libbitcoin-leveldb-devel-git' 'libsodium' 'libwallet-devel-git' 'ncurses' 'obelisk-devel-git' 'python2' 'python2-ecdsa' 'python2-pyzmq' 'qrencode' 'zenity')
+depends=('boost' 'czmq-git' 'czmqpp-git' 'libbitcoin-leveldb-devel-git' 'libsodium' 'libwallet-devel-git' 'ncurses' 'obelisk-devel-git' 'python2' 'python2-ecdsa' 'python2-pyzmq' 'qrencode')
 makedepends=('autoconf' 'curl' 'gcc' 'git' 'libconfig' 'libtool' 'make' 'pkg-config')
+optdepends=('zenity: for sx-easysx script GUI')
 url="https://github.com/spesmilo/sx"
 license=('AGPL3')
 source=(git+https://github.com/spesmilo/sx#branch=develop)
