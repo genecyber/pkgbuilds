@@ -1,0 +1,16 @@
+[Unit]
+Description=Counterblockd API server
+Wants=counterparty.service insight.service mongodb.service redis.service cube-collector cube-evaluator
+After=counterparty.service insight.service mongodb.service redis.service cube-collector cube-evaluator
+
+[Service]
+User=counterblockd
+Group=counterblockd
+ExecStart=/usr/bin/counterblockd \
+                   --config-file=/etc/counterblockd/counterblockd.conf \
+                   --data-dir=/usr/share/counterblockd                  \
+                   --log-file=/var/log/counterblockd/counterblockd.log  \
+                   --tx-log-file=/var/log/counterblockd/counterblockd-transactions.log
+
+[Install]
+WantedBy=multi-user.target

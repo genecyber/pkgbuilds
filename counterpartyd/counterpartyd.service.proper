@@ -1,0 +1,16 @@
+[Unit]
+Description=Counterpartyd server
+Wants=bitcoin.service insight.service
+After=bitcoin.service insight.service
+
+[Service]
+User=counterpartyd
+Group=counterpartyd
+ExecStart=/usr/bin/counterpartyd \
+                   --config-file=/etc/counterpartyd/counterpartyd.conf        \
+                   --data-dir=/usr/share/counterpartyd                       \
+                   --log-file=/var/log/counterpartyd/counterpartyd-server.log \
+                   --verbose --force server
+
+[Install]
+WantedBy=multi-user.target

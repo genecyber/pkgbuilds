@@ -1,7 +1,7 @@
 [Default]
 counterpartyd-rpc-host=127.0.0.1
 counterpartyd-rpc-port=4000
-counterpartyd-rpc-user=counterparty
+counterpartyd-rpc-user=counterpartyd
 counterpartyd-rpc-password=predictions
 insight-connect=127.0.0.1
 insight-port=3000

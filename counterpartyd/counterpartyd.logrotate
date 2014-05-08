@@ -1,4 +1,4 @@
-/var/log/counterparty/*.log
+/var/log/counterpartyd/*.log
 {
         rotate 5
         copytruncate

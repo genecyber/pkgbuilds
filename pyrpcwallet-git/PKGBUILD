@@ -8,9 +8,9 @@ arch=('any')
 depends=('python' 'python-bottle' 'python-crypto' 'python-pycoin' 'sqlite')
 makedepends=('git')
 optdepends=('counterpartyd: Counterparty protocol')
-url="https://github.com/JahPowerBit/pyrpcwallet"
+url="https://github.com/CounterpartyXCP/pyrpcwallet"
 license=('MIT')
-source=(git+https://github.com/JahPowerBit/pyrpcwallet)
+source=(git+https://github.com/CounterpartyXCP/pyrpcwallet)
 sha256sums=('SKIP')
 install=pyrpcwallet.install
 
