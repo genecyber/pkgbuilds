@@ -1,40 +1,39 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
-pkgname=go-ethereum
+pkgname=go-ethereal
 pkgver=20140508
 pkgrel=1
-pkgdesc="Ethereum Go developer client"
+pkgdesc="Ethereum Go GUI developer client"
 arch=('any')
-depends=('gmp' 'leveldb')
+depends=('gmp' 'leveldb' 'qt5-base' 'qt5-quickcontrols')
 makedepends=('git' 'go' 'mercurial')
 url="https://github.com/ethereum/go-ethereum"
 license=('MIT')
 options=('!strip' '!emptydirs')
-provides=('go-ethereum')
-install=go-ethereum.install
+provides=('ethereal' 'go-ethereal')
 
 build() {
-  GOPATH="$srcdir" go get -fix -v -x github.com/ethereum/go-ethereum/ethereum
+  GOPATH="$srcdir" go get -fix -v -x github.com/ethereum/go-ethereum/ethereal
 }
 
 check() {
   [[ -f /etc/profile.d/go.sh ]] && source /etc/profile.d/go.sh
-  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/ethereum/go-ethereum/ethereum || return 0
+  GOPATH="$GOPATH:$srcdir" go test -v -x github.com/ethereum/go-ethereum/ethereal || return 0
 }
 
 package() {
   [[ -f /etc/profile.d/go.sh ]] && source /etc/profile.d/go.sh
 
   msg 'Installing srclibs...'
-  install -dm 755 $pkgdir/usr/share/ethereum/src
+  install -dm 755 $pkgdir/usr/share/ethereal/src
   for _lib in `find $srcdir/src -mindepth 1 -maxdepth 1 -printf '%f\n'`; do
-    cp -dpr --no-preserve=ownership $srcdir/src/$_lib $pkgdir/usr/share/ethereum/src/$_lib
+    cp -dpr --no-preserve=ownership $srcdir/src/$_lib $pkgdir/usr/share/ethereal/src/$_lib
   done
 
   msg 'Installing pkglibs...'
-  install -dm 755 $pkgdir/usr/share/ethereum/pkg
+  install -dm 755 $pkgdir/usr/share/ethereal/pkg
   for _pkg in `find $srcdir/pkg -mindepth 1 -maxdepth 1 -printf '%f\n'`; do
-    cp -dpr --no-preserve=ownership $srcdir/pkg/$_pkg $pkgdir/usr/share/ethereum/pkg/$_pkg
+    cp -dpr --no-preserve=ownership $srcdir/pkg/$_pkg $pkgdir/usr/share/ethereal/pkg/$_pkg
   done
 
   msg 'Installing binaries...'
