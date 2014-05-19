@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=chromawallet-git
-pkgver=20140418
+pkgver=20140516
 pkgrel=1
 pkgdesc="Colored Bitcoin wallet"
 arch=('any')
