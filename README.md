@@ -473,6 +473,10 @@ Index
 
 **Description:** Simple REPL inside Vim.
 
+## [vim-reporoot-git](https://aur.archlinux.org/packages/vim-reporoot-git/)
+
+**Description:** Change the directory to the root of the source code repository.
+
 ## [vim-searchparty-git](https://aur.archlinux.org/packages/vim-searchparty-git/)
 
 **Description:** Extended search commands and maps for Vim.
