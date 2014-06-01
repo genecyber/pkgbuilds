@@ -389,6 +389,10 @@ Index
 
 **Description:** GitHub colors for Vim.
 
+## [vim-colors-jellyx](https://aur.archlinux.org/packages/vim-colors-jellyx/)
+
+**Description:** JellyX colors for Vim.
+
 ## [vim-colors-liquidcarbon](https://aur.archlinux.org/packages/vim-colors-liquidcarbon/)
 
 **Description:** Liquid carbon colors for Vim.
