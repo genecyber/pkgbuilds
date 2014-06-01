@@ -34,7 +34,4 @@ package() {
 
   msg 'Installing...'
   python2 setup.py install --root="${pkgdir}" --optimize=1
-
-  msg 'Renaming eth binary to pyeth...'
-  mv $pkgdir/usr/bin/eth $pkgdir/usr/bin/pyeth
 }
