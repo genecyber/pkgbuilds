@@ -1,13 +1,12 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=chromawallet-git
-pkgver=20140516
+pkgver=20140527
 pkgrel=1
 pkgdesc="Colored Bitcoin wallet"
 arch=('any')
 depends=('python2' 'python2-bitcoinlib-git' 'python2-python-jsonrpc' 'python2-pycoin' 'python2-pyqt4' 'python2-sip' 'python2-webpy' 'qt4' 'sip' 'sqlite')
 makedepends=('git' 'python2-setuptools')
-optdepends=('bitcoin-core: Bitcoin core headless P2P node')
 url="http://chromawallet.com/"
 license=('MIT')
 source=(${pkgname%-git}::git+https://github.com/bitcoinx/ngcccbase)

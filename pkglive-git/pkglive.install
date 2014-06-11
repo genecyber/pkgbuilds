@@ -1,7 +1,7 @@
 post_install() {
   getent passwd pkglive &>/dev/null || {
     echo -n "Creating pkglive user... "
-    useradd -g users -d /opt/pkglive -s /bin/false pkglive
+    useradd -g users -d /opt/pkglive -s /usr/bin/nologin pkglive
     echo "done"
   }
   chown -R pkglive:users /opt/pkglive

@@ -17,7 +17,7 @@ _mkuser() {
   getent passwd copay &>/dev/null || {
     echo -n "Creating copay user... "
     grep -E "^copay:" /etc/group >/dev/null || groupadd copay
-    useradd -m -d /etc/copay -g copay -s /bin/false copay
+    useradd -m -d /etc/copay -g copay -s /usr/bin/nologin copay
     echo "done"
   }
 }

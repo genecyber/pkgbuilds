@@ -2,7 +2,7 @@ post_install() {
   getent passwd convos &>/dev/null || {
     echo -n "Creating convos user... "
     grep -E "^convos:" /etc/group >/dev/null || groupadd convos
-    useradd -M -g convos -s /bin/false convos
+    useradd -M -g convos -s /usr/bin/nologin convos
     echo "done"
   }
   chown -R convos:convos /usr/share/convos

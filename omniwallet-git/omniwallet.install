@@ -15,7 +15,7 @@ _mkuser() {
   getent passwd omniwallet &>/dev/null || {
     echo -n "Creating omniwallet user... "
     grep -E "^omniwallet:" /etc/group >/dev/null || groupadd omniwallet
-    useradd -m -d /etc/omniwallet -g omniwallet -s /bin/false omniwallet
+    useradd -m -d /etc/omniwallet -g omniwallet -s /usr/bin/nologin omniwallet
     echo "done"
   }
 }

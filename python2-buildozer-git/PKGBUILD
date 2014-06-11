@@ -1,7 +1,7 @@
 # Maintainer: Andy Weidenbaum <archbaum@gmail.com>
 
 pkgname=python2-buildozer-git
-pkgver=20140501
+pkgver=20140602
 pkgrel=1
 pkgdesc="Generic Python packager for Android / iOS and Desktop"
 arch=('any')
@@ -10,8 +10,12 @@ makedepends=('cmake' 'git' 'libusb' 'python2-setuptools')
 optdepends=('kivy-git')
 url="https://github.com/kivy/buildozer"
 license=('MIT')
-source=(${pkgname%-git}::git+https://github.com/kivy/buildozer)
-sha256sums=('SKIP')
+source=(${pkgname%-git}::git+https://github.com/kivy/buildozer
+        android.py.patch
+        ios.py.patch)
+sha256sums=('SKIP'
+            'd06af3adb27fb6311b6310beac7cf59653c3e7d596bed54df03564b65bc7bad1'
+            '400c8d481c179eccd77971ea1b5da8b4df8f46371fd068235a625f45301c934f')
 provides=('buildozer' 'python2-buildozer')
 conflicts=('buildozer' 'python2-buildozer')
 
@@ -22,6 +26,10 @@ pkgver() {
 
 prepare() {
   cd ${pkgname%-git}
+
+  msg 'Fixing Cython version...'
+  patch -p1 < ${srcdir}/android.py.patch
+  patch -p1 < ${srcdir}/ios.py.patch
 
   msg 'Fixing Python version...'
   find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/python#/usr/bin/python2#g'

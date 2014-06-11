@@ -7,7 +7,7 @@ pkgdesc="Multisignature Bitcoin wallet"
 arch=('i686' 'x86_64')
 depends=('nodejs')
 makedepends=('nodejs-bower' 'nodejs-grunt-cli')
-optdepends=('insight-bitcore-git: Bitcoin blockchain API'
+optdepends=('insight-bitcore: Bitcoin blockchain API'
             'peerjs-server: peer-to-peer API built on top of WebRTC')
 url="https://github.com/bitpay/copay"
 license=('MIT')
