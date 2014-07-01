@@ -35,11 +35,11 @@ prepare() {
   find . -type f -print0 | xargs -0 sed -i 's#/usr/bin/env python#/usr/bin/env python2#g'
 
   msg 'Changing electrum.banner to electrum-server.banner...'
-  find . -type f -print0 | xargs -0 sed -i 's#/etc/electrum.banner#/etc/electrum-server.banner#g'
+  find . -type f -print0 | xargs -0 sed -i 's#/etc/electrum\.banner#/etc/electrum-server.banner#g'
 
   msg 'Changing electrum.conf to electrum-server.conf...'
   cp -dpr --no-preserve=ownership electrum.conf.sample electrum-server.conf.sample
-  find . -type f -print0 | xargs -0 sed -i 's#electrum.conf#electrum-server.conf#g'
+  find . -type f -print0 | xargs -0 sed -i 's#electrum\.conf#electrum-server.conf#g'
 }
 
 package() {
